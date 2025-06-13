@@ -656,20 +656,56 @@
                     answer: "Un plan de tests est un document détaillant la stratégie, l'approche, les ressources et le calendrier des activités de test. Il contient : objectifs, périmètre, types de tests, environnements, critères d'entrée/sortie, risques, planning. Importance : 1) Assure la couverture complète des fonctionnalités, 2) Optimise les ressources et le temps, 3) Définit les responsabilités, 4) Facilite la communication équipe, 5) Permet le suivi de la qualité, 6) Réduit les risques de régression, 7) Standardise les processus."
                 },
                 {
+                    question: "Quels sont les types de tests inclus dans un plan de tests ?",
+                    answer: "Types de tests dans un plan : 1) Tests fonctionnels : unitaires, intégration, système, acceptation, 2) Tests non-fonctionnels : performance, charge, stress, sécurité, compatibilité, 3) Tests structurels : boîte blanche, couverture de code, 4) Tests de changement : régression, confirmation, 5) Tests spécialisés : accessibilité, utilisabilité, installation, 6) Tests automatisés vs manuels. Chaque type répond à des objectifs spécifiques et couvre différents aspects de la qualité logicielle."
+                },
+                {
                     question: "Quelle est la différence entre un test unitaire et un test d'intégration ?",
                     answer: "Test unitaire : teste une unité de code isolée (fonction, méthode, classe) avec des dépendances mockées. Caractéristiques : rapide, déterministe, nombreux, scope limité. Exemple : tester une fonction de calcul. Test d'intégration : teste l'interaction entre plusieurs composants ou modules. Types : intégration de composants, systèmes, APIs. Plus lents mais vérifient les contrats entre modules. Pyramide des tests : nombreux tests unitaires → quelques tests intégration → peu de tests E2E."
+                },
+                {
+                    question: "Quelle est la différence entre un test manuel et un test automatisé ?",
+                    answer: "Test manuel : exécuté par un humain, interaction directe avec l'application, détecte problèmes UX/UI, créativité dans les scénarios, coûteux en temps. Adapté pour : tests exploratoires, utilisabilité, acceptation utilisateur. Test automatisé : exécuté par des scripts/outils, répétable, rapide, intégrable CI/CD, ROI élevé à long terme. Adapté pour : régression, performance, tests répétitifs. Stratégie hybride recommandée : automatiser les cas standards, garder manuel pour l'exploration et validation UX."
+                },
+                {
+                    question: "Quelle est la différence entre tests unitaires, d'intégration, fonctionnels et E2E ?",
+                    answer: "Tests unitaires : unité de code isolée, rapides, nombreux. Tests d'intégration : interaction entre composants, APIs, DB. Tests fonctionnels : validation des exigences métier, comportement attendu. Tests E2E : parcours utilisateur complet de bout en bout, interface réelle. Pyramide : beaucoup d'unitaires (base), moins d'intégration/fonctionnels (milieu), peu d'E2E (sommet). Chaque niveau a un coût et une valeur différents. Stratégie équilibrée pour couverture optimale."
+                },
+                {
+                    question: "Qu'est-ce qu'un test de charge ?",
+                    answer: "Test de charge : évalue le comportement d'un système sous une charge normale et pic attendue. Objectifs : 1) Identifier les goulots d'étranglement, 2) Valider les temps de réponse, 3) Vérifier la stabilité sous charge, 4) Déterminer la capacité maximale. Types : charge normale, stress (au-delà capacité), spike (pics soudains), volume (gros datasets). Outils : JMeter, LoadRunner, k6, Gatling. Métriques : temps de réponse, throughput, utilisation ressources, taux d'erreur."
+                },
+                {
+                    question: "Pourquoi réaliser des tests unitaires sur un composant métier ?",
+                    answer: "Tests unitaires sur composants métier essentiels pour : 1) Validation des règles de gestion complexes, 2) Détection précoce des erreurs logiques, 3) Documentation vivante du comportement attendu, 4) Facilitation des refactors sans crainte, 5) Regression testing automatique, 6) Confiance dans les modifications, 7) Debugging facilité (isolation des problèmes), 8) Respect des spécifications métier. Les composants métier étant le cœur de l'application, leur fiabilité est critique."
                 },
                 {
                     question: "Qu'est-ce que le Test-Driven Development (TDD) ?",
                     answer: "TDD est une pratique de développement qui suit le cycle Red-Green-Refactor : 1) Red : écrire un test qui échoue pour une fonctionnalité non implémentée, 2) Green : écrire le code minimal pour faire passer le test, 3) Refactor : améliorer le code tout en gardant les tests verts. Avantages : code testé à 100%, design émergent, documentation vivante, confiance dans les refactors, bugs détectés tôt. Discipline requise mais améliore significativement la qualité du code."
                 },
                 {
+                    question: "Quelles sont les bonnes pratiques du Test-Driven Development (TDD) et comment l'implémenter ?",
+                    answer: "Bonnes pratiques TDD : 1) Tests simples et focalisés (une assertion par test), 2) Noms de tests explicites et métier, 3) Arrange-Act-Assert structure, 4) Red-Green-Refactor strict (ne pas sauter d'étapes), 5) Refactor tests ET code, 6) Tests indépendants (pas d'ordre d'exécution), 7) Mock les dépendances externes. Implémentation : outils (JUnit, Jest), IDE supportant TDD, pratique en pair programming, formation équipe, adoption progressive sur nouveaux composants."
+                },
+                {
                     question: "Qu'est-ce que le mocking et comment gérer les dépendances dans les tests ?",
                     answer: "Le mocking consiste à remplacer les dépendances externes par des objets simulés (mocks) pour isoler l'unité testée. Types : Mock (vérification comportement), Stub (retourne des données prédéfinies), Spy (observateur), Fake (implémentation simplifiée). Gestion dépendances : 1) Injection de dépendances, 2) Mocking des APIs/DB, 3) Frameworks : Mockito (Java), Sinon (JS), 4) Test doubles pour services externes, 5) Fixtures pour données test. Objectif : tests rapides, déterministes, isolés."
                 },
                 {
-                    question: "Quelle est la différence entre tests unitaires, d'intégration, fonctionnels et E2E ?",
-                    answer: "Tests unitaires : unité de code isolée, rapides, nombreux. Tests d'intégration : interaction entre composants, APIs, DB. Tests fonctionnels : validation des exigences métier, comportement attendu. Tests E2E : parcours utilisateur complet de bout en bout, interface réelle. Pyramide : beaucoup d'unitaires (base), moins d'intégration/fonctionnels (milieu), peu d'E2E (sommet). Chaque niveau a un coût et une valeur différents. Stratégie équilibrée pour couverture optimale."
+                    question: "Comment créer un environnement de test ?",
+                    answer: "Création environnement test : 1) Isolation (base de données test séparée), 2) Données de test reproductibles (fixtures, factories), 3) Configuration spécifique (properties/env vars), 4) Dépendances mockées/stubbed, 5) Nettoyage automatique après tests, 6) Parallélisation possible, 7) CI/CD integration, 8) Docker pour reproductibilité. Stratégies : base in-memory (H2), TestContainers, environnements éphémères cloud. Principe : tests doivent être indépendants et répétables."
+                },
+                {
+                    question: "Que faire si un test échoue ?",
+                    answer: "Quand un test échoue : 1) Analyser le message d'erreur précisément, 2) Reproduire l'échec localement, 3) Vérifier si c'est un vrai bug ou test défaillant, 4) Debugger avec breakpoints/logs, 5) Corriger le code ou ajuster le test, 6) Relancer tous les tests impactés, 7) Documenter la cause si complexe, 8) Ne jamais ignorer/commenter un test qui échoue. En CI : bloquer le merge/déploiement, notifier l'équipe, analyser les logs de build."
+                },
+                {
+                    question: "Quels outils et frameworks recommandes-tu pour automatiser les tests ?",
+                    answer: "Outils tests par type : Unitaires : JUnit (Java), Jest (JS), pytest (Python), xUnit (.NET). Intégration : TestNG, Mockito, WireMock. E2E : Selenium, Cypress, Playwright, Puppeteer. Performance : JMeter, k6, Gatling. API : Rest Assured, Postman/Newman, Insomnia. Mobile : Appium, Espresso, XCTest. CI/CD : intégration native Jenkins/GitHub Actions. Runners : Maven Surefire, npm test. Choix selon : langage, type app, équipe skills, écosystème existant."
+                },
+                {
+                    question: "Comment organiser et prioriser les tests en méthodologie Agile ?",
+                    answer: "Organisation tests Agile : 1) Pyramide des tests (beaucoup unitaires, moins E2E), 2) Tests dans Definition of Done, 3) Acceptance criteria = scenarios de test, 4) Test automation dans sprints, 5) Régression automatisée continue. Priorisation : 1) Fonctionnalités critiques d'abord, 2) Risques métier élevés, 3) Zones de code instables, 4) User stories prioritaires. Pratiques : BDD (Behavior Driven Development), ATDD (Acceptance Test Driven Development), tests exploratoires en fin de sprint."
                 }
             ],
             security: [
@@ -686,12 +722,40 @@
                     answer: "Mot de passe sécurisé : 1) Longueur minimale 12-16 caractères, 2) Mélange majuscules, minuscules, chiffres, symboles, 3) Éviter informations personnelles et mots du dictionnaire, 4) Unique par service, 5) Passphrase mémorable avec mots aléatoires, 6) Gestionnaire de mots de passe recommandé, 7) Vérification force en temps réel, 8) Pas de stockage en clair, 9) Expiration périodique pour comptes sensibles, 10) Formation utilisateurs sensibilisation sécurité."
                 },
                 {
+                    question: "Comment intégrer la cryptographie et la gestion des identités dans une application sécurisée ?",
+                    answer: "Intégration crypto et identités : 1) PKI (Public Key Infrastructure) pour certificats, 2) HSM (Hardware Security Module) pour clés sensibles, 3) Chiffrement asymétrique pour échange clés, 4) Chiffrement symétrique pour données, 5) Signatures numériques pour intégrité, 6) SSO/SAML/OAuth2 pour fédération identités, 7) LDAP/Active Directory pour annuaires, 8) MFA obligatoire, 9) Rotation automatique des clés, 10) Audit trails chiffrés, 11) Vault pour secrets management."
+                },
+                {
+                    question: "Comment implémenter un système de gestion des permissions efficace ?",
+                    answer: "Système permissions efficace : 1) RBAC (Role-Based Access Control) avec rôles métier, 2) ABAC (Attribute-Based) pour règles complexes, 3) Principe moindre privilège par défaut, 4) Héritage hiérarchique des permissions, 5) Permissions granulaires (CRUD par ressource), 6) Délégation contrôlée de permissions, 7) Audit et révision régulière, 8) Interface admin intuitive, 9) Tests automatisés des autorisations, 10) Documentation des rôles/permissions, 11) Workflow d'approbation pour changements sensibles."
+                },
+                {
+                    question: "Quelles sont les meilleures pratiques pour sécuriser les données sensibles en transit et au repos ?",
+                    answer: "Données en transit : 1) TLS 1.3 minimum, 2) Certificate pinning, 3) VPN pour réseaux non sûrs, 4) API Gateway avec chiffrement bout-en-bout. Données au repos : 1) Chiffrement filesystem (BitLocker, FileVault), 2) Chiffrement base de données (TDE), 3) Clés de chiffrement séparées des données, 4) Backup chiffrées, 5) Destruction sécurisée, 6) Classification des données (public, confidentiel, secret), 7) Access control granulaire, 8) Audit des accès, 9) Tokenization pour données sensibles."
+                },
+                {
+                    question: "Quels sont les défis spécifiques à la sécurité des applications mobiles et PWA ?",
+                    answer: "Défis mobiles/PWA : 1) Stockage local non sécurisé (keychain, encrypted preferences), 2) Communication réseau sur WiFi publics, 3) Jailbreak/Root detection, 4) Reverse engineering apps, 5) Certificate pinning contournement, 6) Biométrie et authentification locale, 7) Updates sécurité fragmentées, 8) Permissions excessives, 9) Code obfuscation nécessaire, 10) Service Workers et cache PWA, 11) APIs sensibles du navigateur, 12) CSP (Content Security Policy) strict, 13) Tests sur devices physiques multiples."
+                },
+                {
+                    question: "Comment détecter et corriger les failles de sécurité dans une application en production ?",
+                    answer: "Détection failles production : 1) SIEM (Security Information Event Management), 2) WAF (Web Application Firewall) avec logs, 3) Monitoring anomalies comportementales, 4) Vulnerability scanning automatisé, 5) Bug bounty programs, 6) Pentest réguliers, 7) Code review sécurité, 8) Dependency checking (Snyk, OWASP Dependency Check). Correction : 1) Incident response plan, 2) Patch management rapide, 3) Rollback procédures, 4) Communication transparent, 5) Post-mortem et amélioration continue, 6) Monitoring renforcé post-correction."
+                },
+                {
                     question: "Quel est le rôle de l'ANSSI et pourquoi suivre ses recommandations ?",
                     answer: "L'ANSSI (Agence Nationale de la Sécurité des Systèmes d'Information) est l'autorité française de cybersécurité. Rôles : 1) Protection des systèmes d'information de l'État, 2) Réglementation et certification sécurité, 3) Veille sur les menaces cyber, 4) Accompagnement des organismes publics et privés, 5) Incident response national. Suivre ses recommandations : conformité réglementaire, bonnes pratiques éprouvées, protection contre menaces actuelles, crédibilité auprès des clients/partenaires, éviter sanctions."
                 },
                 {
                     question: "Quelles sont les obligations du RGPD pour une application qui stocke des données utilisateurs ?",
                     answer: "Obligations RGPD : 1) Consentement explicite et révocable, 2) Finalité définie et proportionnelle, 3) Durée de conservation limitée, 4) Droit d'accès, rectification, effacement ('droit à l'oubli'), 5) Portabilité des données, 6) Notification violation sous 72h, 7) DPO si traitement à grande échelle, 8) Analyse d'impact (DPIA) si risque élevé, 9) Privacy by design, 10) Registre des traitements, 11) Amendes jusqu'à 4% du CA mondial. Documentation et preuves de conformité essentielles."
+                },
+                {
+                    question: "Quelles obligations le RGPD impose-t-il pour une interface utilisateur ?",
+                    answer: "RGPD pour interfaces : 1) Consentement granulaire par finalité (cookies, analytics, marketing), 2) Interfaces de gestion du consentement claires, 3) Information transparente sur collecte/usage, 4) Accès facilité aux paramètres de confidentialité, 5) Export/suppression données en self-service, 6) Formulaires avec finalités explicites, 7) Opt-in par défaut (pas de cases pré-cochées), 8) Bannières cookies conformes, 9) Langue locale et compréhensible, 10) Design patterns respectueux (dark patterns interdits), 11) Accessibilité des fonctions RGPD."
+                },
+                {
+                    question: "Quelles obligations légales dois-tu respecter lors de la conception d'une interface ?",
+                    answer: "Obligations légales interfaces : 1) RGPD (protection données personnelles), 2) Accessibilité numérique (RGAA en France, WCAG internationalement), 3) Mentions légales obligatoires, 4) CGU/CGV conformes, 5) Cookies et traceurs (consentement CNIL), 6) Droit à l'oubli implémenté, 7) Sécurité des mineurs, 8) Anti-discrimination (conception inclusive), 9) Propriété intellectuelle respectée, 10) E-commerce : informations obligatoires, délai rétractation, 11) Hébergement : identification hébergeur, 12) Archivage légal selon secteur d'activité."
                 }
             ],
             design: [
@@ -704,8 +768,28 @@
                     answer: "Wireframe : structure schématique en noir et blanc, focus sur layout et hiérarchie de l'information, sans couleurs ni images finales. Objectif : architecture de l'information et navigation. Maquette : design visuel détaillé avec couleurs, typographies, images réelles, représentation fidèle du rendu final. Prototype : maquette interactive avec transitions et comportements. Progression : Wireframe → Maquette → Prototype → Développement. Chaque étape ajoute du détail et valide différents aspects."
                 },
                 {
+                    question: "Quelle est la différence entre une maquette et un prototype ?",
+                    answer: "Maquette : représentation visuelle statique haute-fidélité avec design final (couleurs, typographies, images), montre l'apparence exacte. Prototype : version interactive de la maquette avec navigation, transitions, animations, simule le comportement réel. Types de prototypes : 1) Basse fidélité (wireframes cliquables), 2) Haute fidélité (proche du produit final), 3) Fonctionnel (avec vraies données). Outils : Figma, Adobe XD, Principle, Framer. Prototype permet validation UX avant développement."
+                },
+                {
+                    question: "Que contient un dossier de conception ?",
+                    answer: "Dossier de conception contient : 1) Brief et cahier des charges, 2) Personas et user journey maps, 3) Benchmarks concurrentiels, 4) Arborescence et architecture information, 5) Wireframes et user flows, 6) Maquettes haute fidélité toutes résolutions, 7) Prototype interactif, 8) Charte graphique et style guide, 9) Spécifications techniques (espacements, couleurs, fonts), 10) Assets exportés (icônes, images), 11) Documentation développeurs, 12) Tests utilisateurs et recommandations."
+                },
+                {
+                    question: "Quels outils de maquettage utiliser et comment les intégrer dans un projet ?",
+                    answer: "Outils maquettage : 1) Figma : collaboratif, web-based, components/variants, 2) Adobe XD : écosystème Adobe, prototypage avancé, 3) Sketch : Mac only, plugins riches, 4) Framer : prototypage complexe avec code. Intégration projet : 1) Librairies de composants partagées, 2) Design system synchronisé, 3) Handoff développeurs (inspect mode), 4) Versioning et feedback clients, 5) Export assets automatisé, 6) Specs développeurs générées, 7) Tests utilisateurs sur prototypes, 8) Validation continue design/développement."
+                },
+                {
                     question: "Quelle est la différence entre UI et UX ?",
                     answer: "UI (User Interface) : aspect visuel et interactif, design des éléments graphiques, couleurs, typographies, boutons, animations. Focus sur l'esthétique et l'utilisabilité immédiate. UX (User Experience) : expérience globale utilisateur, parcours, émotions, efficacité, satisfaction. Inclut recherche utilisateur, architecture de l'information, tests d'utilisabilité. UX = stratégie et recherche, UI = implémentation visuelle. UX définit ce que fait le produit, UI définit comment il apparaît. Collaboration étroite nécessaire."
+                },
+                {
+                    question: "Quels principes ergonomiques faut-il respecter pour une bonne expérience utilisateur ?",
+                    answer: "Principes ergonomiques UX : 1) Simplicité et clarté (loi de Hick), 2) Cohérence interface et interactions, 3) Feedback immédiat sur actions, 4) Contrôle utilisateur (undo/redo), 5) Prévention erreurs et récupération, 6) Reconnaissance plutôt que rappel, 7) Flexibilité pour experts/novices, 8) Design esthétique et minimaliste, 9) Aide et documentation accessibles, 10) Navigation intuitive, 11) Hiérarchie visuelle claire, 12) Affordances évidentes, 13) Loi de Fitts (cibles importantes grandes), 14) Gestalt principles."
+                },
+                {
+                    question: "Comment analyser un cahier des charges et formaliser les besoins utilisateurs ?",
+                    answer: "Analyse cahier des charges : 1) Extraction objectifs métier et contraintes, 2) Identification personas et contextes usage, 3) Mapping besoins fonctionnels/non-fonctionnels, 4) User stories avec acceptance criteria. Formalisation besoins : 1) Personas détaillées avec jobs-to-be-done, 2) User journey maps avec pain points, 3) Functional requirements documentés, 4) User stories priorisées (MoSCoW), 5) Wireflows et task flows, 6) Matrices de traçabilité, 7) Prototypes validation concept, 8) Tests utilisateurs early feedback. Méthodes : interviews, observations, surveys, card sorting."
                 },
                 {
                     question: "Quelles sont les normes d'accessibilité à respecter pour concevoir une interface inclusive ?",
@@ -718,8 +802,16 @@
             ],
             project: [
                 {
+                    question: "Comment planifies-tu les tâches de développement d'un projet ?",
+                    answer: "Planification développement : 1) Décomposition fonctionnalités en user stories, 2) Estimation effort (story points, planning poker), 3) Priorisation selon valeur métier (MoSCoW), 4) Sprint planning avec capacité équipe, 5) Backlog refinement régulier, 6) Identification dépendances et blocages, 7) Definition of Done claire, 8) Buffer pour imprévus (20%), 9) Roadmap long terme avec milestones, 10) Rétrospectives pour amélioration continue. Outils : Jira, Azure DevOps, Trello, roadmaps visuels."
+                },
+                {
                     question: "Quelle est la différence entre une gestion de projet séquentielle et Agile ?",
                     answer: "Gestion séquentielle (Waterfall) : phases linéaires (analyse→conception→développement→test→déploiement), planification complète en amont, changements difficiles. Avantages : prévisibilité, documentation complète. Inconvénients : rigidité, feedback tardif, risque d'inadéquation. Agile : itérations courtes (sprints), adaptabilité aux changements, collaboration client continue, livraisons fréquentes. Avantages : flexibilité, feedback rapide, valeur métier continue. Choix selon : complexité projet, stabilité exigences, équipe."
+                },
+                {
+                    question: "Quelle est la différence entre une approche séquentielle et Agile en gestion de projet ?",
+                    answer: "Approche séquentielle : 1) Phases successives avec gates, 2) Planification détaillée initiale, 3) Changements coûteux, 4) Validation finale, 5) Documentation extensive, 6) Équipes spécialisées par phase. Agile : 1) Itérations courtes et adaptatives, 2) Planification émergente, 3) Changements encouragés, 4) Feedback continu, 5) Documentation juste suffisante, 6) Équipes cross-fonctionnelles. Hybride possible : phases macro avec sprints internes, SAFe pour grandes organisations."
                 },
                 {
                     question: "Qu'est-ce qu'un daily meeting en Agile ?",
@@ -730,8 +822,20 @@
                     answer: "Outils gestion projet : 1) Planification : Jira, Asana, Trello, Monday.com, 2) Communication : Slack, Microsoft Teams, Discord, 3) Versioning : Git (GitHub, GitLab, Bitbucket), 4) Documentation : Confluence, Notion, Wiki, 5) Design : Figma, Adobe XD, 6) CI/CD : Jenkins, GitHub Actions, 7) Monitoring : New Relic, Datadog, 8) Files : Google Drive, SharePoint, 9) Temps : Toggl, Harvest. Choix selon taille équipe, budget, intégrations nécessaires. Important : éviter la sur-outillage."
                 },
                 {
+                    question: "Quels sont les principaux outils de gestion de projet informatique ?",
+                    answer: "Outils gestion projet IT : 1) Planification : Microsoft Project, Smartsheet pour Gantt complexes, 2) Agile : Jira, Azure DevOps, Rally, VersionOne, 3) Collaboration : Confluence, SharePoint, Notion, 4) Communication : Slack, Teams, Mattermost, 5) Temps/Budget : Toggl, Harvest, Clockify, 6) Ressources : Resource Guru, Float, 7) Risques : Risk Register, Monte Carlo simulations, 8) Portfolio : Clarity, ServiceNow PPM. Intégration ecosystem crucial pour efficacité."
+                },
+                {
+                    question: "Comment organiser et animer une réunion efficace dans un projet informatique ?",
+                    answer: "Réunion efficace : Avant : 1) Objectif clair et agenda partagé, 2) Participants pertinents uniquement, 3) Durée limitée (25/50min), 4) Documentation préparatoire. Pendant : 1) Timeboxing strict, 2) Facilitateur neutre, 3) Parking lot pour hors-sujet, 4) Actions/décisions notées. Après : 1) Compte-rendu avec actions/responsables/deadlines, 2) Suivi dans outils projet, 3) Feedback réunion. Types spécialisés : sprint planning, retrospective, demo, architecture decision records. Remote : outils collaboratifs, caméras obligatoires."
+                },
+                {
                     question: "Comment assurer la qualité du code dans un projet ?",
                     answer: "Qualité code : 1) Standards de codage et conventions équipe, 2) Code reviews systématiques (pull requests), 3) Tests automatisés (unitaires, intégration, E2E), 4) Analyse statique de code (SonarQube, ESLint), 5) CI/CD avec gates qualité, 6) Pair programming ou mob programming, 7) Refactoring régulier, 8) Documentation technique à jour, 9) Formation continue équipe, 10) Métriques qualité (couverture tests, complexité cyclomatique). Culture qualité plus importante que les outils."
+                },
+                {
+                    question: "Pourquoi est-il important de rédiger de la documentation technique dans un projet ?",
+                    answer: "Documentation technique essentielle pour : 1) Onboarding nouveaux développeurs, 2) Maintenance et évolution future, 3) Partage connaissance (pas de single point of failure), 4) Décisions d'architecture justifiées, 5) Compliance et audit, 6) Debugging facilité, 7) APIs utilisables par autres équipes, 8) Handover projets, 9) Formation utilisateurs. Types : README, API docs, architecture decisions (ADR), runbooks, troubleshooting guides. Outils : GitBook, Confluence, Docusaurus. Maintenir à jour crucial."
                 },
                 {
                     question: "Quelle est la différence entre un use case et une user story ?",
