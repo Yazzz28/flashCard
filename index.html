@@ -262,12 +262,52 @@
                     answer: "C'est important car : 1) Plus de 50% du trafic web vient du mobile, 2) Google privilégie les sites mobile-friendly dans son référencement, 3) L'expérience utilisateur varie selon l'appareil utilisé, 4) Cela améliore l'accessibilité pour tous les utilisateurs, 5) Cela augmente le taux de conversion et réduit le taux de rebond, 6) C'est une exigence professionnelle moderne."
                 },
                 {
+                    question: "Comment t'assures-tu que ton interface respecte la maquette du dossier de conception ?",
+                    answer: "Pour respecter la maquette : 1) Comparaison pixel-perfect avec des outils de superposition, 2) Utilisation d'un design system cohérent, 3) Respect des spacing, couleurs et typographies définies, 4) Tests sur différents navigateurs et appareils, 5) Validation avec l'équipe design, 6) Utilisation d'outils comme Figma inspect ou Zeplin, 7) Documentation des écarts justifiés, 8) Tests d'intégration réguliers pendant le développement."
+                },
+                {
+                    question: "Pourquoi et comment tester une interface utilisateur ?",
+                    answer: "Tests UI essentiels pour : 1) Validation fonctionnelle des interactions, 2) Détection de régressions visuelles, 3) Vérification de l'accessibilité, 4) Performance et responsive design. Comment : Tests automatisés (Selenium, Cypress, Playwright), tests manuels, tests d'utilisabilité, tests de compatibilité navigateurs, tests de performance (Lighthouse), validation W3C, tests d'accessibilité (axe, Wave). Combine approches pour couverture complète."
+                },
+                {
+                    question: "Quels mécanismes peux-tu mettre en place pour sécuriser une interface ?",
+                    answer: "Sécurisation interface : 1) Validation côté client ET serveur, 2) Échappement des données utilisateur, 3) CSP (Content Security Policy) headers, 4) HTTPS obligatoire, 5) Protection CSRF avec tokens, 6) Sanitization des entrées, 7) Rate limiting, 8) Authentification et autorisation, 9) Audit sécurité régulier, 10) Mise à jour des dépendances, 11) CORS configuré correctement, 12) Headers sécurisés (X-Frame-Options, X-XSS-Protection)."
+                },
+                {
                     question: "Comment fonctionne le DOM et quelle est son importance dans les interfaces web ?",
                     answer: "Le DOM (Document Object Model) est une représentation en arbre des éléments HTML d'une page web. Chaque balise devient un nœud que JavaScript peut manipuler dynamiquement. Son importance : 1) Permet l'interactivité via JavaScript, 2) Structure hiérarchique des éléments, 3) Interface entre HTML/CSS et JavaScript, 4) Permet la manipulation en temps réel du contenu, 5) Base pour les frameworks modernes, 6) Gestion des événements utilisateur."
                 },
                 {
                     question: "Quelles sont les principales vulnérabilités web (XSS, CSRF) et comment s'en prémunir ?",
                     answer: "XSS (Cross-Site Scripting) : injection de scripts malveillants. Prévention : validation et échappement des données, CSP headers. CSRF (Cross-Site Request Forgery) : exécution d'actions non autorisées. Prévention : tokens CSRF, vérification de l'origine, SameSite cookies. Autres vulnérabilités : injection SQL (requêtes préparées), clickjacking (X-Frame-Options), HTTPS obligatoire, validation côté serveur."
+                },
+                {
+                    question: "Comment se protéger contre les injections SQL, XSS et CSRF ?",
+                    answer: "Protection multicouche : SQL Injection : requêtes préparées, ORM, validation stricte, principe moindre privilège DB. XSS : échappement HTML, CSP, validation entrées, sanitization. CSRF : tokens synchronisés, SameSite cookies, vérification Referer/Origin. Général : validation côté serveur obligatoire, encodage approprié, framework sécurisé, tests sécurité, monitoring, formation équipe. Never trust user input !"
+                },
+                {
+                    question: "Pourquoi doit-on valider les données côté frontend et backend ?",
+                    answer: "Double validation nécessaire : Frontend : UX améliorée, feedback immédiat, réduction requêtes serveur, guide utilisateur. Backend : sécurité réelle (frontend contournable), intégrité données, conformité business rules, protection API. Frontend = confort utilisateur, Backend = sécurité obligatoire. Les validations frontend peuvent être désactivées/modifiées, donc backend reste la barrière de sécurité principale. Principe : never trust client-side data."
+                },
+                {
+                    question: "Quelles sont les bonnes pratiques UX pour améliorer l'ergonomie d'une interface web ?",
+                    answer: "Bonnes pratiques UX : 1) Design intuitif et prévisible, 2) Navigation claire et cohérente, 3) Feedback visuel immédiat, 4) Chargement rapide (<3s), 5) Mobile-first design, 6) Accessibilité universelle, 7) Contenu scannable, 8) CTAs clairs, 9) Formulaires simples, 10) Tests utilisateurs réguliers, 11) Hiérarchie visuelle claire, 12) Erreurs explicites et solutions, 13) Recherche efficace, 14) Personnalisation adaptée."
+                },
+                {
+                    question: "Quels facteurs influencent le référencement SEO d'une interface web ?",
+                    answer: "Facteurs SEO : 1) Performance (Core Web Vitals), 2) Mobile-friendly responsive, 3) Structure HTML sémantique, 4) Balises meta optimisées, 5) Contenu de qualité et unique, 6) URL structure claire, 7) Images optimisées avec alt, 8) HTTPS obligatoire, 9) Schema markup, 10) Sitemap XML, 11) Linking interne/externe, 12) Temps de chargement, 13) Accessibilité, 14) Contenu frais régulier, 15) Social signals."
+                },
+                {
+                    question: "Quelles règles d'accessibilité dois-tu respecter lors du développement d'une interface ?",
+                    answer: "Règles d'accessibilité WCAG 2.1 : 1) Perceptible : alt text images, contrastes 4.5:1, sous-titres vidéos, 2) Utilisable : navigation clavier, pas de clignotements, temps suffisant, 3) Compréhensible : langage simple, navigation prévisible, aide erreurs, 4) Robuste : HTML valide, compatible assistive technologies. Tests : lecteurs d'écran, validation automatique, audit manuel. Bénéficie à tous les utilisateurs."
+                },
+                {
+                    question: "Comment améliorer l'accessibilité d'une interface ?",
+                    answer: "Amélioration accessibilité : 1) HTML sémantique correct, 2) Alternative text pour images, 3) Contrastes suffisants, 4) Navigation clavier fluide, 5) Labels explicites formulaires, 6) ARIA labels appropriés, 7) Focus visible, 8) Tailles cliquables ≥44px, 9) Tests lecteurs d'écran, 10) Vidéos sous-titrées, 11) Structure hiérarchique headings, 12) Messages d'erreur clairs, 13) Temps de session adaptés, 14) Documentation utilisateur."
+                },
+                {
+                    question: "Qu'est-ce que le RGAA et pourquoi est-il important ?",
+                    answer: "RGAA (Référentiel Général d'Amélioration de l'Accessibilité) : standard français d'accessibilité numérique basé sur WCAG. Obligatoire pour services publics, recommandé pour privé. Importance : 1) Conformité légale, 2) Inclusion universelle, 3) Amélioration UX globale, 4) SEO renforcé, 5) Image de marque, 6) Marché élargi (12M personnes handicapées France). Certification possible, audits réguliers nécessaires."
                 }
             ],
             backend: [
@@ -288,16 +328,88 @@
                     answer: "Les interfaces servent à : 1) Définir un contrat que les classes doivent respecter, 2) Permettre l'héritage multiple en Java, 3) Faciliter les tests avec des mocks, 4) Découpler le code et améliorer la flexibilité, 5) Respecter le principe d'inversion de dépendance, 6) Permettre le polymorphisme, 7) Standardiser les comportements entre différentes implémentations, 8) Faciliter la maintenance et l'évolutivité du code."
                 },
                 {
+                    question: "Dans quel cas utiliser une classe abstraite plutôt qu'une interface ?",
+                    answer: "Utiliser une classe abstraite quand : 1) Partage de code commun entre classes dérivées, 2) Constructeurs avec logique d'initialisation, 3) Variables d'instance partagées, 4) Méthodes avec implémentation par défaut, 5) Contrôle d'accès varié (protected, private), 6) Évolution future sans casser les implémentations. Interface quand : contrat pur, héritage multiple nécessaire, pas de logique partagée. Règle : classe abstraite = relation 'IS-A' forte, interface = capacité 'CAN-DO'."
+                },
+                {
+                    question: "Pourquoi dit-on que l'héritage favorise la réutilisation du code ?",
+                    answer: "L'héritage favorise la réutilisation car : 1) Évite la duplication en héritant des méthodes/attributs de la classe parent, 2) Permet l'extension de fonctionnalités existantes, 3) Factorisation du code commun dans la classe de base, 4) Maintenance centralisée des fonctionnalités communes, 5) Respect du principe DRY (Don't Repeat Yourself), 6) Hiérarchie logique des concepts métier. Attention : privilégier composition over inheritance pour éviter couplage fort."
+                },
+                {
+                    question: "Comment empêcher une classe d'être héritée en Java ?",
+                    answer: "En Java, utiliser le mot-clé 'final' devant la déclaration de classe : 'public final class MaClasse'. Exemples : String, Integer, Boolean sont des classes final. Pourquoi : 1) Sécurité et intégrité du design, 2) Performance (pas de virtual method calls), 3) Immutabilité garantie, 4) API stable et prévisible. Alternative : constructeur privé avec factory methods pour contrôler l'instanciation sans empêcher l'héritage."
+                },
+                {
+                    question: "Comment garantit-on l'encapsulation des données en Java ?",
+                    answer: "Encapsulation en Java : 1) Attributs privés (private), 2) Getters/setters publics pour accès contrôlé, 3) Validation dans les setters, 4) Retour de copies défensives pour objets mutables, 5) Classes internes privées, 6) Package-private quand approprié. Exemple : private String nom; public String getNom() { return nom; } public void setNom(String nom) { if(nom != null) this.nom = nom; }. Protège l'intégrité des données et cache l'implémentation."
+                },
+                {
+                    question: "Une classe peut-elle implémenter plusieurs interfaces en Java ?",
+                    answer: "Oui, une classe Java peut implémenter plusieurs interfaces : 'class MaClasse implements Interface1, Interface2, Interface3'. Avantages : 1) Héritage multiple de comportements, 2) Flexibilité architectural, 3) Respect du contrat de plusieurs APIs, 4) Polymorphisme multiple. Attention aux : conflits de méthodes par défaut (résolution explicite requise), complexité accrue. Exemple : class Voiture implements Vehicule, Assurable, Trackable."
+                },
+                {
+                    question: "Pourquoi et comment appliquer le principe de l'encapsulation ?",
+                    answer: "Encapsulation : principes et mise en œuvre. Pourquoi : 1) Protection des données internes, 2) Contrôle d'accès et validation, 3) Facilite maintenance et évolution, 4) Réduit couplage, 5) Améliore testabilité. Comment : attributs privés, méthodes publiques d'accès, validation dans setters, documentation des contrats, tests unitaires de l'API publique. Design by contract : préconditions, postconditions, invariants. Résultat : code plus robuste et maintenable."
+                },
+                {
                     question: "Comment sécuriser une API REST ?",
                     answer: "Pour sécuriser une API REST : 1) Authentification (JWT, OAuth2), 2) Autorisation basée sur les rôles (RBAC), 3) Validation stricte des entrées, 4) Rate limiting pour éviter les attaques DoS, 5) HTTPS obligatoire, 6) CORS configuré correctement, 7) Logs et monitoring des accès, 8) Versionning de l'API, 9) Gestion des erreurs sans exposer d'informations sensibles, 10) Tests de sécurité réguliers."
+                },
+                {
+                    question: "Pourquoi et comment valider les entrées utilisateur dans une API ?",
+                    answer: "Validation API critique pour : sécurité (injection, XSS), intégrité données, stabilité système, UX cohérente. Comment : 1) Validation syntaxique (format, type, longueur), 2) Validation sémantique (business rules), 3) Sanitization des entrées, 4) Whitelist validation, 5) Frameworks de validation (Bean Validation JSR-303), 6) Validation en couches (DTO, service, persistence), 7) Messages d'erreur informatifs mais non révélateurs, 8) Logging des tentatives malveillantes."
+                },
+                {
+                    question: "Pourquoi utiliser un format JSON pour les réponses d'une API REST ?",
+                    answer: "JSON privilégié pour APIs REST car : 1) Format léger et compact, 2) Support natif JavaScript, 3) Lisible humainement, 4) Largement supporté tous langages, 5) Structure flexible (objets, arrays), 6) Parsing rapide, 7) Standard web moderne, 8) Moins verbeux que XML, 9) Facilite intégration frontend, 10) Bon support tooling (validation, transformation). Alternative : XML pour enterprise, Protocol Buffers pour performance extrême."
+                },
+                {
+                    question: "Comment sécuriser un composant métier dans une application web ?",
+                    answer: "Sécurisation composant métier : 1) Validation des entrées systématique, 2) Autorisation granulaire par méthode, 3) Encapsulation des règles business, 4) Audit trail des opérations, 5) Gestion des exceptions sécurisée, 6) Principe de moindre privilège, 7) Tests de sécurité dédiés, 8) Chiffrement des données sensibles, 9) Session management approprié, 10) Logs sécurisés sans données sensibles, 11) Rate limiting par utilisateur/fonction."
+                },
+                {
+                    question: "Quelles sont les principales failles de sécurité en développement web ?",
+                    answer: "OWASP Top 10 : 1) Broken Access Control, 2) Cryptographic Failures, 3) Injection (SQL, NoSQL, LDAP), 4) Insecure Design, 5) Security Misconfiguration, 6) Vulnerable Components, 7) Authentication Failures, 8) Software/Data Integrity Failures, 9) Logging/Monitoring Failures, 10) Server-Side Request Forgery (SSRF). Prévention : formation équipe, code review sécurisé, outils SAST/DAST, pentesting régulier, veille vulnérabilités, framework sécurisé."
                 },
                 {
                     question: "Comment fonctionne l'authentification avec JWT ?",
                     answer: "JWT (JSON Web Token) fonctionne ainsi : 1) L'utilisateur s'authentifie avec ses identifiants, 2) Le serveur vérifie et génère un token JWT signé contenant des claims (user ID, rôles, expiration), 3) Le client stocke le token (localStorage/sessionStorage), 4) Pour chaque requête, le client envoie le token dans l'header Authorization: Bearer <token>, 5) Le serveur vérifie la signature et l'expiration, 6) Si valide, la requête est autorisée. Avantages : stateless, scalable, sécurisé."
                 },
                 {
+                    question: "Comment gérer les autorisations côté backend avec Spring Boot ?",
+                    answer: "Autorisations Spring Boot : 1) Spring Security avec @EnableGlobalMethodSecurity, 2) Annotations @PreAuthorize, @PostAuthorize, @Secured, 3) Configuration WebSecurityConfigurer, 4) Roles et Authorities via UserDetails, 5) ACL (Access Control Lists) pour granularité fine, 6) JWT Claims pour rôles, 7) Method-level security, 8) SpEL expressions pour logique complexe. Exemple : @PreAuthorize('hasRole(\"ADMIN\") or #userId == authentication.name'). Tests avec @WithMockUser."
+                },
+                {
+                    question: "Pourquoi activer CORS dans une API backend ?",
+                    answer: "CORS (Cross-Origin Resource Sharing) nécessaire car : Same-Origin Policy bloque requêtes inter-domaines par défaut pour sécurité. CORS permet : 1) Frontend et API sur domaines différents, 2) SPAs consommant APIs tierces, 3) Microservices architecture, 4) CDN et assets externes. Configuration : headers Access-Control-Allow-Origin, Allow-Methods, Allow-Headers. Spring : @CrossOrigin ou WebMvcConfigurer. Production : domaines spécifiques, pas de wildcard '*'."
+                },
+                {
+                    question: "Pourquoi un token JWT doit-il avoir une durée de vie limitée ?",
+                    answer: "JWT avec expiration courte pour : 1) Limiter impact en cas de vol/fuite, 2) Rotation sécurisée des credentials, 3) Révocation possible via refresh tokens, 4) Compliance réglementaire, 5) Principe de moindre exposition. Stratégie : access token court (15min-1h) + refresh token long (7-30j). Stockage sécurisé : httpOnly cookies > localStorage. Monitoring des tokens expirés/suspects. Balance entre sécurité et UX."
+                },
+                {
+                    question: "Comment sécuriser une API avec OAuth2 et JWT ?",
+                    answer: "OAuth2 + JWT architecture : 1) Authorization Server émet JWT après authentification, 2) Resource Server valide JWT signature et claims, 3) Scopes pour granularité permissions, 4) PKCE pour clients publics, 5) State parameter anti-CSRF, 6) TLS obligatoire, 7) Rotation des secrets, 8) Audit logs détaillés. Flows : Authorization Code (SPAs), Client Credentials (M2M). Libraries : Spring Security OAuth2, Auth0. Tests : mock JWT, test authorizations scenarios."
+                },
+                {
                     question: "Quelle est la différence entre le JDK et la JVM ?",
                     answer: "JVM (Java Virtual Machine) : environnement d'exécution qui interprète et exécute le bytecode Java, assure la portabilité 'Write Once, Run Anywhere', gère la mémoire et le garbage collection. JDK (Java Development Kit) : kit de développement complet qui inclut la JVM, le compilateur javac, les outils de développement (debugger, javadoc), les bibliothèques standard, et les APIs. En résumé : JDK = outils de développement + JVM, JVM = environnement d'exécution uniquement."
+                },
+                {
+                    question: "Quelles sont les bonnes pratiques pour concevoir une API RESTful bien structurée ?",
+                    answer: "API RESTful bien conçue : 1) Noms de ressources substantifs (users, orders), 2) HTTP verbs appropriés (GET, POST, PUT, DELETE), 3) Structure URLs hiérarchique (/users/123/orders), 4) Codes de statut HTTP précis, 5) Versioning dans URL ou headers, 6) Pagination, filtrage, tri, 7) HATEOAS pour discoverability, 8) Documentation OpenAPI/Swagger, 9) Validation et gestion d'erreurs consistantes, 10) Cache headers, 11) Rate limiting, 12) Tests automatisés complets."
+                },
+                {
+                    question: "Quelles sont les différences fondamentales entre REST et GraphQL ?",
+                    answer: "REST vs GraphQL : REST : multiple endpoints, over/under-fetching possible, cache HTTP natif, maturité élevée, simplicité conceptuelle. GraphQL : endpoint unique, requête précise des données, résolution N+1 potential, cache complexe, courbe apprentissage. REST meilleur pour : APIs simples, cache HTTP, équipes junior. GraphQL meilleur pour : clients multiples, données complexes, développement rapide frontend. Choisir selon : complexité données, équipe, performance requirements, écosystème existant."
+                },
+                {
+                    question: "Quelles stratégies utiliser pour le versionnement et la compatibilité des APIs ?",
+                    answer: "Stratégies versioning API : 1) URL versioning (/v1/users, /v2/users), 2) Header versioning (Accept: application/vnd.api+json;version=1), 3) Query parameter (?version=1), 4) Semantic versioning (major.minor.patch). Compatibilité : 1) Backward compatibility stricte, 2) Deprecation warnings, 3) Sunset headers, 4) Transition periods, 5) Documentation migration guides, 6) Feature flags, 7) Contract testing. Éviter breaking changes, privilegier évolution additive."
+                },
+                {
+                    question: "Comment tester efficacement les endpoints d'une API (unitaires et intégration) ?",
+                    answer: "Tests API multicouches : Unitaires : services isolés, mocks dépendances, logique métier pure. Intégration : @SpringBootTest, TestContainers pour DB, MockMvc pour HTTP layer. Contrat : Pact testing entre consumer/provider. E2E : Rest Assured, Postman/Newman. Stratégie : pyramide tests, données de test isolées, CI/CD integration, monitoring production. Outils : JUnit, Mockito, WireMock, TestContainers. Coverage : happy path + edge cases + error scenarios."
                 }
             ],
             database: [
@@ -310,20 +422,92 @@
                     answer: "Clé primaire : identifiant unique pour chaque ligne d'une table, ne peut pas être NULL, une seule par table, assure l'intégrité d'entité. Exemple : user_id dans table Users. Clé étrangère : référence à la clé primaire d'une autre table, peut être NULL (sauf si NOT NULL), plusieurs par table, assure l'intégrité référentielle. Exemple : user_id dans table Orders qui référence Users.user_id. Les clés étrangères maintiennent la cohérence des relations entre tables."
                 },
                 {
+                    question: "Quelles sont les principales étapes de la méthode Merise pour concevoir une base de données ?",
+                    answer: "Méthode Merise : 1) Analyse des besoins et règles de gestion, 2) MCD (Modèle Conceptuel de Données) : entités, associations, cardinalités, 3) MLD (Modèle Logique de Données) : transformation en tables relationnelles, 4) MPD (Modèle Physique de Données) : implémentation SGBD spécifique, optimisations. Parallèlement : MCT (flux), MOT (organisation), MPT (technique). Validation à chaque étape, itérations possibles. Résultat : base de données normalisée et optimisée."
+                },
+                {
+                    question: "Quelle est la différence entre une association 1-1, 1-N et N-N dans Merise ?",
+                    answer: "Associations Merise : 1-1 (un-à-un) : une occurrence d'entité liée à une seule occurrence de l'autre (Personne-Passeport). 1-N (un-à-plusieurs) : une occurrence liée à plusieurs (Client-Commandes). N-N (plusieurs-à-plusieurs) : plusieurs occurrences liées à plusieurs (Étudiants-Cours). Implémentation : 1-1 et 1-N = clé étrangère, N-N = table d'association intermédiaire. Cardinalités précisent la participation (0,1 ou 1,1 ou 0,N ou 1,N)."
+                },
+                {
+                    question: "Comment construire et modéliser une base de données relationnelle efficace ?",
+                    answer: "Base de données efficace : 1) Analyse métier approfondie, 2) Normalisation (3NF minimum), 3) Choix types de données appropriés, 4) Index stratégiques, 5) Contraintes d'intégrité, 6) Dénormalisation contrôlée si nécessaire, 7) Partitioning pour gros volumes, 8) Archivage des données anciennes, 9) Tests de performance, 10) Documentation complète. Outils : ERwin, PowerDesigner, MySQL Workbench. Validation avec cas d'usage réels."
+                },
+                {
                     question: "Comment créer une base de données en SQL ?",
                     answer: "Pour créer une base de données en SQL : CREATE DATABASE nom_base_donnees; puis USE nom_base_donnees; pour l'utiliser. Options avancées : CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci; pour l'encodage. Exemple complet : CREATE DATABASE ecommerce CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci; Bonnes pratiques : utiliser des noms explicites, définir l'encodage, planifier la structure, prévoir les droits d'accès."
+                },
+                {
+                    question: "Comment créer une table avec une clé primaire et une clé étrangère ?",
+                    answer: "Création table SQL : CREATE TABLE users (id INT PRIMARY KEY AUTO_INCREMENT, nom VARCHAR(100) NOT NULL, email VARCHAR(255) UNIQUE); CREATE TABLE orders (id INT PRIMARY KEY AUTO_INCREMENT, user_id INT, amount DECIMAL(10,2), FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE ON UPDATE CASCADE); Contraintes : NOT NULL, UNIQUE, CHECK. Options FK : CASCADE, SET NULL, RESTRICT. Index automatique sur PK, recommandé sur FK."
                 },
                 {
                     question: "Comment protéger une base de données contre les injections SQL ?",
                     answer: "Protection contre l'injection SQL : 1) Requêtes préparées (prepared statements) - séparent code et données, 2) Validation stricte des entrées côté serveur, 3) Échappement des caractères spéciaux, 4) Utilisation d'un ORM (Hibernate, Doctrine), 5) Principe de moindre privilège pour les comptes DB, 6) Stored procedures avec paramètres, 7) Whitelist validation plutôt que blacklist, 8) Tests de sécurité réguliers, 9) Never trust user input."
                 },
                 {
+                    question: "Quelles sont les stratégies d'optimisation des performances des bases de données SQL ?",
+                    answer: "Optimisation performance SQL : 1) Index appropriés (B-tree, Hash, Bitmap), 2) Requêtes optimisées (EXPLAIN), 3) Dénormalisation contrôlée, 4) Partitioning horizontal/vertical, 5) Cache query results, 6) Connection pooling, 7) Maintenance régulière (ANALYZE, VACUUM), 8) Archivage données anciennes, 9) Hardware adapté (SSD, RAM), 10) Monitoring continu (slow query log). Mesurer avant/après optimisations."
+                },
+                {
+                    question: "Quelles sont les meilleures pratiques pour optimiser les requêtes SQL et NoSQL ?",
+                    answer: "Optimisation requêtes : SQL : 1) Index sur colonnes WHERE/JOIN, 2) Éviter SELECT *, 3) LIMIT pour pagination, 4) EXISTS vs IN selon contexte, 5) Analyze query plans. NoSQL : 1) Design orienté requêtes, 2) Index composés, 3) Sharding strategy, 4) Éviter cross-shard queries, 5) Projection fields appropriées. Général : cache, batch operations, monitoring performance, load testing. Outils : EXPLAIN, profilers, APM."
+                },
+                {
+                    question: "Quelles sont les bonnes pratiques pour sécuriser une base de données et gérer les comptes utilisateurs ?",
+                    answer: "Sécurisation base de données : 1) Comptes nominatifs avec mots de passe forts, 2) Principe de moindre privilège, 3) Rôles et permissions granulaires, 4) Rotation des mots de passe, 5) Audit des accès, 6) Chiffrement en transit (TLS) et au repos, 7) Sauvegarde chiffrées, 8) Monitoring des connexions suspectes, 9) Réseau sécurisé (VPN, firewall), 10) Maintenance sécurité régulière, 11) Formation équipes. Éviter comptes partagés."
+                },
+                {
+                    question: "Pourquoi ne faut-il pas utiliser root pour les accès à la base de données ?",
+                    answer: "Éviter root car : 1) Principe de moindre privilège violé, 2) Audit impossible (actions non traçables), 3) Risque sécuritaire énorme si compromis, 4) Pas de granularité des permissions, 5) Violation des standards sécurité, 6) Impossibilité de révoquer accès spécifiques, 7) Non-conformité réglementaire. Solution : comptes dédiés par application/utilisateur avec permissions minimales nécessaires. Root réservé aux tâches administratives ponctuelles."
+                },
+                {
+                    question: "Pourquoi faut-il toujours valider les entrées utilisateur avant d'insérer des données en base ?",
+                    answer: "Validation entrées obligatoire pour : 1) Prévention injection SQL, 2) Intégrité des données métier, 3) Cohérence format/type, 4) Respect contraintes DB, 5) Performance (éviter rollbacks), 6) Audit et conformité, 7) UX (messages d'erreur clairs), 8) Stabilité système. Validation multicouche : frontend (UX), backend (sécurité), database (intégrité). Never trust client data. Logs des tentatives malveillantes."
+                },
+                {
+                    question: "Comment sécuriser les accès aux bases de données SQL et NoSQL ?",
+                    answer: "Sécurisation accès DB : 1) Authentification forte (certificats, 2FA), 2) Autorisation granulaire (RBAC), 3) Chiffrement connexions (TLS/SSL), 4) VPN ou réseaux privés, 5) Firewall DB niveau réseau, 6) Rate limiting connexions, 7) Monitoring et alertes, 8) Audit logs détaillés, 9) Backup chiffrées hors site, 10) Patching sécurité régulier. NoSQL : attention aux configurations par défaut non sécurisées."
+                },
+                {
+                    question: "Comment tester la sécurité et l'intégrité des accès aux bases de données ?",
+                    answer: "Tests sécurité DB : 1) Tests d'intrusion automatisés, 2) Audit des permissions et rôles, 3) Vérification chiffrement, 4) Tests injection SQL/NoSQL, 5) Monitoring des accès anormaux, 6) Validation sauvegarde/restore, 7) Tests de performance sous charge, 8) Compliance checks (GDPR, PCI), 9) Penetration testing, 10) Code review accès données. Outils : SQLMap, OWASP ZAP, Nessus. Tests réguliers en CI/CD."
+                },
+                {
                     question: "Qu'est-ce qu'un ORM et pourquoi l'utiliser ?",
                     answer: "ORM (Object-Relational Mapping) : technique de programmation qui fait le lien entre objets métier et tables de base de données. Avantages : 1) Abstraction de la DB, code plus maintenable, 2) Protection contre l'injection SQL, 3) Portabilité entre différents SGBD, 4) Génération automatique des requêtes, 5) Gestion des relations complexes, 6) Cache de premier niveau. Inconvénients : courbe d'apprentissage, performance parfois moindre, requêtes N+1. Exemples : Hibernate (Java), Doctrine (PHP), Eloquent (Laravel)."
                 },
                 {
+                    question: "Comment JPA crée-t-il la base et les tables dans Spring Boot ?",
+                    answer: "JPA/Spring Boot création automatique : 1) spring.jpa.hibernate.ddl-auto=create/update/validate, 2) Annotations @Entity sur classes, 3) @Table pour noms spécifiques, 4) @Id @GeneratedValue pour PK, 5) @Column pour contraintes, 6) @OneToMany, @ManyToOne pour relations, 7) schema.sql pour initialisation, 8) data.sql pour données test. Environnements : create en dev, validate en prod. Attention : create DROP les tables ! Migrations Flyway/Liquibase en production."
+                },
+                {
+                    question: "Comment accéder aux données avec JPA dans Spring Boot ?",
+                    answer: "Accès données JPA Spring Boot : 1) Repository interfaces (CrudRepository, JpaRepository), 2) Méthodes de requête dérivées (findByName), 3) @Query pour requêtes personnalisées JPQL/SQL, 4) @Modifying pour UPDATE/DELETE, 5) Pagination avec Pageable, 6) Spécifications pour requêtes dynamiques, 7) @Transactional pour transactions, 8) EntityManager pour contrôle fin. Exemple : List<User> findByAgeGreaterThan(int age); Performance : Lazy loading, projections."
+                },
+                {
+                    question: "Comment configurer la connexion à une base MySQL avec Spring Boot ?",
+                    answer: "Configuration MySQL Spring Boot : application.properties : spring.datasource.url=jdbc:mysql://localhost:3306/mydb, spring.datasource.username=user, spring.datasource.password=password, spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver, spring.jpa.hibernate.ddl-auto=update, spring.jpa.show-sql=true. Dépendance Maven : mysql-connector-java. Pool connexions : HikariCP par défaut. Sécurité : variables d'environnement pour credentials, SSL si nécessaire."
+                },
+                {
+                    question: "Comment JPA fait-il le lien entre une classe Java et une table en base de données ?",
+                    answer: "Mapping JPA classe-table : 1) @Entity marque la classe persistante, 2) @Table(name=\"users\") spécifie nom table, 3) @Id identifie la clé primaire, 4) @Column(name=\"email\", unique=true) map attribut-colonne, 5) @GeneratedValue pour auto-increment, 6) @Temporal pour dates, 7) @Enumerated pour enums, 8) Relations @OneToMany/@ManyToOne, 9) @JoinColumn pour FK. Convention over configuration : User -> user table par défaut."
+                },
+                {
                     question: "Quelle est la différence entre une base de données SQL et NoSQL ?",
                     answer: "SQL (Relationnel) : structure tabulaire avec schéma fixe, ACID compliance, relations complexes, langage SQL standardisé, excellente consistance. Exemples : MySQL, PostgreSQL. NoSQL : schéma flexible, types variés (document, clé-valeur, graphe, colonne), scale horizontal naturel, performance élevée, eventual consistency. Exemples : MongoDB (document), Redis (clé-valeur), Cassandra (colonne), Neo4j (graphe). Choix selon : complexité des relations, volume de données, besoins de consistance, équipe de développement."
+                },
+                {
+                    question: "Quels sont les avantages et inconvénients des procédures stockées et des triggers ?",
+                    answer: "Procédures stockées : Avantages : performance (pré-compilées), sécurité (permissions granulaires), logique centralisée, réduction trafic réseau. Inconvénients : portabilité limitée, versioning complexe, debugging difficile, couplage fort DB. Triggers : Avantages : intégrité automatique, audit transparent, règles métier centralisées. Inconvénients : debugging complexe, performance impact, logique cachée, cascade effects. Usage : procédures pour traitements complexes, triggers pour contraintes business critiques."
+                },
+                {
+                    question: "Quels sont les principaux Design Patterns pour l'accès aux bases de données et leur utilité ?",
+                    answer: "Design Patterns accès données : 1) Repository : abstraction couche accès, testabilité, 2) DAO (Data Access Object) : encapsulation logique persistance, 3) Unit of Work : gestion transactions, cohérence, 4) Active Record : objet = enregistrement, simplicité, 5) Data Mapper : séparation objet/DB, flexibilité, 6) Query Object : requêtes réutilisables, 7) Connection Pool : performance connexions. Choix selon complexité, performance, testabilité. Spring Data Repository populaire."
+                },
+                {
+                    question: "Pourquoi intégrer l'authentification et la gestion des accès dans les composants d'accès aux données ?",
+                    answer: "Sécurité intégrée accès données pour : 1) Defense in depth, 2) Autorisation granulaire par donnée, 3) Audit trail complet, 4) Prévention élévation privilèges, 5) Compliance réglementaire, 6) Isolation multi-tenant. Implémentation : Spring Security method-level, Row Level Security PostgreSQL, filtres dynamiques, aspects AOP. Exemples : @PreAuthorize sur repositories, filtres utilisateur automatiques, logging accès sensibles. Équilibre sécurité/performance."
                 }
             ],
             devops: [
@@ -332,20 +516,88 @@
                     answer: "Docker apporte : 1) Isolation des applications dans des conteneurs légers, 2) Reproductibilité : 'ça marche sur ma machine' → 'ça marche partout', 3) Portabilité entre environnements (dev, test, prod), 4) Scalabilité horizontale facilitée, 5) Gestion simplifiée des dépendances, 6) Déploiement rapide et rollback facile, 7) Optimisation des ressources vs VMs, 8) Intégration CI/CD, 9) Microservices architecture, 10) Cohérence des environnements équipe."
                 },
                 {
-                    question: "Qu'est-ce que DevOps et pourquoi l'utiliser ?",
-                    answer: "DevOps est une culture et ensemble de pratiques qui rapprochent le développement (Dev) et les opérations (Ops) pour : 1) Accélérer la livraison de logiciels, 2) Améliorer la collaboration entre équipes, 3) Automatiser les processus (CI/CD), 4) Réduire les erreurs humaines, 5) Feedback rapide et amélioration continue, 6) Monitoring et observabilité, 7) Infrastructure as Code, 8) Déploiements fréquents et fiables. Bénéfices : time-to-market réduit, qualité améliorée, satisfaction client."
+                    question: "Quels fichiers sont nécessaires pour configurer un conteneur Docker ?",
+                    answer: "Fichiers Docker essentiels : 1) Dockerfile : instructions de build (FROM, RUN, COPY, EXPOSE, CMD), 2) .dockerignore : exclusions du contexte build, 3) docker-compose.yml : orchestration multi-conteneurs, 4) docker-compose.override.yml : surcharges développement. Optionnels : entrypoint.sh (script démarrage), healthcheck scripts, variables d'environnement (.env). Structure typique : base image → dépendances → code application → configuration runtime."
+                },
+                {
+                    question: "Pourquoi utiliser Docker dans une démarche DevOps ?",
+                    answer: "Docker + DevOps = synergie parfaite : 1) Standardisation environnements dev→prod, 2) CI/CD simplifié avec images versionnées, 3) Déploiements automatisés et reproductibles, 4) Rollback instantané, 5) Scaling horizontal facilité, 6) Infrastructure as Code, 7) Monitoring unifié, 8) Tests en environnements identiques, 9) Réduction Time-to-Market, 10) Collaboration Dev/Ops améliorée. Élimination 'configuration drift' entre environnements."
+                },
+                {
+                    question: "Qu'est-ce que docker-compose et pourquoi l'utiliser ?",
+                    answer: "Docker Compose : outil d'orchestration multi-conteneurs avec fichier YAML déclaratif. Utilité : 1) Définition architecture complète (app, DB, cache, proxy), 2) Gestion des réseaux et volumes, 3) Variables d'environnement centralisées, 4) Commandes simples (up, down, scale), 5) Environnements reproductibles, 6) Développement local simplifié. Exemple : web app + PostgreSQL + Redis en une commande. Alternative : Kubernetes pour production complexe."
+                },
+                {
+                    question: "Quels sont les avantages de Docker et comment l'utiliser dans un projet ?",
+                    answer: "Avantages Docker : isolation, portabilité, efficacité ressources, versioning, scaling. Utilisation projet : 1) Dockerfile pour chaque service, 2) Multi-stage builds (build/runtime séparés), 3) Base images officielles sécurisées, 4) Secrets management, 5) Health checks, 6) Resource limits, 7) Logging centralisé, 8) Registry privé, 9) Scanning sécurité images, 10) Documentation Dockerfile. Best practices : layers minimales, user non-root, images lightweight."
+                },
+                {
+                    question: "Comment Kubernetes facilite-t-il l'orchestration des conteneurs ?",
+                    answer: "Kubernetes orchestration : 1) Déploiement automatisé (Deployments, StatefulSets), 2) Service discovery et load balancing, 3) Auto-scaling horizontal/vertical, 4) Rolling updates sans downtime, 5) Health checks et self-healing, 6) Gestion configuration (ConfigMaps, Secrets), 7) Persistence volumes, 8) Network policies, 9) RBAC sécurité, 10) Multi-cloud portabilité. Abstraction infrastructure, état désiré déclaratif, écosystème riche (Helm, Operators)."
                 },
                 {
                     question: "Comment mettre en place une pipeline CI/CD efficace ?",
                     answer: "Pipeline CI/CD efficace : 1) Source Control (Git) avec branches stratégiques, 2) CI : build automatique, tests unitaires/intégration, analyse qualité code (SonarQube), 3) Artefacts : création et stockage des builds, 4) CD : déploiement automatisé par environnement (dev→test→prod), 5) Tests automatisés (E2E, performance), 6) Monitoring et alertes, 7) Rollback automatique si échec, 8) Documentation et notifications équipe. Outils : Jenkins, GitLab CI, GitHub Actions, Azure DevOps."
                 },
                 {
+                    question: "Qu'est-ce que DevOps et pourquoi l'utiliser ?",
+                    answer: "DevOps est une culture et ensemble de pratiques qui rapprochent le développement (Dev) et les opérations (Ops) pour : 1) Accélérer la livraison de logiciels, 2) Améliorer la collaboration entre équipes, 3) Automatiser les processus (CI/CD), 4) Réduire les erreurs humaines, 5) Feedback rapide et amélioration continue, 6) Monitoring et observabilité, 7) Infrastructure as Code, 8) Déploiements fréquents et fiables. Bénéfices : time-to-market réduit, qualité améliorée, satisfaction client."
+                },
+                {
                     question: "Quelle est la différence entre Intégration Continue (CI) et Déploiement Continu (CD) ?",
                     answer: "CI (Continuous Integration) : pratique de merger fréquemment le code dans la branche principale, avec build et tests automatiques à chaque commit. Objectif : détecter les problèmes tôt. CD (Continuous Deployment/Delivery) : extension de CI qui automatise le déploiement. Continuous Delivery : code prêt à déployer, déploiement manuel. Continuous Deployment : déploiement automatique en production si tous les tests passent. CI assure la qualité, CD assure la livraison rapide."
                 },
                 {
+                    question: "Quels outils sont utilisés pour la CI/CD ?",
+                    answer: "Outils CI/CD populaires : 1) Jenkins : open-source, extensible, plugins nombreux, 2) GitLab CI : intégré Git, containers natifs, 3) GitHub Actions : workflows YAML, marketplace, 4) Azure DevOps : Microsoft ecosystem, 5) CircleCI : cloud-native, performance, 6) TeamCity : JetBrains, intégration IDE. Critères choix : écosystème existant, complexité pipelines, coûts, support équipe, intégrations tierces. Tendance : cloud-native solutions."
+                },
+                {
+                    question: "Pourquoi automatiser les tests dans une CI/CD ?",
+                    answer: "Automatisation tests CI/CD critique pour : 1) Détection précoce des régressions, 2) Feedback rapide développeurs, 3) Qualité constante releases, 4) Confiance déploiements, 5) Réduction coûts bugs production, 6) Vélocité équipe maintenue, 7) Documentation comportements attendus, 8) Non-régression fonctionnelle. Tests : unitaires (rapides), intégration (contrats), E2E (parcours critiques), performance (seuils). Gate qualité avant déploiement."
+                },
+                {
+                    question: "Que contient un fichier CI/CD (.yaml) pour GitHub Actions ?",
+                    answer: "Fichier GitHub Actions (.github/workflows/ci.yml) : name, on: [push, pull_request], jobs avec runs-on (ubuntu-latest), steps avec uses/run, actions marketplace (checkout, setup-node, cache), variables d'environnement, secrets, artifacts, matrix builds, conditions. Exemple : checkout code → setup environment → install dependencies → run tests → build → deploy. Workflows parallèles, réutilisables, intégration status checks."
+                },
+                {
+                    question: "Qu'est-ce que le déploiement d'une application ?",
+                    answer: "Déploiement application : processus de mise en production du code depuis l'environnement de développement. Étapes : 1) Build de l'application, 2) Tests qualité/sécurité, 3) Packaging (Docker, JAR, etc.), 4) Configuration environnement cible, 5) Transfert artefacts, 6) Installation/mise à jour, 7) Configuration runtime, 8) Démarrage services, 9) Tests post-déploiement, 10) Monitoring. Stratégies : blue-green, rolling, canary. Automatisation recommandée."
+                },
+                {
+                    question: "Quelle est la différence entre un serveur et un hébergeur ?",
+                    answer: "Serveur : machine physique/virtuelle exécutant des applications et services. Hébergeur : entreprise fournissant infrastructure (serveurs, réseau, sécurité, maintenance). Types hébergement : 1) Mutualisé : ressources partagées, économique, 2) Dédié : serveur exclusif, performance max, 3) VPS : virtuel isolé, équilibre prix/performance, 4) Cloud : élastique, pay-as-you-use. Serveur = hardware/software, Hébergeur = service provider."
+                },
+                {
+                    question: "Qu'est-ce qu'un DNS et quel est son rôle ?",
+                    answer: "DNS (Domain Name System) : système de résolution de noms de domaine en adresses IP. Rôle : 1) Traduction google.com → 172.217.14.110, 2) Hiérarchie distributée (root → TLD → autoritaire), 3) Cache pour performance, 4) Redondance et fiabilité, 5) Load balancing par rotation, 6) Géolocalisation traffic. Types d'enregistrements : A (IPv4), AAAA (IPv6), CNAME (alias), MX (mail), TXT (métadonnées). Essentiel pour navigation web."
+                },
+                {
                     question: "Qu'est-ce qu'un reverse proxy et pourquoi l'utiliser ?",
                     answer: "Un reverse proxy (ex: Nginx, HAProxy) se place devant les serveurs d'application et agit au nom du serveur. Fonctions : 1) Load balancing : distribue les requêtes entre plusieurs serveurs, 2) SSL termination : gère le chiffrement HTTPS, 3) Cache : stocke les réponses statiques, 4) Compression : réduit la bande passante, 5) Sécurité : filtre les requêtes malveillantes, 6) Rate limiting, 7) Health checks des serveurs backend. Améliore performance, sécurité et disponibilité."
+                },
+                {
+                    question: "Comment gérer efficacement le versionnement et les mises à jour d'un logiciel ?",
+                    answer: "Versionnement efficace : 1) Semantic Versioning (MAJOR.MINOR.PATCH), 2) Git flow ou GitHub flow, 3) Tags pour releases, 4) Changelog détaillé, 5) Branches de maintenance LTS, 6) Tests automatisés complets, 7) Déploiements progressifs (canary, blue-green), 8) Rollback strategy, 9) Communication utilisateurs, 10) Monitoring post-release. Mises à jour : backward compatibility, migration scripts, documentation."
+                },
+                {
+                    question: "Quelles stratégies adopter pour une migration de logiciel sans rupture ?",
+                    answer: "Migration sans rupture : 1) Strangler Pattern : remplacement progressif, 2) Blue-Green Deployment : environnements parallèles, 3) Feature Flags : activation contrôlée, 4) Database migration scripts, 5) API versioning pour compatibilité, 6) Tests de charge avant switch, 7) Rollback plan détaillé, 8) Communication stakeholders, 9) Formation équipes, 10) Monitoring intensif. Phase pilote, feedback users, validation métier. Patience et planification."
+                },
+                {
+                    question: "Qu'est-ce que l'Infrastructure as Code et quels outils utiliser (Terraform, Ansible…) ?",
+                    answer: "Infrastructure as Code (IaC) : gestion infrastructure via code déclaratif versionné. Avantages : reproductibilité, versioning, collaboration, automatisation. Outils : 1) Terraform : multi-cloud, state management, 2) Ansible : configuration management, agentless, 3) CloudFormation : AWS natif, 4) Pulumi : langages de programmation, 5) Chef/Puppet : configuration complexe. Choisir selon : cloud provider, équipe skills, complexité infrastructure. Best practices : modules, testing, state remote."
+                },
+                {
+                    question: "Quels outils recommandes-tu pour la supervision et la gestion des logs en production ?",
+                    answer: "Monitoring et logs production : 1) APM : New Relic, Datadog, AppDynamics pour performance applicative, 2) Infrastructure : Prometheus + Grafana, Nagios, Zabbix, 3) Logs : ELK Stack (Elasticsearch, Logstash, Kibana), Splunk, Fluentd, 4) Alerting : PagerDuty, OpsGenie, 5) Synthetics : tests user journey, 6) Cloud-native : CloudWatch, Azure Monitor. Centralisation, corrélation, alertes intelligentes, dashboards métier."
+                },
+                {
+                    question: "Quels outils de monitoring et de logging recommandes-tu pour suivre les performances d'une application ?",
+                    answer: "Stack monitoring moderne : 1) Métriques : Prometheus (collecte) + Grafana (visualisation), 2) Traces distribuées : Jaeger, Zipkin pour microservices, 3) Logs : ELK/EFK stack, Loki, 4) APM : New Relic, Datadog, Dynatrace pour code-level insights, 5) Synthetics : Pingdom, Uptime Robot, 6) Real User Monitoring (RUM), 7) Infrastructure : Node Exporter, cAdvisor. Corrélation métriques/logs/traces cruciale pour troubleshooting."
+                },
+                {
+                    question: "Quelles sont les stratégies de mise en cache pour améliorer les performances d'une application ?",
+                    answer: "Stratégies cache multicouche : 1) Browser cache : CSS/JS/images avec Cache-Control, 2) CDN : géodistribution contenu statique, 3) Reverse proxy cache : Varnish, Nginx, 4) Application cache : Redis, Memcached pour données fréquentes, 5) Database query cache, 6) Object cache : ORM L1/L2, 7) HTTP cache : ETags, Last-Modified. Patterns : cache-aside, write-through, write-behind. Invalidation strategy cruciale. Mesurer hit ratio."
                 },
                 {
                     question: "Comment fonctionne le load balancing et quand l'utiliser ?",
@@ -358,16 +610,44 @@
                     answer: "Architecture multicouches (n-tier) organise l'application en couches distinctes : 1) Présentation : interface utilisateur (UI/UX), 2) Logique métier : règles de gestion et traitements, 3) Accès aux données : persistance et récupération. Principes : séparation des responsabilités, couplage faible, cohésion forte, réutilisabilité, maintenabilité. Chaque couche ne communique qu'avec les couches adjacentes. Avantages : modularité, testabilité, évolutivité, équipes spécialisées."
                 },
                 {
+                    question: "Quel est l'intérêt d'une architecture en couches ?",
+                    answer: "Architecture en couches bénéfique pour : 1) Séparation des responsabilités claire, 2) Réutilisabilité des composants, 3) Maintenance facilitée par isolation, 4) Tests indépendants par couche, 5) Évolutivité contrôlée, 6) Équipes spécialisées par couche, 7) Sécurité renforcée (defense in depth), 8) Performance optimisable par couche, 9) Documentation simplifiée, 10) Respect des standards architecturaux. Facilite compréhension et maintenance long terme."
+                },
+                {
                     question: "Quelle est la différence entre une architecture monolithique et une architecture en microservices ?",
                     answer: "Monolithique : application déployée comme une seule unité, toutes les fonctionnalités dans un même processus. Avantages : simplicité développement/déploiement, performance interne élevée. Inconvénients : scaling difficile, technologies figées, risque de panne globale. Microservices : application découpée en services indépendants communicant par APIs. Avantages : scaling granulaire, technologies variées, résilience, équipes autonomes. Inconvénients : complexité réseau, gestion distribuée, debugging complexe. Choix selon taille équipe et complexité métier."
+                },
+                {
+                    question: "Quelles sont les principales couches d'une architecture logicielle multicouche ?",
+                    answer: "Couches architecture multicouche typique : 1) Présentation : UI, contrôleurs, formatage données, 2) Application/Service : orchestration, workflows, APIs, 3) Métier/Domaine : règles business, entités, logique core, 4) Persistance/Données : repositories, DAO, mapping ORM, 5) Infrastructure : base de données, filesystem, services externes. Variantes : MVC, MVP, MVVM, Clean Architecture, Hexagonal. Communication unidirectionnelle descendante recommandée."
+                },
+                {
+                    question: "Quels sont les principes d'architecture d'une application SaaS et leurs avantages ?",
+                    answer: "Architecture SaaS : 1) Multi-tenancy : isolation données clients, 2) Élasticité : scaling automatique, 3) API-first : intégrations facilitées, 4) Microservices : déploiements indépendants, 5) Event-driven : asynchrone, découplage, 6) Cloud-native : containers, orchestration, 7) Security by design : chiffrement, RBAC, 8) Observabilité : monitoring, logs, metrics. Avantages : coûts réduits, mises à jour centralisées, accessibilité globale, scalabilité, time-to-market rapide."
                 },
                 {
                     question: "Comment sécuriser une architecture logicielle ?",
                     answer: "Sécurisation architecture : 1) Defense in depth : sécurité multicouche, 2) Principe de moindre privilège, 3) Zero Trust : vérifier tout, ne rien supposer, 4) Chiffrement en transit (HTTPS) et au repos, 5) Authentification forte et autorisation granulaire, 6) Segmentation réseau et firewalls, 7) Logs centralisés et monitoring, 8) Gestion des secrets (Vault), 9) Updates sécurité régulières, 10) Tests de pénétration, 11) Backup et plan de continuité, 12) Formation équipes sécurité."
                 },
                 {
+                    question: "Quelles sont les principales vulnérabilités des architectures multicouches et comment les prévenir ?",
+                    answer: "Vulnérabilités multicouches : 1) Injection attacks (SQL, NoSQL, LDAP) → prepared statements, validation, 2) Broken authentication → MFA, session management, 3) Data exposure → chiffrement, access control, 4) API abuse → rate limiting, validation, 5) Privilege escalation → RBAC, audit, 6) Man-in-the-middle → TLS, certificate pinning. Prévention : security by design, code reviews, SAST/DAST tools, penetration testing, security training."
+                },
+                {
+                    question: "Comment adapter une architecture logicielle aux exigences de sécurité de l'ANSSI ?",
+                    answer: "Conformité ANSSI : 1) Référentiel RGS (Référentiel Général de Sécurité), 2) Classification données (DR, Confidentiel, Secret), 3) Homologation sécurité obligatoire, 4) Chiffrement qualifié (algorithmes ANSSI), 5) Architecture cloisonnée, 6) Audit et traçabilité, 7) Plan de continuité/reprise, 8) Formation personnels habilités, 9) Gestion des incidents, 10) Revues sécurité régulières. Documentation détaillée, tests conformité, certification produits."
+                },
+                {
+                    question: "Quels sont les principaux indicateurs de sécurité des systèmes d'information (DICP) ?",
+                    answer: "DICP (Disponibilité, Intégrité, Confidentialité, Preuve) : 1) Disponibilité : uptime, RTO/RPO, redondance, 2) Intégrité : checksums, signatures numériques, contrôles cohérence, 3) Confidentialité : chiffrement, access control, classification, 4) Preuve/Non-répudiation : signatures, audit trails, timestamps. Métriques : taux incidents, temps résolution, niveau conformité, coûts sécurité. Balance entre sécurité et usabilité selon criticité métier."
+                },
+                {
                     question: "Quels outils peux-tu utiliser pour modéliser une architecture logicielle ?",
                     answer: "Outils de modélisation architecture : 1) UML : diagrammes de composants, déploiement, séquence (Lucidchart, Draw.io), 2) C4 Model : Context, Containers, Components, Code (PlantUML, Structurizr), 3) ArchiMate : framework enterprise (Archi, BiZZdesign), 4) Diagrammes d'architecture cloud (AWS/Azure/GCP tools), 5) Miro/Mural pour ateliers collaboratifs, 6) Enterprise Architect pour grandes organisations, 7) Draw.io gratuit et efficace, 8) Visio Microsoft. Important : choisir selon audience et niveau de détail requis."
+                },
+                {
+                    question: "Quels principes d'éco-conception peux-tu appliquer dans une architecture logicielle ?",
+                    answer: "Éco-conception logicielle : 1) Optimisation algorithmes (complexité réduite), 2) Lazy loading et pagination, 3) Cache intelligent pour réduire calculs, 4) Compression données/images, 5) Base de données optimisées (index, requêtes), 6) Architecture serverless/cloud-native, 7) Monitoring consommation énergétique, 8) Code quality (moins de bugs = moins de ressources), 9) Lifecycle management données, 10) Green hosting providers. Mesurer impact carbone, optimiser performance = écologie."
                 }
             ],
             tests: [
