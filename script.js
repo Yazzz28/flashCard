@@ -5,20 +5,18 @@ let questionCounter = 1;
 
 async function loadQuestionsData() {
     try {
-        const response = await fetch('data.json');
+        const response = await fetch("data.json");
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
         questionsData = await response.json();
-        console.log('Données chargées avec succès:', Object.keys(questionsData));
         return true;
-    } catch (error) {
-        console.error('Erreur lors du chargement des données:', error);
+    } catch (_error) {
         questionsData = {
-            "frontend": [
+            frontend: [
                 {
-                    "question": "Erreur de chargement - Vérifiez que data.json est présent",
-                    "answer": "Assurez-vous que le fichier data.json est dans le même dossier que votre HTML et que le serveur web est configuré correctement."
+                    question: "Erreur de chargement",
+                    answer: "Une erreur s'est produite lors du chargement des données.",
                 }
             ]
         };
@@ -174,17 +172,8 @@ function revealAllVisible() {
 }
 
 async function initializeApp() {
-    console.log('🚀 Initialisation de StudyCards...');
-    
-    const dataLoaded = await loadQuestionsData();
-    
-    if (dataLoaded) {
-        console.log('✅ Données chargées, rendu des cartes...');
-        renderCards();
-    } else {
-        console.log('❌ Erreur de chargement, affichage du message d\'erreur...');
-        renderCards();
-    }
+    await loadQuestionsData();
+    renderCards();
 }
 
 document.addEventListener('DOMContentLoaded', async () => {
