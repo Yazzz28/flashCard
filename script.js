@@ -4,7 +4,6 @@ let revealedCards = new Set();
 let questionCounter = 1;
 let confirmCallback = null;
 
-// Modal functions
 function showModal(message, onConfirm) {
     const modalOverlay = document.getElementById('modalOverlay');
     const modalMessage = document.getElementById('modalMessage');
