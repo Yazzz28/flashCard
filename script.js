@@ -1,10 +1,8 @@
-// Variable globale pour stocker les données
 let questionsData = {};
 let currentCategory = 'all';
 let revealedCards = new Set();
 let questionCounter = 1;
 
-// Fonction pour charger les données depuis data.json
 async function loadQuestionsData() {
     try {
         const response = await fetch('data.json');
@@ -28,7 +26,6 @@ async function loadQuestionsData() {
     }
 }
 
-// Fonction pour sauvegarder les cartes révélées
 function saveRevealedCards() {
     const revealedData = [];
     revealedCards.forEach(card => {
@@ -39,7 +36,6 @@ function saveRevealedCards() {
     localStorage.setItem('revealedCards', JSON.stringify(revealedData));
 }
 
-// Fonction pour charger les cartes révélées
 function loadRevealedCards() {
     const savedData = localStorage.getItem('revealedCards');
     if (savedData) {
@@ -62,7 +58,6 @@ function loadRevealedCards() {
     }
 }
 
-// Fonction pour révéler une carte
 function revealCard(card) {
     const answerDiv = card.querySelector('.answer');
     if (!answerDiv.classList.contains('visible')) {
@@ -74,7 +69,6 @@ function revealCard(card) {
     }
 }
 
-// Fonction pour réinitialiser
 function resetRevealedCards() {
     if (confirm('Êtes-vous sûr de vouloir réinitialiser toutes les cartes révélées ?')) {
         localStorage.removeItem('revealedCards');
@@ -83,7 +77,6 @@ function resetRevealedCards() {
     }
 }
 
-// Créer une carte
 function createCard(question, answer, category) {
     const card = document.createElement('div');
     card.className = 'card';
@@ -105,7 +98,6 @@ function createCard(question, answer, category) {
     return card;
 }
 
-// Rendu des cartes
 function renderCards() {
     const container = document.getElementById('cardsContainer');
     container.innerHTML = '<div class="loading"><div class="spinner"></div></div>';
@@ -114,7 +106,6 @@ function renderCards() {
         container.innerHTML = '';
         questionCounter = 1;
         
-        // Vérifier si les données sont chargées
         if (!questionsData || Object.keys(questionsData).length === 0) {
             container.innerHTML = '<div class="error-message">❌ Aucune donnée disponible. Vérifiez le fichier data.json</div>';
             return;
@@ -134,7 +125,6 @@ function renderCards() {
     }, 500);
 }
 
-// Mise à jour des statistiques
 function updateStats() {
     const totalCards = document.querySelectorAll('.card').length;
     const revealedCount = document.querySelectorAll('.card.revealed').length;
@@ -145,7 +135,6 @@ function updateStats() {
     document.getElementById('progressFill').style.width = `${percentage}%`;
 }
 
-// Filtrage par catégorie
 function filterByCategory(category) {
     currentCategory = category;
     
@@ -157,7 +146,6 @@ function filterByCategory(category) {
     renderCards();
 }
 
-// Recherche
 function searchCards(searchTerm) {
     const cards = document.querySelectorAll('.card');
     const term = searchTerm.toLowerCase();
@@ -174,7 +162,6 @@ function searchCards(searchTerm) {
     });
 }
 
-// Révéler toutes les cartes visibles
 function revealAllVisible() {
     const visibleCards = document.querySelectorAll('.card:not(.hidden):not(.revealed)');
     if (visibleCards.length === 0) return;
@@ -186,11 +173,9 @@ function revealAllVisible() {
     }
 }
 
-// Fonction d'initialisation principale
 async function initializeApp() {
     console.log('🚀 Initialisation de StudyCards...');
     
-    // Charger les données
     const dataLoaded = await loadQuestionsData();
     
     if (dataLoaded) {
@@ -198,23 +183,19 @@ async function initializeApp() {
         renderCards();
     } else {
         console.log('❌ Erreur de chargement, affichage du message d\'erreur...');
-        renderCards(); // Affichera le message d'erreur
+        renderCards();
     }
 }
 
-// Event listeners
 document.addEventListener('DOMContentLoaded', async () => {
-    // Initialiser l'application
     await initializeApp();
     
-    // Boutons de catégorie
     document.querySelectorAll('.category-btn').forEach(btn => {
         btn.addEventListener('click', () => {
             filterByCategory(btn.dataset.category);
         });
     });
 
-    // Recherche
     const searchBox = document.getElementById('searchBox');
     if (searchBox) {
         searchBox.addEventListener('input', (e) => {
@@ -222,13 +203,11 @@ document.addEventListener('DOMContentLoaded', async () => {
         });
     }
 
-    // Bouton reset
     const resetBtn = document.getElementById('resetBtn');
     if (resetBtn) {
         resetBtn.addEventListener('click', resetRevealedCards);
     }
 
-    // FAB - Révéler toutes
     const fab = document.getElementById('fab');
     if (fab) {
         fab.addEventListener('click', revealAllVisible);
@@ -246,7 +225,6 @@ document.addEventListener('DOMContentLoaded', async () => {
             document.documentElement.setAttribute('data-theme', newTheme);
             localStorage.setItem('theme', newTheme);
             
-            // Animation de transition
             document.body.style.transition = 'background-color 0.3s ease, color 0.3s ease';
             setTimeout(() => {
                 document.body.style.transition = '';
