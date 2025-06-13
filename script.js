@@ -2,6 +2,33 @@ let questionsData = {};
 let currentCategory = 'all';
 let revealedCards = new Set();
 let questionCounter = 1;
+let confirmCallback = null;
+
+// Modal functions
+function showModal(message, onConfirm) {
+    const modalOverlay = document.getElementById('modalOverlay');
+    const modalMessage = document.getElementById('modalMessage');
+
+    modalMessage.textContent = message;
+    modalOverlay.classList.add('show');
+    confirmCallback = onConfirm;
+}
+
+function closeModal() {
+    const modalOverlay = document.getElementById('modalOverlay');
+    modalOverlay.classList.remove('show');
+    if (confirmCallback) {
+        confirmCallback(false);
+    }
+}
+
+function confirmModal() {
+    const modalOverlay = document.getElementById('modalOverlay');
+    modalOverlay.classList.remove('show');
+    if (confirmCallback) {
+        confirmCallback(true);
+    }
+}
 
 async function loadQuestionsData() {
     try {
@@ -11,7 +38,7 @@ async function loadQuestionsData() {
         }
         questionsData = await response.json();
         return true;
-    } catch (_error) {
+    } catch (error) {
         questionsData = {
             frontend: [
                 {
@@ -25,35 +52,11 @@ async function loadQuestionsData() {
 }
 
 function saveRevealedCards() {
-    const revealedData = [];
-    revealedCards.forEach(card => {
-        const question = card.querySelector('.question .question-text').textContent;
-        const category = card.dataset.category;
-        revealedData.push({ question, category });
-    });
-    localStorage.setItem('revealedCards', JSON.stringify(revealedData));
+    console.log('Saving revealed cards...');
 }
 
 function loadRevealedCards() {
-    const savedData = localStorage.getItem('revealedCards');
-    if (savedData) {
-        const revealedData = JSON.parse(savedData);
-        
-        setTimeout(() => {
-            revealedData.forEach(savedCard => {
-                const cards = document.querySelectorAll('.card');
-                cards.forEach(card => {
-                    const question = card.querySelector('.question .question-text').textContent;
-                    const category = card.dataset.category;
-                    
-                    if (question === savedCard.question && category === savedCard.category) {
-                        revealCard(card);
-                    }
-                });
-            });
-            updateStats();
-        }, 100);
-    }
+    console.log('Loading revealed cards...');
 }
 
 function revealCard(card) {
@@ -68,18 +71,19 @@ function revealCard(card) {
 }
 
 function resetRevealedCards() {
-    if (confirm('Êtes-vous sûr de vouloir réinitialiser toutes les cartes révélées ?')) {
-        localStorage.removeItem('revealedCards');
-        revealedCards.clear();
-        renderCards();
-    }
+    showModal('Êtes-vous sûr de vouloir réinitialiser toutes les cartes révélées ?', (confirmed) => {
+        if (confirmed) {
+            revealedCards.clear();
+            renderCards();
+        }
+    });
 }
 
 function createCard(question, answer, category) {
     const card = document.createElement('div');
     card.className = 'card';
     card.dataset.category = category;
-    
+
     card.innerHTML = `
         <div class="question">
             <div class="question-icon">Q${questionCounter++}</div>
@@ -99,16 +103,16 @@ function createCard(question, answer, category) {
 function renderCards() {
     const container = document.getElementById('cardsContainer');
     container.innerHTML = '<div class="loading"><div class="spinner"></div></div>';
-    
+
     setTimeout(() => {
         container.innerHTML = '';
         questionCounter = 1;
-        
+
         if (!questionsData || Object.keys(questionsData).length === 0) {
             container.innerHTML = '<div class="error-message">❌ Aucune donnée disponible. Vérifiez le fichier data.json</div>';
             return;
         }
-        
+
         Object.entries(questionsData).forEach(([category, questions]) => {
             if (currentCategory === 'all' || currentCategory === category) {
                 questions.forEach(({question, answer}) => {
@@ -127,7 +131,7 @@ function updateStats() {
     const totalCards = document.querySelectorAll('.card').length;
     const revealedCount = document.querySelectorAll('.card.revealed').length;
     const percentage = totalCards > 0 ? (revealedCount / totalCards) * 100 : 0;
-    
+
     document.getElementById('totalCount').textContent = totalCards;
     document.getElementById('revealedCount').textContent = revealedCount;
     document.getElementById('progressFill').style.width = `${percentage}%`;
@@ -135,12 +139,12 @@ function updateStats() {
 
 function filterByCategory(category) {
     currentCategory = category;
-    
+
     document.querySelectorAll('.category-btn').forEach(btn => {
         btn.classList.remove('active');
     });
     document.querySelector(`[data-category="${category}"]`).classList.add('active');
-    
+
     renderCards();
 }
 
@@ -151,7 +155,7 @@ function searchCards(searchTerm) {
     cards.forEach(card => {
         const question = card.querySelector('.question .question-text').textContent.toLowerCase();
         const answer = card.querySelector('.answer').textContent.toLowerCase();
-        
+
         if (question.includes(term) || answer.includes(term)) {
             card.classList.remove('hidden');
         } else {
@@ -163,12 +167,14 @@ function searchCards(searchTerm) {
 function revealAllVisible() {
     const visibleCards = document.querySelectorAll('.card:not(.hidden):not(.revealed)');
     if (visibleCards.length === 0) return;
-    
-    if (confirm(`Révéler toutes les ${visibleCards.length} cartes visibles ?`)) {
-        visibleCards.forEach(card => {
-            setTimeout(() => revealCard(card), Math.random() * 1000);
-        });
-    }
+
+    showModal(`Révéler toutes les ${visibleCards.length} cartes visibles ?`, (confirmed) => {
+        if (confirmed) {
+            visibleCards.forEach(card => {
+                setTimeout(() => revealCard(card), Math.random() * 1000);
+            });
+        }
+    });
 }
 
 async function initializeApp() {
@@ -178,7 +184,7 @@ async function initializeApp() {
 
 document.addEventListener('DOMContentLoaded', async () => {
     await initializeApp();
-    
+
     document.querySelectorAll('.category-btn').forEach(btn => {
         btn.addEventListener('click', () => {
             filterByCategory(btn.dataset.category);
@@ -204,16 +210,12 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     const themeToggle = document.querySelector('.theme-toggle');
     if (themeToggle) {
-        const savedTheme = localStorage.getItem('theme') || 'light';
-        document.documentElement.setAttribute('data-theme', savedTheme);
-        
         themeToggle.addEventListener('click', () => {
             const currentTheme = document.documentElement.getAttribute('data-theme');
             const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-            
+
             document.documentElement.setAttribute('data-theme', newTheme);
-            localStorage.setItem('theme', newTheme);
-            
+
             document.body.style.transition = 'background-color 0.3s ease, color 0.3s ease';
             setTimeout(() => {
                 document.body.style.transition = '';

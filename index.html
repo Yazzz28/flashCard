@@ -92,5 +92,27 @@
         </button>
     </div>
     <script src="script.js"></script>
+    <div id="modalOverlay" class="modal-overlay">
+    <div class="modal">
+        <div class="modal-header">
+            <div class="modal-icon" id="modalIcon">❓</div>
+            <h3 class="modal-title" id="modalTitle">Confirmation</h3>
+            <p class="modal-subtitle" id="modalSubtitle">Veuillez confirmer votre action</p>
+        </div>
+        <div class="modal-body">
+            <p class="modal-message" id="modalMessage">
+                Êtes-vous sûr de vouloir effectuer cette action ?
+            </p>
+            <div class="modal-actions" id="modalActions">
+                <button class="modal-btn modal-btn-secondary" onclick="closeModal()">
+                    Annuler
+                </button>
+                <button class="modal-btn modal-btn-primary" onclick="confirmModal()">
+                    Confirmer
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
 </body>
 </html>
