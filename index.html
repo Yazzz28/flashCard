@@ -1,118 +1,151 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WildCards - Merci Pilou</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <div class="container">
-        <div class="theme-toggle" title="Changer de thème">
-            🌙
-        </div>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>WildCards - Merci Pilou</title>
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+        <div class="container">
+            <div class="theme-toggle" title="Changer de thème">🌙</div>
 
-        <header class="header">
-            <div class="logo">
-                <div class="logo-icon">🎓</div>
-            </div>
-            <h1 class="main-title">WildCards</h1>
-            <p class="subtitle">Fiches de révision pour CDA</p>
-        </header>
+            <header class="header">
+                <div class="logo">
+                    <div class="logo-icon">🎓</div>
+                </div>
+                <h1 class="main-title">WildCards</h1>
+                <p class="subtitle">Fiches de révision pour CDA et DWWM</p>
+            </header>
 
-        <div class="stats-panel" id="statsPanel">
-            <div class="stats-title">📊 Progression</div>
-            <div class="stat-item">
-                <span class="stat-label">Révélées</span>
-                <span class="stat-value" id="revealedCount">0</span>
+            <div class="stats-panel" id="statsPanel">
+                <div class="stats-title">📊 Progression</div>
+                <div class="stat-item">
+                    <span class="stat-label">Révélées</span>
+                    <span class="stat-value" id="revealedCount">0</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">Total</span>
+                    <span class="stat-value" id="totalCount">0</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressFill"></div>
+                </div>
+                <button class="reset-btn" id="resetBtn">
+                    🔄 Réinitialiser
+                </button>
             </div>
-            <div class="stat-item">
-                <span class="stat-label">Total</span>
-                <span class="stat-value" id="totalCount">0</span>
+
+            <div class="controls">
+                <div class="search-container">
+                    <div class="search-icon">🔍</div>
+                    <input
+                        type="text"
+                        class="search-box"
+                        placeholder="Rechercher une question ou un concept..."
+                        id="searchBox"
+                    />
+                </div>
+
+                <div class="formations">
+                    <div class="formations-title">🎓 Formations</div>
+                    <div class="formations-buttons">
+                        <button
+                            class="formation-btn active"
+                            data-formation="all"
+                        >
+                            <span>📚</span> Toutes
+                        </button>
+                        <button class="formation-btn" data-formation="CDA">
+                            <span>💻</span> CDA
+                        </button>
+                        <button class="formation-btn" data-formation="DWWM">
+                            <span>🌐</span> DWWM
+                        </button>
+                    </div>
+                </div>
+
+                <div class="categories">
+                    <button class="category-btn active" data-category="all">
+                        <span>📚</span> Toutes
+                    </button>
+                    <button class="category-btn" data-category="frontend">
+                        <span>🖥️</span> Frontend
+                    </button>
+                    <button class="category-btn" data-category="backend">
+                        <span>⚙️</span> Backend
+                    </button>
+                    <button class="category-btn" data-category="database">
+                        <span>🗄️</span> Base de données
+                    </button>
+                    <button class="category-btn" data-category="devops">
+                        <span>🚀</span> DevOps
+                    </button>
+                    <button class="category-btn" data-category="architecture">
+                        <span>🏗️</span> Architecture
+                    </button>
+                    <button class="category-btn" data-category="tests">
+                        <span>🧪</span> Tests
+                    </button>
+                    <button class="category-btn" data-category="security">
+                        <span>🔒</span> Sécurité
+                    </button>
+                    <button class="category-btn" data-category="design">
+                        <span>🎨</span> Conception
+                    </button>
+                    <button class="category-btn" data-category="project">
+                        <span>📋</span> Gestion de projet
+                    </button>
+                    <button class="category-btn" data-category="tools">
+                        <span>🛠️</span> Outils
+                    </button>
+                </div>
             </div>
-            <div class="progress-bar">
-                <div class="progress-fill" id="progressFill"></div>
+
+            <div class="cards-container" id="cardsContainer">
+                <div class="loading">
+                    <div class="spinner"></div>
+                </div>
             </div>
-            <button class="reset-btn" id="resetBtn">
-                🔄 Réinitialiser
+
+            <button
+                class="fab"
+                id="fab"
+                title="Révéler toutes les cartes visibles"
+            >
+                ⚡
             </button>
         </div>
-
-        <div class="controls">
-            <div class="search-container">
-                <div class="search-icon">🔍</div>
-                <input type="text" class="search-box" placeholder="Rechercher une question ou un concept..." id="searchBox">
-            </div>
-
-            <div class="categories">
-                <button class="category-btn active" data-category="all">
-                    <span>📚</span> Toutes
-                </button>
-                <button class="category-btn" data-category="frontend">
-                    <span>🖥️</span> Frontend
-                </button>
-                <button class="category-btn" data-category="backend">
-                    <span>⚙️</span> Backend
-                </button>
-                <button class="category-btn" data-category="database">
-                    <span>🗄️</span> Base de données
-                </button>
-                <button class="category-btn" data-category="devops">
-                    <span>🚀</span> DevOps
-                </button>
-                <button class="category-btn" data-category="architecture">
-                    <span>🏗️</span> Architecture
-                </button>
-                <button class="category-btn" data-category="tests">
-                    <span>🧪</span> Tests
-                </button>
-                <button class="category-btn" data-category="security">
-                    <span>🔒</span> Sécurité
-                </button>
-                <button class="category-btn" data-category="design">
-                    <span>🎨</span> Conception
-                </button>
-                <button class="category-btn" data-category="project">
-                    <span>📋</span> Gestion de projet
-                </button>
-                <button class="category-btn" data-category="tools">
-                    <span>🛠️</span> Outils
-                </button>
+        <script src="script.js"></script>
+        <div id="modalOverlay" class="modal-overlay">
+            <div class="modal">
+                <div class="modal-header">
+                    <div class="modal-icon" id="modalIcon">❓</div>
+                    <h3 class="modal-title" id="modalTitle">Confirmation</h3>
+                    <p class="modal-subtitle" id="modalSubtitle">
+                        Veuillez confirmer votre action
+                    </p>
+                </div>
+                <div class="modal-body">
+                    <p class="modal-message" id="modalMessage">
+                        Êtes-vous sûr de vouloir effectuer cette action ?
+                    </p>
+                    <div class="modal-actions" id="modalActions">
+                        <button
+                            class="modal-btn modal-btn-secondary"
+                            onclick="closeModal()"
+                        >
+                            Annuler
+                        </button>
+                        <button
+                            class="modal-btn modal-btn-primary"
+                            onclick="confirmModal()"
+                        >
+                            Confirmer
+                        </button>
+                    </div>
+                </div>
             </div>
         </div>
-
-        <div class="cards-container" id="cardsContainer">
-            <div class="loading">
-                <div class="spinner"></div>
-            </div>
-        </div>
-
-        <button class="fab" id="fab" title="Révéler toutes les cartes visibles">
-            ⚡
-        </button>
-    </div>
-    <script src="script.js"></script>
-    <div id="modalOverlay" class="modal-overlay">
-    <div class="modal">
-        <div class="modal-header">
-            <div class="modal-icon" id="modalIcon">❓</div>
-            <h3 class="modal-title" id="modalTitle">Confirmation</h3>
-            <p class="modal-subtitle" id="modalSubtitle">Veuillez confirmer votre action</p>
-        </div>
-        <div class="modal-body">
-            <p class="modal-message" id="modalMessage">
-                Êtes-vous sûr de vouloir effectuer cette action ?
-            </p>
-            <div class="modal-actions" id="modalActions">
-                <button class="modal-btn modal-btn-secondary" onclick="closeModal()">
-                    Annuler
-                </button>
-                <button class="modal-btn modal-btn-primary" onclick="confirmModal()">
-                    Confirmer
-                </button>
-            </div>
-        </div>
-    </div>
-</div>
-</body>
+    </body>
 </html>
