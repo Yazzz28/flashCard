@@ -1,0 +1,34 @@
+{
+    "CDA": {
+        "frontend": [
+            {
+                "question": "Qu'est-ce que HTML ?",
+                "answer": "HyperText Markup Language - langage de balisage pour structurer les pages web"
+            },
+            {
+                "question": "Que signifie CSS ?",
+                "answer": "Cascading Style Sheets - langage de style pour la présentation des pages web"
+            }
+        ],
+        "backend": [
+            {
+                "question": "Qu'est-ce qu'une API REST ?",
+                "answer": "Architecture de services web basée sur HTTP avec des opérations CRUD"
+            }
+        ]
+    },
+    "DWWM": {
+        "frontend": [
+            {
+                "question": "Qu'est-ce que JavaScript ?",
+                "answer": "Langage de programmation dynamique pour le web"
+            }
+        ],
+        "database": [
+            {
+                "question": "Qu'est-ce qu'une base de données relationnelle ?",
+                "answer": "Système de gestion de données organisées en tables liées"
+            }
+        ]
+    }
+}

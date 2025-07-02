@@ -1,0 +1,38 @@
+{
+    "env": {
+        "browser": true,
+        "es2022": true,
+        "jest": true,
+        "node": true
+    },
+    "extends": ["eslint:recommended"],
+    "parserOptions": {
+        "ecmaVersion": 2022,
+        "sourceType": "module"
+    },
+    "rules": {
+        "indent": ["error", 4],
+        "linebreak-style": ["error", "unix"],
+        "quotes": ["error", "single"],
+        "semi": ["error", "always"],
+        "no-unused-vars": "warn",
+        "no-console": "off",
+        "camelcase": "error",
+        "prefer-const": "error",
+        "no-var": "error",
+        "prefer-arrow-callback": "error",
+        "arrow-spacing": "error",
+        "object-curly-spacing": ["error", "always"],
+        "array-bracket-spacing": ["error", "never"],
+        "no-trailing-spaces": "error",
+        "eol-last": "error",
+        "comma-dangle": ["error", "never"],
+        "prefer-template": "error",
+        "template-curly-spacing": "error"
+    },
+    "globals": {
+        "module": "readonly",
+        "closeModal": "writable",
+        "confirmModal": "writable"
+    }
+}

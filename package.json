@@ -1,0 +1,73 @@
+{
+    "name": "wildcards",
+    "version": "1.0.0",
+    "description": "Application web de fiches de révision pour les formations CDA et DWWM",
+    "main": "public/index.html",
+    "scripts": {
+        "start": "serve public",
+        "dev": "serve . -s",
+        "lint:js": "eslint src/**/*.js",
+        "lint:css": "prettier --check assets/css/styles.css",
+        "format:css": "prettier --write assets/css/styles.css",
+        "lint:html": "html-validate public/index.html",
+        "fix:js": "eslint src/**/*.js --fix",
+        "fix:css": "prettier --write assets/css/styles.css",
+        "fix": "npm run fix:js && npm run fix:css",
+        "lint": "npm run lint:js && npm run lint:css && npm run lint:html",
+        "test": "jest",
+        "test:unit": "jest tests/unit",
+        "test:integration": "jest tests/integration",
+        "test:e2e": "playwright test",
+        "test:e2e-ui": "playwright test --ui",
+        "test:watch": "jest --watch",
+        "test:coverage": "jest --coverage",
+        "test:all": "npm run test:unit && npm run test:integration && npm run test:e2e",
+        "validate": "npm run fix && npm run lint && npm run test:unit && npm run test:integration",
+        "build": "echo \"Build process: copie des fichiers optimisés\" && exit 0"
+    },
+    "keywords": [
+        "flashcards",
+        "révision",
+        "CDA",
+        "DWWM",
+        "Wild Code School",
+        "education",
+        "web app",
+        "accessible",
+        "responsive"
+    ],
+    "author": "Wild Code School",
+    "license": "MIT",
+    "devDependencies": {
+        "@axe-core/playwright": "^4.10.2",
+        "@babel/core": "^7.28.0",
+        "@babel/preset-env": "^7.28.0",
+        "@playwright/test": "^1.53.2",
+        "@testing-library/dom": "^10.4.0",
+        "@testing-library/jest-dom": "^6.6.3",
+        "axe-core": "^4.10.3",
+        "babel-jest": "^30.0.2",
+        "eslint": "^8.57.0",
+        "html-validate": "^8.15.0",
+        "jest": "^29.7.0",
+        "jest-environment-jsdom": "^30.0.2",
+        "jsdom": "^26.1.0",
+        "playwright": "^1.53.2",
+        "prettier": "^3.6.2",
+        "serve": "^14.2.1"
+    },
+    "browserslist": [
+        "> 1%",
+        "last 2 versions",
+        "not dead",
+        "not ie 11"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/wild-code-school/wildcards.git"
+    },
+    "bugs": {
+        "url": "https://github.com/wild-code-school/wildcards/issues"
+    },
+    "homepage": "https://github.com/wild-code-school/wildcards#readme"
+}

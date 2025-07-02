@@ -1,0 +1,265 @@
+# Page snapshot
+
+```yaml
+- button "Basculer entre le thème clair et sombre": Mode sombre
+- banner:
+  - heading "WildCards" [level=1]
+  - paragraph: Fiches de révision pour CDA et DWWM
+- complementary "Statistiques de progression":
+  - text: 📊 Progression Révélées 0 Total 228
+  - progressbar "Progression des cartes révélées"
+  - button "Réinitialiser toutes les cartes révélées": 🔄 Réinitialiser
+- region "Contrôles de filtrage et recherche":
+  - text: Rechercher une question ou un concept
+  - textbox "Rechercher une question ou un concept"
+  - text: Tapez pour rechercher dans les questions et réponses
+  - group "🎓 Formations":
+    - text: 🎓 Formations
+    - button "Afficher toutes les formations" [pressed]: Toutes
+    - button "Filtrer par formation CDA": CDA
+    - button "Filtrer par formation DWWM": DWWM
+  - group:
+    - button "Filtrer par catégorie Toutes" [pressed]: Toutes
+    - button "Filtrer par catégorie Frontend": Frontend
+    - button "Filtrer par catégorie Backend": Backend
+    - button "Filtrer par catégorie Base de données": Base de données
+    - button "Filtrer par catégorie DevOps": DevOps
+    - button "Filtrer par catégorie Architecture": Architecture
+    - button "Filtrer par catégorie Tests": Tests
+    - button "Filtrer par catégorie Sécurité": Sécurité
+    - button "Filtrer par catégorie Conception": Conception
+    - button "Filtrer par catégorie Gestion de projet": Gestion de projet
+    - button "Filtrer par catégorie Outils": Outils
+    - button "Filtrer par catégorie Fullstack": Fullstack
+    - button "Filtrer par catégorie Pratiques modernes": Pratiques modernes
+- main "Liste des fiches de révision":
+  - 'button "Question 1: Qu''est-ce qu''une SPA ?..."': Qu'est-ce qu'une SPA ? Cliquez pour révéler la réponse
+  - 'button "Question 2: Qu''est-ce qu''Angular ?..."': Qu'est-ce qu'Angular ? Cliquez pour révéler la réponse
+  - 'button "Question 3: Quels sont les avantages d''un framework orienté composant comme Angular ?..."': Quels sont les avantages d'un framework orienté composant comme Angular ? Cliquez pour révéler la réponse
+  - 'button "Question 4: Quels sont les prérequis pour installer et exécuter un projet Angular ?..."': Quels sont les prérequis pour installer et exécuter un projet Angular ? Cliquez pour révéler la réponse
+  - 'button "Question 5: Comment gères-tu un événement utilisateur dans Angular ?..."': Comment gères-tu un événement utilisateur dans Angular ? Cliquez pour révéler la réponse
+  - 'button "Question 6: Comment récupères-tu des données d''une API dans une interface Angular ?..."': Comment récupères-tu des données d'une API dans une interface Angular ? Cliquez pour révéler la réponse
+  - 'button "Question 7: Comment sécuriser les pages en Angular selon le rôle de l''utilisateur ?..."': Comment sécuriser les pages en Angular selon le rôle de l'utilisateur ? Cliquez pour révéler la réponse
+  - 'button "Question 8: Comment rends-tu une interface responsive ?..."': Comment rends-tu une interface responsive ? Cliquez pour révéler la réponse
+  - 'button "Question 9: Pourquoi est-il important d''adapter une interface à différents types de supports ?..."': Pourquoi est-il important d'adapter une interface à différents types de supports ? Cliquez pour révéler la réponse
+  - 'button "Question 10: Comment t''assures-tu que ton interface respecte la maquette du dossier de conception ?..."': Comment t'assures-tu que ton interface respecte la maquette du dossier de conception ? Cliquez pour révéler la réponse
+  - 'button "Question 11: Pourquoi et comment tester une interface utilisateur ?..."': Pourquoi et comment tester une interface utilisateur ? Cliquez pour révéler la réponse
+  - 'button "Question 12: Quels mécanismes peux-tu mettre en place pour sécuriser une interface ?..."': Quels mécanismes peux-tu mettre en place pour sécuriser une interface ? Cliquez pour révéler la réponse
+  - 'button "Question 13: Comment fonctionne le DOM et quelle est son importance dans les interfaces web ?..."': Comment fonctionne le DOM et quelle est son importance dans les interfaces web ? Cliquez pour révéler la réponse
+  - 'button "Question 14: Quelles sont les principales vulnérabilités web (XSS, CSRF) et comment s''en prémunir ?..."': Quelles sont les principales vulnérabilités web (XSS, CSRF) et comment s'en prémunir ? Cliquez pour révéler la réponse
+  - 'button "Question 15: Comment se protéger contre les injections SQL, XSS et CSRF ?..."': Comment se protéger contre les injections SQL, XSS et CSRF ? Cliquez pour révéler la réponse
+  - 'button "Question 16: Pourquoi doit-on valider les données côté frontend et backend ?..."': Pourquoi doit-on valider les données côté frontend et backend ? Cliquez pour révéler la réponse
+  - 'button "Question 17: Quelles sont les bonnes pratiques UX pour améliorer l''ergonomie d''une interface web ?..."': Quelles sont les bonnes pratiques UX pour améliorer l'ergonomie d'une interface web ? Cliquez pour révéler la réponse
+  - 'button "Question 18: Quels facteurs influencent le référencement SEO d''une interface web ?..."': Quels facteurs influencent le référencement SEO d'une interface web ? Cliquez pour révéler la réponse
+  - 'button "Question 19: Quelles règles d''accessibilité dois-tu respecter lors du développement d''une interface ?..."': Quelles règles d'accessibilité dois-tu respecter lors du développement d'une interface ? Cliquez pour révéler la réponse
+  - 'button "Question 20: Comment améliorer l''accessibilité d''une interface ?..."': Comment améliorer l'accessibilité d'une interface ? Cliquez pour révéler la réponse
+  - 'button "Question 21: Qu''est-ce que le RGAA et pourquoi est-il important ?..."': Qu'est-ce que le RGAA et pourquoi est-il important ? Cliquez pour révéler la réponse
+  - 'button "Question 22: Quels sont les principes SOLID en programmation orientée objet ?..."': Quels sont les principes SOLID en programmation orientée objet ? Cliquez pour révéler la réponse
+  - 'button "Question 23: Quels sont les quatre piliers de la Programmation Orientée Objet (POO) ?..."': Quels sont les quatre piliers de la Programmation Orientée Objet (POO) ? Cliquez pour révéler la réponse
+  - 'button "Question 24: Comment fonctionne le polymorphisme en Java ?..."': Comment fonctionne le polymorphisme en Java ? Cliquez pour révéler la réponse
+  - 'button "Question 25: Pourquoi utilise-t-on des interfaces en POO ?..."': Pourquoi utilise-t-on des interfaces en POO ? Cliquez pour révéler la réponse
+  - 'button "Question 26: Dans quel cas utiliser une classe abstraite plutôt qu''une interface ?..."': Dans quel cas utiliser une classe abstraite plutôt qu'une interface ? Cliquez pour révéler la réponse
+  - 'button "Question 27: Pourquoi dit-on que l''héritage favorise la réutilisation du code ?..."': Pourquoi dit-on que l'héritage favorise la réutilisation du code ? Cliquez pour révéler la réponse
+  - 'button "Question 28: Comment empêcher une classe d''être héritée en Java ?..."': Comment empêcher une classe d'être héritée en Java ? Cliquez pour révéler la réponse
+  - 'button "Question 29: Comment garantit-on l''encapsulation des données en Java ?..."': Comment garantit-on l'encapsulation des données en Java ? Cliquez pour révéler la réponse
+  - 'button "Question 30: Une classe peut-elle implémenter plusieurs interfaces en Java ?..."': Une classe peut-elle implémenter plusieurs interfaces en Java ? Cliquez pour révéler la réponse
+  - 'button "Question 31: Pourquoi et comment appliquer le principe de l''encapsulation ?..."': Pourquoi et comment appliquer le principe de l'encapsulation ? Cliquez pour révéler la réponse
+  - 'button "Question 32: Comment sécuriser une API REST ?..."': Comment sécuriser une API REST ? Cliquez pour révéler la réponse
+  - 'button "Question 33: Pourquoi et comment valider les entrées utilisateur dans une API ?..."': Pourquoi et comment valider les entrées utilisateur dans une API ? Cliquez pour révéler la réponse
+  - 'button "Question 34: Pourquoi utiliser un format JSON pour les réponses d''une API REST ?..."': Pourquoi utiliser un format JSON pour les réponses d'une API REST ? Cliquez pour révéler la réponse
+  - 'button "Question 35: Comment sécuriser un composant métier dans une application web ?..."': Comment sécuriser un composant métier dans une application web ? Cliquez pour révéler la réponse
+  - 'button "Question 36: Quelles sont les principales failles de sécurité en développement web ?..."': Quelles sont les principales failles de sécurité en développement web ? Cliquez pour révéler la réponse
+  - 'button "Question 37: Comment fonctionne l''authentification avec JWT ?..."': Comment fonctionne l'authentification avec JWT ? Cliquez pour révéler la réponse
+  - 'button "Question 38: Comment gérer les autorisations côté backend avec Spring Boot ?..."': Comment gérer les autorisations côté backend avec Spring Boot ? Cliquez pour révéler la réponse
+  - 'button "Question 39: Pourquoi activer CORS dans une API backend ?..."': Pourquoi activer CORS dans une API backend ? Cliquez pour révéler la réponse
+  - 'button "Question 40: Pourquoi un token JWT doit-il avoir une durée de vie limitée ?..."': Pourquoi un token JWT doit-il avoir une durée de vie limitée ? Cliquez pour révéler la réponse
+  - 'button "Question 41: Comment sécuriser une API avec OAuth2 et JWT ?..."': Comment sécuriser une API avec OAuth2 et JWT ? Cliquez pour révéler la réponse
+  - 'button "Question 42: Quelle est la différence entre le JDK et la JVM ?..."': Quelle est la différence entre le JDK et la JVM ? Cliquez pour révéler la réponse
+  - 'button "Question 43: Quelles sont les bonnes pratiques pour concevoir une API RESTful bien structurée ?..."': Quelles sont les bonnes pratiques pour concevoir une API RESTful bien structurée ? Cliquez pour révéler la réponse
+  - 'button "Question 44: Quelles sont les différences fondamentales entre REST et GraphQL ?..."': Quelles sont les différences fondamentales entre REST et GraphQL ? Cliquez pour révéler la réponse
+  - 'button "Question 45: Quelles stratégies utiliser pour le versionnement et la compatibilité des APIs ?..."': Quelles stratégies utiliser pour le versionnement et la compatibilité des APIs ? Cliquez pour révéler la réponse
+  - 'button "Question 46: Comment tester efficacement les endpoints d''une API (unitaires et intégration) ?..."': Comment tester efficacement les endpoints d'une API (unitaires et intégration) ? Cliquez pour révéler la réponse
+  - 'button "Question 47: Quelle est la différence entre un schéma conceptuel, un schéma logique et un schéma physique ?..."': Quelle est la différence entre un schéma conceptuel, un schéma logique et un schéma physique ? Cliquez pour révéler la réponse
+  - 'button "Question 48: Quelle est la différence entre une clé primaire et une clé étrangère ?..."': Quelle est la différence entre une clé primaire et une clé étrangère ? Cliquez pour révéler la réponse
+  - 'button "Question 49: Quelles sont les principales étapes de la méthode Merise pour concevoir une base de données ?..."': Quelles sont les principales étapes de la méthode Merise pour concevoir une base de données ? Cliquez pour révéler la réponse
+  - 'button "Question 50: Quelle est la différence entre une association 1-1, 1-N et N-N dans Merise ?..."': Quelle est la différence entre une association 1-1, 1-N et N-N dans Merise ? Cliquez pour révéler la réponse
+  - 'button "Question 51: Comment construire et modéliser une base de données relationnelle efficace ?..."': Comment construire et modéliser une base de données relationnelle efficace ? Cliquez pour révéler la réponse
+  - 'button "Question 52: Comment créer une base de données en SQL ?..."': Comment créer une base de données en SQL ? Cliquez pour révéler la réponse
+  - 'button "Question 53: Comment créer une table avec une clé primaire et une clé étrangère ?..."': Comment créer une table avec une clé primaire et une clé étrangère ? Cliquez pour révéler la réponse
+  - 'button "Question 54: Comment protéger une base de données contre les injections SQL ?..."': Comment protéger une base de données contre les injections SQL ? Cliquez pour révéler la réponse
+  - 'button "Question 55: Quelles sont les stratégies d''optimisation des performances des bases de données SQL ?..."': Quelles sont les stratégies d'optimisation des performances des bases de données SQL ? Cliquez pour révéler la réponse
+  - 'button "Question 56: Quelles sont les meilleures pratiques pour optimiser les requêtes SQL et NoSQL ?..."': Quelles sont les meilleures pratiques pour optimiser les requêtes SQL et NoSQL ? Cliquez pour révéler la réponse
+  - 'button "Question 57: Quelles sont les bonnes pratiques pour sécuriser une base de données et gérer les comptes utilisateu..."': Quelles sont les bonnes pratiques pour sécuriser une base de données et gérer les comptes utilisateurs ? Cliquez pour révéler la réponse
+  - 'button "Question 58: Pourquoi ne faut-il pas utiliser root pour les accès à la base de données ?..."': Pourquoi ne faut-il pas utiliser root pour les accès à la base de données ? Cliquez pour révéler la réponse
+  - 'button "Question 59: Pourquoi faut-il toujours valider les entrées utilisateur avant d''insérer des données en base ?..."': Pourquoi faut-il toujours valider les entrées utilisateur avant d'insérer des données en base ? Cliquez pour révéler la réponse
+  - 'button "Question 60: Comment sécuriser les accès aux bases de données SQL et NoSQL ?..."': Comment sécuriser les accès aux bases de données SQL et NoSQL ? Cliquez pour révéler la réponse
+  - 'button "Question 61: Comment tester la sécurité et l''intégrité des accès aux bases de données ?..."': Comment tester la sécurité et l'intégrité des accès aux bases de données ? Cliquez pour révéler la réponse
+  - 'button "Question 62: Qu''est-ce qu''un ORM et pourquoi l''utiliser ?..."': Qu'est-ce qu'un ORM et pourquoi l'utiliser ? Cliquez pour révéler la réponse
+  - 'button "Question 63: Comment JPA crée-t-il la base et les tables dans Spring Boot ?..."': Comment JPA crée-t-il la base et les tables dans Spring Boot ? Cliquez pour révéler la réponse
+  - 'button "Question 64: Comment accéder aux données avec JPA dans Spring Boot ?..."': Comment accéder aux données avec JPA dans Spring Boot ? Cliquez pour révéler la réponse
+  - 'button "Question 65: Comment configurer la connexion à une base MySQL avec Spring Boot ?..."': Comment configurer la connexion à une base MySQL avec Spring Boot ? Cliquez pour révéler la réponse
+  - 'button "Question 66: Comment JPA fait-il le lien entre une classe Java et une table en base de données ?..."': Comment JPA fait-il le lien entre une classe Java et une table en base de données ? Cliquez pour révéler la réponse
+  - 'button "Question 67: Quelle est la différence entre une base de données SQL et NoSQL ?..."': Quelle est la différence entre une base de données SQL et NoSQL ? Cliquez pour révéler la réponse
+  - 'button "Question 68: Quels sont les avantages et inconvénients des procédures stockées et des triggers ?..."': Quels sont les avantages et inconvénients des procédures stockées et des triggers ? Cliquez pour révéler la réponse
+  - 'button "Question 69: Quels sont les principaux Design Patterns pour l''accès aux bases de données et leur utilité ?..."': Quels sont les principaux Design Patterns pour l'accès aux bases de données et leur utilité ? Cliquez pour révéler la réponse
+  - 'button "Question 70: Pourquoi intégrer l''authentification et la gestion des accès dans les composants d''accès aux données..."': Pourquoi intégrer l'authentification et la gestion des accès dans les composants d'accès aux données ? Cliquez pour révéler la réponse
+  - 'button "Question 71: Pourquoi utiliser Docker pour un projet ?..."': Pourquoi utiliser Docker pour un projet ? Cliquez pour révéler la réponse
+  - 'button "Question 72: Quels fichiers sont nécessaires pour configurer un conteneur Docker ?..."': Quels fichiers sont nécessaires pour configurer un conteneur Docker ? Cliquez pour révéler la réponse
+  - 'button "Question 73: Pourquoi utiliser Docker dans une démarche DevOps ?..."': Pourquoi utiliser Docker dans une démarche DevOps ? Cliquez pour révéler la réponse
+  - 'button "Question 74: Qu''est-ce que docker-compose et pourquoi l''utiliser ?..."': Qu'est-ce que docker-compose et pourquoi l'utiliser ? Cliquez pour révéler la réponse
+  - 'button "Question 75: Quels sont les avantages de Docker et comment l''utiliser dans un projet ?..."': Quels sont les avantages de Docker et comment l'utiliser dans un projet ? Cliquez pour révéler la réponse
+  - 'button "Question 76: Comment Kubernetes facilite-t-il l''orchestration des conteneurs ?..."': Comment Kubernetes facilite-t-il l'orchestration des conteneurs ? Cliquez pour révéler la réponse
+  - 'button "Question 77: Comment mettre en place une pipeline CI/CD efficace ?..."': Comment mettre en place une pipeline CI/CD efficace ? Cliquez pour révéler la réponse
+  - 'button "Question 78: Qu''est-ce que DevOps et pourquoi l''utiliser ?..."': Qu'est-ce que DevOps et pourquoi l'utiliser ? Cliquez pour révéler la réponse
+  - 'button "Question 79: Quelle est la différence entre Intégration Continue (CI) et Déploiement Continu (CD) ?..."': Quelle est la différence entre Intégration Continue (CI) et Déploiement Continu (CD) ? Cliquez pour révéler la réponse
+  - 'button "Question 80: Quels outils sont utilisés pour la CI/CD ?..."': Quels outils sont utilisés pour la CI/CD ? Cliquez pour révéler la réponse
+  - 'button "Question 81: Pourquoi automatiser les tests dans une CI/CD ?..."': Pourquoi automatiser les tests dans une CI/CD ? Cliquez pour révéler la réponse
+  - 'button "Question 82: Que contient un fichier CI/CD (.yaml) pour GitHub Actions ?..."': Que contient un fichier CI/CD (.yaml) pour GitHub Actions ? Cliquez pour révéler la réponse
+  - 'button "Question 83: Qu''est-ce que le déploiement d''une application ?..."': Qu'est-ce que le déploiement d'une application ? Cliquez pour révéler la réponse
+  - 'button "Question 84: Quelle est la différence entre un serveur et un hébergeur ?..."': Quelle est la différence entre un serveur et un hébergeur ? Cliquez pour révéler la réponse
+  - 'button "Question 85: Qu''est-ce qu''un DNS et quel est son rôle ?..."': Qu'est-ce qu'un DNS et quel est son rôle ? Cliquez pour révéler la réponse
+  - 'button "Question 86: Qu''est-ce qu''un reverse proxy et pourquoi l''utiliser ?..."': Qu'est-ce qu'un reverse proxy et pourquoi l'utiliser ? Cliquez pour révéler la réponse
+  - 'button "Question 87: Comment gérer efficacement le versionnement et les mises à jour d''un logiciel ?..."': Comment gérer efficacement le versionnement et les mises à jour d'un logiciel ? Cliquez pour révéler la réponse
+  - 'button "Question 88: Quelles stratégies adopter pour une migration de logiciel sans rupture ?..."': Quelles stratégies adopter pour une migration de logiciel sans rupture ? Cliquez pour révéler la réponse
+  - 'button "Question 89: Qu''est-ce que l''Infrastructure as Code et quels outils utiliser (Terraform, Ansible…) ?..."': Qu'est-ce que l'Infrastructure as Code et quels outils utiliser (Terraform, Ansible…) ? Cliquez pour révéler la réponse
+  - 'button "Question 90: Quels outils recommandes-tu pour la supervision et la gestion des logs en production ?..."': Quels outils recommandes-tu pour la supervision et la gestion des logs en production ? Cliquez pour révéler la réponse
+  - 'button "Question 91: Quels outils de monitoring et de logging recommandes-tu pour suivre les performances d''une applicati..."': Quels outils de monitoring et de logging recommandes-tu pour suivre les performances d'une application ? Cliquez pour révéler la réponse
+  - 'button "Question 92: Quelles sont les stratégies de mise en cache pour améliorer les performances d''une application ?..."': Quelles sont les stratégies de mise en cache pour améliorer les performances d'une application ? Cliquez pour révéler la réponse
+  - 'button "Question 93: Comment fonctionne le load balancing et quand l''utiliser ?..."': Comment fonctionne le load balancing et quand l'utiliser ? Cliquez pour révéler la réponse
+  - 'button "Question 94: Quels sont les principes des architectures logicielles multicouches ?..."': Quels sont les principes des architectures logicielles multicouches ? Cliquez pour révéler la réponse
+  - 'button "Question 95: Quel est l''intérêt d''une architecture en couches ?..."': Quel est l'intérêt d'une architecture en couches ? Cliquez pour révéler la réponse
+  - 'button "Question 96: Quelle est la différence entre une architecture monolithique et une architecture en microservices ?..."': Quelle est la différence entre une architecture monolithique et une architecture en microservices ? Cliquez pour révéler la réponse
+  - 'button "Question 97: Quelles sont les principales couches d''une architecture logicielle multicouche ?..."': Quelles sont les principales couches d'une architecture logicielle multicouche ? Cliquez pour révéler la réponse
+  - 'button "Question 98: Quels sont les principes d''architecture d''une application SaaS et leurs avantages ?..."': Quels sont les principes d'architecture d'une application SaaS et leurs avantages ? Cliquez pour révéler la réponse
+  - 'button "Question 99: Comment sécuriser une architecture logicielle ?..."': Comment sécuriser une architecture logicielle ? Cliquez pour révéler la réponse
+  - 'button "Question 100: Quelles sont les principales vulnérabilités des architectures multicouches et comment les prévenir ?..."': Quelles sont les principales vulnérabilités des architectures multicouches et comment les prévenir ? Cliquez pour révéler la réponse
+  - 'button "Question 101: Comment adapter une architecture logicielle aux exigences de sécurité de l''ANSSI ?..."': Comment adapter une architecture logicielle aux exigences de sécurité de l'ANSSI ? Cliquez pour révéler la réponse
+  - 'button "Question 102: Quels sont les principaux indicateurs de sécurité des systèmes d''information (DICP) ?..."': Quels sont les principaux indicateurs de sécurité des systèmes d'information (DICP) ? Cliquez pour révéler la réponse
+  - 'button "Question 103: Quels outils peux-tu utiliser pour modéliser une architecture logicielle ?..."': Quels outils peux-tu utiliser pour modéliser une architecture logicielle ? Cliquez pour révéler la réponse
+  - 'button "Question 104: Quels principes d''éco-conception peux-tu appliquer dans une architecture logicielle ?..."': Quels principes d'éco-conception peux-tu appliquer dans une architecture logicielle ? Cliquez pour révéler la réponse
+  - 'button "Question 105: Qu''est-ce qu''un plan de tests et pourquoi est-il important ?..."': Qu'est-ce qu'un plan de tests et pourquoi est-il important ? Cliquez pour révéler la réponse
+  - 'button "Question 106: Quels sont les types de tests inclus dans un plan de tests ?..."': Quels sont les types de tests inclus dans un plan de tests ? Cliquez pour révéler la réponse
+  - 'button "Question 107: Quelle est la différence entre un test unitaire et un test d''intégration ?..."': Quelle est la différence entre un test unitaire et un test d'intégration ? Cliquez pour révéler la réponse
+  - 'button "Question 108: Quelle est la différence entre un test manuel et un test automatisé ?..."': Quelle est la différence entre un test manuel et un test automatisé ? Cliquez pour révéler la réponse
+  - 'button "Question 109: Quelle est la différence entre tests unitaires, d''intégration, fonctionnels et E2E ?..."': Quelle est la différence entre tests unitaires, d'intégration, fonctionnels et E2E ? Cliquez pour révéler la réponse
+  - 'button "Question 110: Qu''est-ce qu''un test de charge ?..."': Qu'est-ce qu'un test de charge ? Cliquez pour révéler la réponse
+  - 'button "Question 111: Pourquoi réaliser des tests unitaires sur un composant métier ?..."': Pourquoi réaliser des tests unitaires sur un composant métier ? Cliquez pour révéler la réponse
+  - 'button "Question 112: Qu''est-ce que le Test-Driven Development (TDD) ?..."': Qu'est-ce que le Test-Driven Development (TDD) ? Cliquez pour révéler la réponse
+  - 'button "Question 113: Quelles sont les bonnes pratiques du Test-Driven Development (TDD) et comment l''implémenter ?..."': Quelles sont les bonnes pratiques du Test-Driven Development (TDD) et comment l'implémenter ? Cliquez pour révéler la réponse
+  - 'button "Question 114: Qu''est-ce que le mocking et comment gérer les dépendances dans les tests ?..."': Qu'est-ce que le mocking et comment gérer les dépendances dans les tests ? Cliquez pour révéler la réponse
+  - 'button "Question 115: Comment créer un environnement de test ?..."': Comment créer un environnement de test ? Cliquez pour révéler la réponse
+  - 'button "Question 116: Que faire si un test échoue ?..."': Que faire si un test échoue ? Cliquez pour révéler la réponse
+  - 'button "Question 117: Quels outils et frameworks recommandes-tu pour automatiser les tests ?..."': Quels outils et frameworks recommandes-tu pour automatiser les tests ? Cliquez pour révéler la réponse
+  - 'button "Question 118: Comment organiser et prioriser les tests en méthodologie Agile ?..."': Comment organiser et prioriser les tests en méthodologie Agile ? Cliquez pour révéler la réponse
+  - 'button "Question 119: Pourquoi utiliser HTTPS au lieu de HTTP ?..."': Pourquoi utiliser HTTPS au lieu de HTTP ? Cliquez pour révéler la réponse
+  - 'button "Question 120: Pourquoi ne jamais stocker un mot de passe en clair et comment le sécuriser ?..."': Pourquoi ne jamais stocker un mot de passe en clair et comment le sécuriser ? Cliquez pour révéler la réponse
+  - 'button "Question 121: Quelles sont les bonnes pratiques pour définir un mot de passe sécurisé ?..."': Quelles sont les bonnes pratiques pour définir un mot de passe sécurisé ? Cliquez pour révéler la réponse
+  - 'button "Question 122: Comment intégrer la cryptographie et la gestion des identités dans une application sécurisée ?..."': Comment intégrer la cryptographie et la gestion des identités dans une application sécurisée ? Cliquez pour révéler la réponse
+  - 'button "Question 123: Comment implémenter un système de gestion des permissions efficace ?..."': Comment implémenter un système de gestion des permissions efficace ? Cliquez pour révéler la réponse
+  - 'button "Question 124: Quelles sont les meilleures pratiques pour sécuriser les données sensibles en transit et au repos ?..."': Quelles sont les meilleures pratiques pour sécuriser les données sensibles en transit et au repos ? Cliquez pour révéler la réponse
+  - 'button "Question 125: Quels sont les défis spécifiques à la sécurité des applications mobiles et PWA ?..."': Quels sont les défis spécifiques à la sécurité des applications mobiles et PWA ? Cliquez pour révéler la réponse
+  - 'button "Question 126: Comment détecter et corriger les failles de sécurité dans une application en production ?..."': Comment détecter et corriger les failles de sécurité dans une application en production ? Cliquez pour révéler la réponse
+  - 'button "Question 127: Quel est le rôle de l''ANSSI et pourquoi suivre ses recommandations ?..."': Quel est le rôle de l'ANSSI et pourquoi suivre ses recommandations ? Cliquez pour révéler la réponse
+  - 'button "Question 128: Quelles sont les obligations du RGPD pour une application qui stocke des données utilisateurs ?..."': Quelles sont les obligations du RGPD pour une application qui stocke des données utilisateurs ? Cliquez pour révéler la réponse
+  - 'button "Question 129: Quelles obligations le RGPD impose-t-il pour une interface utilisateur ?..."': Quelles obligations le RGPD impose-t-il pour une interface utilisateur ? Cliquez pour révéler la réponse
+  - 'button "Question 130: Quelles obligations légales dois-tu respecter lors de la conception d''une interface ?..."': Quelles obligations légales dois-tu respecter lors de la conception d'une interface ? Cliquez pour révéler la réponse
+  - 'button "Question 131: Pourquoi réaliser des maquettes avant de coder ?..."': Pourquoi réaliser des maquettes avant de coder ? Cliquez pour révéler la réponse
+  - 'button "Question 132: Quelle est la différence entre un wireframe et une maquette ?..."': Quelle est la différence entre un wireframe et une maquette ? Cliquez pour révéler la réponse
+  - 'button "Question 133: Quelle est la différence entre une maquette et un prototype ?..."': Quelle est la différence entre une maquette et un prototype ? Cliquez pour révéler la réponse
+  - 'button "Question 134: Que contient un dossier de conception ?..."': Que contient un dossier de conception ? Cliquez pour révéler la réponse
+  - 'button "Question 135: Quels outils de maquettage utiliser et comment les intégrer dans un projet ?..."': Quels outils de maquettage utiliser et comment les intégrer dans un projet ? Cliquez pour révéler la réponse
+  - 'button "Question 136: Quelle est la différence entre UI et UX ?..."': Quelle est la différence entre UI et UX ? Cliquez pour révéler la réponse
+  - 'button "Question 137: Quels principes ergonomiques faut-il respecter pour une bonne expérience utilisateur ?..."': Quels principes ergonomiques faut-il respecter pour une bonne expérience utilisateur ? Cliquez pour révéler la réponse
+  - 'button "Question 138: Comment analyser un cahier des charges et formaliser les besoins utilisateurs ?..."': Comment analyser un cahier des charges et formaliser les besoins utilisateurs ? Cliquez pour révéler la réponse
+  - 'button "Question 139: Quelles sont les normes d''accessibilité à respecter pour concevoir une interface inclusive ?..."': Quelles sont les normes d'accessibilité à respecter pour concevoir une interface inclusive ? Cliquez pour révéler la réponse
+  - 'button "Question 140: Quels éléments composent une charte graphique ?..."': Quels éléments composent une charte graphique ? Cliquez pour révéler la réponse
+  - 'button "Question 141: Comment planifies-tu les tâches de développement d''un projet ?..."': Comment planifies-tu les tâches de développement d'un projet ? Cliquez pour révéler la réponse
+  - 'button "Question 142: Quelle est la différence entre une gestion de projet séquentielle et Agile ?..."': Quelle est la différence entre une gestion de projet séquentielle et Agile ? Cliquez pour révéler la réponse
+  - 'button "Question 143: Quelle est la différence entre une approche séquentielle et Agile en gestion de projet ?..."': Quelle est la différence entre une approche séquentielle et Agile en gestion de projet ? Cliquez pour révéler la réponse
+  - 'button "Question 144: Qu''est-ce qu''un daily meeting en Agile ?..."': Qu'est-ce qu'un daily meeting en Agile ? Cliquez pour révéler la réponse
+  - 'button "Question 145: Quels outils peux-tu utiliser pour gérer un projet en équipe ?..."': Quels outils peux-tu utiliser pour gérer un projet en équipe ? Cliquez pour révéler la réponse
+  - 'button "Question 146: Quels sont les principaux outils de gestion de projet informatique ?..."': Quels sont les principaux outils de gestion de projet informatique ? Cliquez pour révéler la réponse
+  - 'button "Question 147: Comment organiser et animer une réunion efficace dans un projet informatique ?..."': Comment organiser et animer une réunion efficace dans un projet informatique ? Cliquez pour révéler la réponse
+  - 'button "Question 148: Comment assurer la qualité du code dans un projet ?..."': Comment assurer la qualité du code dans un projet ? Cliquez pour révéler la réponse
+  - 'button "Question 149: Pourquoi est-il important de rédiger de la documentation technique dans un projet ?..."': Pourquoi est-il important de rédiger de la documentation technique dans un projet ? Cliquez pour révéler la réponse
+  - 'button "Question 150: Quelle est la différence entre un use case et une user story ?..."': Quelle est la différence entre un use case et une user story ? Cliquez pour révéler la réponse
+  - 'button "Question 151: Quels sont les outils indispensables à ton environnement de développement ?..."': Quels sont les outils indispensables à ton environnement de développement ? Cliquez pour révéler la réponse
+  - 'button "Question 152: Pourquoi utiliser un gestionnaire de versions comme Git ?..."': Pourquoi utiliser un gestionnaire de versions comme Git ? Cliquez pour révéler la réponse
+  - 'button "Question 153: Comment assures-tu la compatibilité entre ton environnement local et l''environnement de production ?..."': Comment assures-tu la compatibilité entre ton environnement local et l'environnement de production ? Cliquez pour révéler la réponse
+  - 'button "Question 154: Quels outils as-tu utilisé ?..."': Quels outils as-tu utilisé ? Cliquez pour révéler la réponse
+  - 'button "Question 155: Quelles sont les 3 étapes du maquettage ?..."': Quelles sont les 3 étapes du maquettage ? Cliquez pour révéler la réponse
+  - 'button "Question 156: Responsive design ?..."': Responsive design ? Cliquez pour révéler la réponse
+  - 'button "Question 157: UX ? UI ?..."': UX ? UI ? Cliquez pour révéler la réponse
+  - 'button "Question 158: Connais-tu le système de composants ?..."': Connais-tu le système de composants ? Cliquez pour révéler la réponse
+  - 'button "Question 159: Qu''est-ce que le CSS ? Comment rendre responsive avec le CSS ?..."': Qu'est-ce que le CSS ? Comment rendre responsive avec le CSS ? Cliquez pour révéler la réponse
+  - 'button "Question 160: Qu''est-ce que le SASS ? Différence avec le CSS ?..."': Qu'est-ce que le SASS ? Différence avec le CSS ? Cliquez pour révéler la réponse
+  - 'button "Question 161: Tu as utilisé une librairie CSS (ex : tailwind) : peux-tu donner les avantages et les inconvénients ..."': "Tu as utilisé une librairie CSS (ex : tailwind) : peux-tu donner les avantages et les inconvénients ? Cliquez pour révéler la réponse"
+  - 'button "Question 162: Qu''est-ce que le Référencement naturel ? Que signifie S.E.O ? À quoi ça sert ? Pourquoi c''est import..."': Qu'est-ce que le Référencement naturel ? Que signifie S.E.O ? À quoi ça sert ? Pourquoi c'est important ? Quelles sont les bonnes pratiques (en citer au moins 3) ? Cliquez pour révéler la réponse
+  - 'button "Question 163: Quelle architecture as-tu mis en place ?..."': Quelle architecture as-tu mis en place ? Cliquez pour révéler la réponse
+  - 'button "Question 164: Différence librairie VS framework ?..."': Différence librairie VS framework ? Cliquez pour révéler la réponse
+  - 'button "Question 165: Qu''est-ce que React ? Pourquoi avoir choisi React pour réaliser ton projet ?..."': Qu'est-ce que React ? Pourquoi avoir choisi React pour réaliser ton projet ? Cliquez pour révéler la réponse
+  - 'button "Question 166: Qu''est-ce qu''une SPA ? Avantages et inconvénients ?..."': Qu'est-ce qu'une SPA ? Avantages et inconvénients ? Cliquez pour révéler la réponse
+  - 'button "Question 167: A quoi sert vite ?..."': A quoi sert vite ? Cliquez pour révéler la réponse
+  - 'button "Question 168: Qu''est-ce qu''un bundle JS ?..."': Qu'est-ce qu'un bundle JS ? Cliquez pour révéler la réponse
+  - 'button "Question 169: Comment, depuis un composant JSX, on en arrive à un fichier JS dans le navigateur ?..."': Comment, depuis un composant JSX, on en arrive à un fichier JS dans le navigateur ? Cliquez pour révéler la réponse
+  - 'button "Question 170: Comment React gère-t-il la mise à jour du DOM ?..."': Comment React gère-t-il la mise à jour du DOM ? Cliquez pour révéler la réponse
+  - 'button "Question 171: Qu''est-ce que le DOM ?..."': Qu'est-ce que le DOM ? Cliquez pour révéler la réponse
+  - 'button "Question 172: Qu''est-ce que npm ? A quoi sert le package.json ? Le dossier node_modules ?..."': Qu'est-ce que npm ? A quoi sert le package.json ? Le dossier node_modules ? Cliquez pour révéler la réponse
+  - 'button "Question 173: Qu''est-ce qu''un linter ? A quoi ça sert ?..."': Qu'est-ce qu'un linter ? A quoi ça sert ? Cliquez pour révéler la réponse
+  - 'button "Question 174: Qu''est-ce que le JSX ? Différence avec le JS ?..."': Qu'est-ce que le JSX ? Différence avec le JS ? Cliquez pour révéler la réponse
+  - 'button "Question 175: Comment met-on le routing en place dans React ? Qu''est-ce qu''un loader ?..."': Comment met-on le routing en place dans React ? Qu'est-ce qu'un loader ? Cliquez pour révéler la réponse
+  - 'button "Question 176: Qu''est-ce qu''un composant ? À quoi ça sert ?..."': Qu'est-ce qu'un composant ? À quoi ça sert ? Cliquez pour révéler la réponse
+  - 'button "Question 177: A quoi sert le .map en JS ? Pourquoi l''utilise-t-on régulièrement en JSX ?..."': A quoi sert le .map en JS ? Pourquoi l'utilise-t-on régulièrement en JSX ? Cliquez pour révéler la réponse
+  - 'button "Question 178: Lorsque tu déclares une variable, à quoi dois-tu faire attention ?..."': Lorsque tu déclares une variable, à quoi dois-tu faire attention ? Cliquez pour révéler la réponse
+  - 'button "Question 179: Quels types de données connais-tu en JS ?..."': Quels types de données connais-tu en JS ? Cliquez pour révéler la réponse
+  - 'button "Question 180: Qu''est-ce qu''un objet ?..."': Qu'est-ce qu'un objet ? Cliquez pour révéler la réponse
+  - 'button "Question 181: Qu''est-ce qu''une boucle ?..."': Qu'est-ce qu'une boucle ? Cliquez pour révéler la réponse
+  - 'button "Question 182: Qu''est-ce qu''une clé ? Une valeur ?..."': Qu'est-ce qu'une clé ? Une valeur ? Cliquez pour révéler la réponse
+  - 'button "Question 183: Qu''est-ce qu''une fonction ? Un paramètre ? Un argument ? Le return ?..."': Qu'est-ce qu'une fonction ? Un paramètre ? Un argument ? Le return ? Cliquez pour révéler la réponse
+  - 'button "Question 184: Qu''est-ce que la POO ? Une class ? Un constructor ? Une propriété ? Une méthode ? Le mot clé ''this'' ..."': Qu'est-ce que la POO ? Une class ? Un constructor ? Une propriété ? Une méthode ? Le mot clé 'this' ? Une instance ? Cliquez pour révéler la réponse
+  - 'button "Question 185: Qu''est-ce que l''héritage ? Le mot clé ''extends'' ? Quels sont ses inconvénients ?..."': Qu'est-ce que l'héritage ? Le mot clé 'extends' ? Quels sont ses inconvénients ? Cliquez pour révéler la réponse
+  - 'button "Question 186: Qu''est-ce qu''une interface ? À quoi ça sert ?..."': Qu'est-ce qu'une interface ? À quoi ça sert ? Cliquez pour révéler la réponse
+  - 'button "Question 187: Qu''est-ce qu''une méthode abstraite ?..."': Qu'est-ce qu'une méthode abstraite ? Cliquez pour révéler la réponse
+  - 'button "Question 188: Qu''est-ce qu''une classe abstraite ?..."': Qu'est-ce qu'une classe abstraite ? Cliquez pour révéler la réponse
+  - 'button "Question 189: Qu''est-ce qu''une props ? Pourquoi les utiliser ? Quel grand principe cela permet-il de respecter ? M..."': Qu'est-ce qu'une props ? Pourquoi les utiliser ? Quel grand principe cela permet-il de respecter ? Montre-moi en une dans ton code en m'expliquant le plus rigoureusement possible Cliquez pour révéler la réponse
+  - 'button "Question 190: A quoi sert le mot clé ''default'' dans ''export default myFunction'' ?..."': A quoi sert le mot clé 'default' dans 'export default myFunction' ? Cliquez pour révéler la réponse
+  - 'button "Question 191: En React, où placerais-tu des objets ''globaux et utilisables par tous les composants'' ?..."': En React, où placerais-tu des objets 'globaux et utilisables par tous les composants' ? Cliquez pour révéler la réponse
+  - 'button "Question 192: À quoi sert useEffect ? (il faut savoir expliquer tous les ''use'' : useEffect, useMemo, useNavigate, ..."': "À quoi sert useEffect ? (il faut savoir expliquer tous les 'use' : useEffect, useMemo, useNavigate, etc…) Cliquez pour révéler la réponse"
+  - 'button "Question 193: Dans un useEffect, à quoi sert le tableau de dépendances ? S''il est vide, que se passe-t-il ? Et si ..."': Dans un useEffect, à quoi sert le tableau de dépendances ? S'il est vide, que se passe-t-il ? Et si j'oublie le tableau de dépendances ? Cliquez pour révéler la réponse
+  - 'button "Question 194: Montre-moi comment tu trouves une réponse sur internet ?..."': Montre-moi comment tu trouves une réponse sur internet ? Cliquez pour révéler la réponse
+  - 'button "Question 195: À quoi sert de commenter son code ? C''est bien ou c''est mal ? Qu''est-ce qu''un bon commentaire ? Un m..."': À quoi sert de commenter son code ? C'est bien ou c'est mal ? Qu'est-ce qu'un bon commentaire ? Un mauvais ? Cliquez pour révéler la réponse
+  - 'button "Question 196: Comment travailles-tu en groupe ? Quels outils utilises-tu ?..."': Comment travailles-tu en groupe ? Quels outils utilises-tu ? Cliquez pour révéler la réponse
+  - 'button "Question 197: Qu''est-ce que git ? github ? Quelles sont les bonnes pratiques à respecter que tu connais ?..."': Qu'est-ce que git ? github ? Quelles sont les bonnes pratiques à respecter que tu connais ? Cliquez pour révéler la réponse
+  - 'button "Question 198: Qu''est-ce que le SQL ? Le NoSQL ? Un SGBDR ? Quel SGBDR utilises-tu dans ton projet ? Connais-tu une..."': Qu'est-ce que le SQL ? Le NoSQL ? Un SGBDR ? Quel SGBDR utilises-tu dans ton projet ? Connais-tu une alternative ? Cliquez pour révéler la réponse
+  - 'button "Question 199: Écris moi une jointure au tableau (il faut alors le faire sur tableau blanc. Il faut bien connaître ..."': Écris moi une jointure au tableau (il faut alors le faire sur tableau blanc. Il faut bien connaître tous les fondamentaux en SQL) Cliquez pour révéler la réponse
+  - 'button "Question 200: Qu''est-ce qu''une clé primaire ? Clé étrangère ? Table de jointure ?..."': Qu'est-ce qu'une clé primaire ? Clé étrangère ? Table de jointure ? Cliquez pour révéler la réponse
+  - 'button "Question 201: Parle-moi des cardinalités ?..."': Parle-moi des cardinalités ? Cliquez pour révéler la réponse
+  - 'button "Question 202: Quelles contraintes connais-tu ? (Appliquées sur des colonnes)..."': Quelles contraintes connais-tu ? (Appliquées sur des colonnes) Cliquez pour révéler la réponse
+  - 'button "Question 203: De quoi est constituée une table SQL ?..."': De quoi est constituée une table SQL ? Cliquez pour révéler la réponse
+  - 'button "Question 204: Quelles failles de sécurité connais-tu ? Qu''est-ce qu''une injection SQL ? Une attaque CSRF ? Une att..."': Quelles failles de sécurité connais-tu ? Qu'est-ce qu'une injection SQL ? Une attaque CSRF ? Une attaque XSS ? Cliquez pour révéler la réponse
+  - 'button "Question 205: Qu''est-ce que le format JSON ? Qu''est-ce que la sérialisation ?..."': Qu'est-ce que le format JSON ? Qu'est-ce que la sérialisation ? Cliquez pour révéler la réponse
+  - 'button "Question 206: Comment sont transférées les données entre ton frontend et ton backend ?..."': Comment sont transférées les données entre ton frontend et ton backend ? Cliquez pour révéler la réponse
+  - 'button "Question 207: Quelles sont les 2 parties qui constituent ton backend ?..."': Quelles sont les 2 parties qui constituent ton backend ? Cliquez pour révéler la réponse
+  - 'button "Question 208: Qu''est-ce qu''une API ? Une WEB API ?..."': Qu'est-ce qu'une API ? Une WEB API ? Cliquez pour révéler la réponse
+  - 'button "Question 209: Qu''est-ce qu''une base de données ?..."': Qu'est-ce qu'une base de données ? Cliquez pour révéler la réponse
+  - 'button "Question 210: Quelle architecture as-tu utilisé pour organiser ta WEB API ?..."': Quelle architecture as-tu utilisé pour organiser ta WEB API ? Cliquez pour révéler la réponse
+  - 'button "Question 211: Qu''est-ce que la spécification REST ? RESTful ?..."': Qu'est-ce que la spécification REST ? RESTful ? Cliquez pour révéler la réponse
+  - 'button "Question 212: Ta WEB API est-elle REST ou RESTful ? Quels principes respecte-t-elle ?..."': Ta WEB API est-elle REST ou RESTful ? Quels principes respecte-t-elle ? Cliquez pour révéler la réponse
+  - 'button "Question 213: Que signifie dans ton controller le ''res.json()'' ?..."': Que signifie dans ton controller le 'res.json()' ? Cliquez pour révéler la réponse
+  - 'button "Question 214: Parle-moi des différents types de requêtes..."': Parle-moi des différents types de requêtes Cliquez pour révéler la réponse
+  - 'button "Question 215: Montre-moi dans ton backend le chemin qu''emprunte une requête de type GET sur la route ''X''..."': Montre-moi dans ton backend le chemin qu'emprunte une requête de type GET sur la route 'X' Cliquez pour révéler la réponse
+  - 'button "Question 216: Idem pour POST. Que doit ajouter le client, par rapport à une requête GET ?..."': Idem pour POST. Que doit ajouter le client, par rapport à une requête GET ? Cliquez pour révéler la réponse
+  - 'button "Question 217: À quoi sert le index.js ? Le table.js ? Le seed.js ?..."': À quoi sert le index.js ? Le table.js ? Le seed.js ? Cliquez pour révéler la réponse
+  - 'button "Question 218: Dans tes managers : pourquoi as-tu utilisé extends sur un AbstractManager ?..."': "Dans tes managers : pourquoi as-tu utilisé extends sur un AbstractManager ? Cliquez pour révéler la réponse"
+  - 'button "Question 219: Qu''est-ce qu''une middleware ? Peux-tu m''en montrer/décrire un ? Quels sont les 3 paramètres que pren..."': Qu'est-ce qu'une middleware ? Peux-tu m'en montrer/décrire un ? Quels sont les 3 paramètres que prend un midleware ? À quoi sert le troisième justement ? Cliquez pour révéler la réponse
+  - 'button "Question 220: Comment utilises-tu un midleware ?..."': Comment utilises-tu un midleware ? Cliquez pour révéler la réponse
+  - 'button "Question 221: Comment as-tu mis en place l''authentification ?..."': Comment as-tu mis en place l'authentification ? Cliquez pour révéler la réponse
+  - 'button "Question 222: Peux-tu me parler du JWT ? Des cookies ? Me montrer où tu les as impleménté ?..."': Peux-tu me parler du JWT ? Des cookies ? Me montrer où tu les as impleménté ? Cliquez pour révéler la réponse
+  - 'button "Question 223: Pourquoi est-il important de vérifier, côté backend, les données que tu reçois depuis ton frontend ?..."': Pourquoi est-il important de vérifier, côté backend, les données que tu reçois depuis ton frontend ? As-tu mis en place cette couche de vérification ? Cliquez pour révéler la réponse
+  - 'button "Question 224: En cliquant sur ton bouton ''X'' de ton application, peux-tu me décrire les couches que traverse ta re..."': En cliquant sur ton bouton 'X' de ton application, peux-tu me décrire les couches que traverse ta requête, du client vers le serveur puis du serveur vers le client ? Peux-tu me montrer le code aussi, qui est exécuté ligne par ligne ? Cliquez pour révéler la réponse
+  - 'button "Question 225: Tu affiches X éléments sur cette page. Tu as fait un ''getAll()''. Mais si tu avais 1 million d''objets..."': Tu affiches X éléments sur cette page. Tu as fait un 'getAll()'. Mais si tu avais 1 million d'objets à récupérer, quel serait le problème ? Que pourrais-tu mettre en place ? Cliquez pour révéler la réponse
+  - 'button "Question 226: As-tu écris des tests ? À quoi ça sert ?..."': As-tu écris des tests ? À quoi ça sert ? Cliquez pour révéler la réponse
+  - 'button "Question 227: Comment fonctionne la mise en prod ? Qu''est-ce que la CI/CD ? Quels outils connais-tu ?..."': Comment fonctionne la mise en prod ? Qu'est-ce que la CI/CD ? Quels outils connais-tu ? Cliquez pour révéler la réponse
+  - 'button "Question 228: Qu''est-ce qu''un VPS ? Une solution Cloud ?..."': Qu'est-ce qu'un VPS ? Une solution Cloud ? Cliquez pour révéler la réponse
+- button "Révéler toutes les réponses des cartes visibles"
+```
