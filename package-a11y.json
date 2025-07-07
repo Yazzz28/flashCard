@@ -1,0 +1,23 @@
+{
+    "name": "wildcards-accessibility-tests",
+    "version": "1.0.0",
+    "description": "Tests d'accessibilité pour l'application WildCards",
+    "scripts": {
+        "test:a11y": "axe http://localhost:8080 --timeout 10000",
+        "test:html": "html-validate index.html",
+        "test:lighthouse": "lighthouse http://localhost:8080 --only-categories=accessibility --output=json --output-path=./lighthouse-a11y-report.json",
+        "serve": "python3 -m http.server 8080",
+        "test:all": "npm run serve & sleep 2 && npm run test:a11y && npm run test:lighthouse && kill %1"
+    },
+    "devDependencies": {
+        "@axe-core/cli": "^4.8.0",
+        "html-validate": "^8.7.0",
+        "lighthouse": "^11.4.0"
+    },
+    "keywords": ["accessibility", "a11y", "wcag", "testing"],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/wildcodeschool/wildcards"
+    },
+    "license": "MIT"
+}

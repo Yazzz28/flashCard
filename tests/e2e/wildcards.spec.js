@@ -2,7 +2,7 @@ import { test, expect } from '@playwright/test';
 
 test.describe('WildCards E2E Tests', () => {
     test.beforeEach(async ({ page }) => {
-        await page.goto('/public/');
+        await page.goto('/');
         await page.waitForLoadState('networkidle');
     });
 

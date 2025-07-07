@@ -4,7 +4,7 @@ test.describe('Performance Tests', () => {
     test('should load the application within performance budget', async ({ page }) => {
         const startTime = Date.now();
 
-        await page.goto('/public/');
+        await page.goto('/');
         await page.waitForSelector('.card');
 
         const loadTime = Date.now() - startTime;
@@ -14,7 +14,7 @@ test.describe('Performance Tests', () => {
     });
 
     test('should handle large number of cards efficiently', async ({ page }) => {
-        await page.goto('/public/');
+        await page.goto('/');
         await page.waitForSelector('.card');
 
         // Mesurer le temps de révélation de toutes les cartes
@@ -41,7 +41,7 @@ test.describe('Performance Tests', () => {
     });
 
     test('should search efficiently with many cards', async ({ page }) => {
-        await page.goto('/public/');
+        await page.goto('/');
         await page.waitForSelector('.card');
 
         const searchBox = page.locator('#searchBox');
@@ -61,7 +61,7 @@ test.describe('Performance Tests', () => {
     });
 
     test('should maintain smooth animations', async ({ page }) => {
-        await page.goto('/public/');
+        await page.goto('/');
         await page.waitForSelector('.card');
 
         // Tester l'animation de révélation
@@ -75,7 +75,7 @@ test.describe('Performance Tests', () => {
     });
 
     test('should handle rapid interactions without blocking', async ({ page }) => {
-        await page.goto('/public/');
+        await page.goto('/');
         await page.waitForSelector('.card');
 
         const cards = page.locator('.card');
@@ -99,7 +99,7 @@ test.describe('Performance Tests', () => {
     });
 
     test('should handle localStorage operations efficiently', async ({ page }) => {
-        await page.goto('/public/');
+        await page.goto('/');
         await page.waitForSelector('.card');
 
         // Révéler quelques cartes

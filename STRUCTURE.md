@@ -45,7 +45,7 @@ npm run validate
 
 ## Points d'entrée
 
-- **Application principale** : `public/index.html`
+- **Application principale** : `/index.html`
 - **Code source** : `src/script.js`
 - **Styles** : `assets/css/styles.css`
 - **Données** : `assets/data/data.json`
