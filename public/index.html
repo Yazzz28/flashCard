@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head>
-        <meta charset="UTF-8" >
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>WildCards - Fiches de révision CDA et DWWM</title>
-        <meta name="description" content="Application web de fiches de révision pour les formations CDA et DWWM de la Wild Code School">
-        <link rel="stylesheet" href="../assets/css/styles.css" >
+        <meta
+            name="description"
+            content="Application web de fiches de révision pour les formations CDA et DWWM de la Wild Code School">
+        <link rel="stylesheet" href="../assets/css/styles.css">
     </head>
     <body>
         <div class="container">
-            <button 
-                class="theme-toggle" 
-                title="Changer de thème" 
+            <button
+                class="theme-toggle"
+                title="Changer de thème"
                 type="button"
                 aria-label="Basculer entre le thème clair et sombre"
                 aria-pressed="false"
@@ -20,7 +22,7 @@
                 <span class="sr-only">Mode sombre</span>
             </button>
 
-            <header class="header" role="banner">
+            <header class="header">
                 <div class="header__logo">
                     <div class="header__logo-icon" aria-hidden="true">🎓</div>
                 </div>
@@ -38,12 +40,21 @@
                     <span class="stats__label">Total</span>
                     <span class="stats__value" id="totalCount" aria-live="polite">0</span>
                 </div>
-                <progress class="stats__progress" id="progressBar" value="0" max="100" aria-label="Progression des cartes révélées">
+                <div class="stats__progress-container">
+                    <progress
+                        class="stats__progress"
+                        id="progressBar"
+                        value="0"
+                        max="100"
+                        aria-label="Progression des cartes révélées"
+                    >
+                        0% - Progression des cartes révélées
+                    </progress>
                     <div class="stats__progress-fill" id="progressFill"></div>
-                </progress>
-                <button 
-                    class="stats__reset-btn" 
-                    id="resetBtn" 
+                </div>
+                <button
+                    class="stats__reset-btn"
+                    id="resetBtn"
                     type="button"
                     aria-label="Réinitialiser toutes les cartes révélées"
                 >
@@ -54,7 +65,9 @@
             <section class="controls" aria-label="Contrôles de filtrage et recherche">
                 <div class="search">
                     <div class="search__icon" aria-hidden="true">🔍</div>
-                    <label for="searchBox" class="sr-only">Rechercher une question ou un concept</label>
+                    <label for="searchBox" class="sr-only"
+                        >Rechercher une question ou un concept</label
+                    >
                     <input
                         type="text"
                         class="search__input"
@@ -62,33 +75,35 @@
                         id="searchBox"
                         aria-describedby="searchHelp"
                     >
-                    <div id="searchHelp" class="sr-only">Tapez pour rechercher dans les questions et réponses</div>
+                    <div id="searchHelp" class="sr-only">
+                        Tapez pour rechercher dans les questions et réponses
+                    </div>
                 </div>
 
                 <fieldset class="formations" aria-labelledby="formationsTitle">
                     <legend class="formations__title" id="formationsTitle">🎓 Formations</legend>
                     <div class="formations__list">
-                        <button 
-                            class="formations__btn formations__btn--active" 
-                            data-formation="all" 
+                        <button
+                            class="formations__btn formations__btn--active"
+                            data-formation="all"
                             type="button"
                             aria-pressed="true"
                             aria-label="Afficher toutes les formations"
                         >
                             <span aria-hidden="true">📚</span> Toutes
                         </button>
-                        <button 
-                            class="formations__btn" 
-                            data-formation="CDA" 
+                        <button
+                            class="formations__btn"
+                            data-formation="CDA"
                             type="button"
                             aria-pressed="false"
                             aria-label="Filtrer par formation CDA"
                         >
                             <span aria-hidden="true">💻</span> CDA
                         </button>
-                        <button 
-                            class="formations__btn" 
-                            data-formation="DWWM" 
+                        <button
+                            class="formations__btn"
+                            data-formation="DWWM"
                             type="button"
                             aria-pressed="false"
                             aria-label="Filtrer par formation DWWM"
@@ -100,99 +115,99 @@
 
                 <fieldset class="categories" aria-labelledby="categoriesTitle">
                     <legend id="categoriesTitle" class="sr-only">Filtrer par catégorie</legend>
-                    <button 
-                        class="categories__btn categories__btn--active" 
-                        data-category="all" 
+                    <button
+                        class="categories__btn categories__btn--active"
+                        data-category="all"
                         type="button"
                         aria-pressed="true"
                         aria-label="Afficher toutes les catégories"
                     >
                         <span aria-hidden="true">📚</span> Toutes
                     </button>
-                    <button 
-                        class="categories__btn" 
-                        data-category="frontend" 
+                    <button
+                        class="categories__btn"
+                        data-category="frontend"
                         type="button"
                         aria-pressed="false"
                         aria-label="Filtrer par catégorie Frontend"
                     >
                         <span aria-hidden="true">🖥️</span> Frontend
                     </button>
-                    <button 
-                        class="categories__btn" 
-                        data-category="backend" 
+                    <button
+                        class="categories__btn"
+                        data-category="backend"
                         type="button"
                         aria-pressed="false"
                         aria-label="Filtrer par catégorie Backend"
                     >
                         <span aria-hidden="true">⚙️</span> Backend
                     </button>
-                    <button 
-                        class="categories__btn" 
-                        data-category="database" 
+                    <button
+                        class="categories__btn"
+                        data-category="database"
                         type="button"
                         aria-pressed="false"
                         aria-label="Filtrer par catégorie Base de données"
                     >
                         <span aria-hidden="true">🗄️</span> Base de données
                     </button>
-                    <button 
-                        class="categories__btn" 
-                        data-category="devops" 
+                    <button
+                        class="categories__btn"
+                        data-category="devops"
                         type="button"
                         aria-pressed="false"
                         aria-label="Filtrer par catégorie DevOps"
                     >
                         <span aria-hidden="true">🚀</span> DevOps
                     </button>
-                    <button 
-                        class="categories__btn" 
-                        data-category="architecture" 
+                    <button
+                        class="categories__btn"
+                        data-category="architecture"
                         type="button"
                         aria-pressed="false"
                         aria-label="Filtrer par catégorie Architecture"
                     >
                         <span aria-hidden="true">🏗️</span> Architecture
                     </button>
-                    <button 
-                        class="categories__btn" 
-                        data-category="tests" 
+                    <button
+                        class="categories__btn"
+                        data-category="tests"
                         type="button"
                         aria-pressed="false"
                         aria-label="Filtrer par catégorie Tests"
                     >
                         <span aria-hidden="true">🧪</span> Tests
                     </button>
-                    <button 
-                        class="categories__btn" 
-                        data-category="security" 
+                    <button
+                        class="categories__btn"
+                        data-category="security"
                         type="button"
                         aria-pressed="false"
                         aria-label="Filtrer par catégorie Sécurité"
                     >
                         <span aria-hidden="true">🔒</span> Sécurité
                     </button>
-                    <button 
-                        class="categories__btn" 
-                        data-category="design" 
+                    <button
+                        class="categories__btn"
+                        data-category="design"
                         type="button"
                         aria-pressed="false"
                         aria-label="Filtrer par catégorie Conception"
                     >
                         <span aria-hidden="true">🎨</span> Conception
                     </button>
-                    <button 
-                        class="categories__btn" 
-                        data-category="project" 
+                    <button
+                        class="categories__btn"
+                        data-category="project"
                         type="button"
                         aria-pressed="false"
                         aria-label="Filtrer par catégorie Gestion de projet"
                     >
                         <span aria-hidden="true">📋</span> Gestion de projet
                     </button>
-                    <button 
-                        class="categories__btn" 
-                        data-category="tools" 
+                    <button
+                        class="categories__btn"
+                        data-category="tools"
                         type="button"
                         aria-pressed="false"
                         aria-label="Filtrer par catégorie Outils"
@@ -202,17 +217,17 @@
                 </fieldset>
             </section>
 
-            <main class="cards" id="cardsContainer" role="main" aria-label="Liste des fiches de révision">
-                <div class="loading" aria-label="Chargement des fiches en cours">
+            <main class="cards" id="cardsContainer" aria-label="Liste des fiches de révision">
+                <div class="loading">
                     <div class="loading__spinner" aria-hidden="true"></div>
                     <span class="sr-only">Chargement des fiches de révision...</span>
                 </div>
             </main>
 
-            <button 
-                class="fab" 
-                id="fab" 
-                title="Révéler toutes les cartes visibles" 
+            <button
+                class="fab"
+                id="fab"
+                title="Révéler toutes les cartes visibles"
                 type="button"
                 aria-label="Révéler toutes les réponses des cartes visibles"
             >
@@ -220,13 +235,19 @@
             </button>
         </div>
         <script type="module" src="../src/script.js"></script>
-        
-        <dialog id="modalOverlay" class="modal" aria-labelledby="modalTitle" aria-describedby="modalMessage">
+        <dialog
+            id="modalOverlay"
+            class="modal"
+            aria-labelledby="modalTitle"
+            aria-describedby="modalMessage"
+        >
             <div class="modal__content">
                 <div class="modal__header">
                     <div class="modal__icon" id="modalIcon" aria-hidden="true">❓</div>
                     <h3 class="modal__title" id="modalTitle">Confirmation</h3>
-                    <p class="modal__subtitle" id="modalSubtitle">Veuillez confirmer votre action</p>
+                    <p class="modal__subtitle" id="modalSubtitle">
+                        Veuillez confirmer votre action
+                    </p>
                 </div>
                 <div class="modal__body">
                     <p class="modal__message" id="modalMessage">

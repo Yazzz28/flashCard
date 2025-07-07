@@ -118,15 +118,15 @@ describe('Data Persistence Integration', () => {
         });
 
         it('should handle quota exceeded errors', () => {
-            const originalSetItem = localStorage.setItem;
-            localStorage.setItem = jest.fn(() => {
+            const setItemSpy = jest.spyOn(Storage.prototype, 'setItem');
+            setItemSpy.mockImplementation(() => {
                 throw new Error('QuotaExceededError');
             });
 
             const result = StorageUtils.save('test', { large: 'data' });
             expect(result).toBe(false);
 
-            localStorage.setItem = originalSetItem;
+            setItemSpy.mockRestore();
         });
     });
 

@@ -105,7 +105,7 @@ class ModalService {
         modalOverlay.classList.add('modal--show');
         modalOverlay.showModal();
         this.confirmCallback = onConfirm;
-        
+
         // Focus on the first button for better accessibility
         const firstButton = modalOverlay.querySelector('.modal__btn');
         firstButton?.focus();
@@ -152,7 +152,10 @@ class CardService {
         card.setAttribute('role', 'button');
         card.setAttribute('tabindex', '0');
         card.setAttribute('aria-expanded', 'false');
-        card.setAttribute('aria-label', `Question ${this.appState.questionCounter}: ${question.substring(0, 100)}...`);
+        card.setAttribute(
+            'aria-label',
+            `Question ${this.appState.questionCounter}: ${question.substring(0, 100)}...`
+        );
 
         card.innerHTML = `
             <div class="card__question">
@@ -259,7 +262,8 @@ class UIService {
     }
 
     showLoadingState(container) {
-        container.innerHTML = '<div class="loading" aria-label="Chargement des fiches en cours"><div class="loading__spinner" aria-hidden="true"></div><span class="sr-only">Chargement des fiches de révision...</span></div>';
+        container.innerHTML =
+            '<div class="loading" aria-label="Chargement des fiches en cours"><div class="loading__spinner" aria-hidden="true"></div><span class="sr-only">Chargement des fiches de révision...</span></div>';
     }
 
     showErrorState(
@@ -325,7 +329,10 @@ class FilterService {
                 button.className = `categories__btn ${this.appState.currentCategory === key ? 'categories__btn--active' : ''}`;
                 button.dataset.category = key;
                 button.type = 'button';
-                button.setAttribute('aria-pressed', this.appState.currentCategory === key ? 'true' : 'false');
+                button.setAttribute(
+                    'aria-pressed',
+                    this.appState.currentCategory === key ? 'true' : 'false'
+                );
                 button.setAttribute('aria-label', `Filtrer par catégorie ${label}`);
                 button.innerHTML = `<span aria-hidden="true">${icon}</span> ${label}`;
                 button.addEventListener('click', () => onCategoryClick(key));
@@ -336,19 +343,38 @@ class FilterService {
 
     searchCards(searchTerm) {
         const cards = document.querySelectorAll('.card');
-        const term = searchTerm.toLowerCase();
+        const term = searchTerm.toLowerCase().trim();
 
-        cards.forEach((card) => {
-            const question =
-                card.querySelector('.card__question .card__question-text')?.textContent.toLowerCase() || '';
-            const answer = card.querySelector('.card__answer')?.textContent.toLowerCase() || '';
+        console.log('searchCards called with:', searchTerm, 'normalized to:', term);
+        console.log('Found', cards.length, 'cards');
 
-            if (question.includes(term) || answer.includes(term)) {
+        cards.forEach((card, index) => {
+            const questionElement = card.querySelector('.card__question .card__question-text');
+            const answerElement = card.querySelector('.card__answer');
+
+            const question = questionElement?.textContent.toLowerCase() || '';
+            const answer = answerElement?.textContent.toLowerCase() || '';
+
+            console.log(`Card ${index + 1}:`, {
+                question: question.substring(0, 50),
+                answer: answer.substring(0, 50),
+                questionIncludes: question.includes(term),
+                answerIncludes: answer.includes(term)
+            });
+
+            // Si pas de terme de recherche, afficher toutes les cartes
+            if (!term) {
                 card.classList.remove('hidden');
                 card.removeAttribute('aria-hidden');
+                console.log(`Card ${index + 1}: showing (no search term)`);
+            } else if (question.includes(term) || answer.includes(term)) {
+                card.classList.remove('hidden');
+                card.removeAttribute('aria-hidden');
+                console.log(`Card ${index + 1}: showing (match found)`);
             } else {
                 card.classList.add('hidden');
                 card.setAttribute('aria-hidden', 'true');
+                console.log(`Card ${index + 1}: hiding (no match)`);
             }
         });
     }
@@ -520,9 +546,9 @@ class WildCardsApp {
                 themeText.textContent = savedTheme === 'dark' ? 'Mode clair' : 'Mode sombre';
             }
         };
-        
+
         loadSavedTheme();
-        
+
         themeToggle?.addEventListener('click', () => {
             this.toggleTheme();
         });
@@ -589,10 +615,10 @@ class WildCardsApp {
 
         document.documentElement.setAttribute('data-theme', newTheme);
         this.storageService.save(STORAGE_KEYS.THEME, newTheme);
-        
+
         const themeToggle = document.querySelector('.theme-toggle');
         themeToggle?.setAttribute('aria-pressed', newTheme === 'dark' ? 'true' : 'false');
-        
+
         const themeText = themeToggle?.querySelector('.sr-only');
         if (themeText) {
             themeText.textContent = newTheme === 'dark' ? 'Mode clair' : 'Mode sombre';
@@ -611,7 +637,7 @@ class WildCardsApp {
         announcement.className = 'sr-only';
         announcement.textContent = message;
         document.body.appendChild(announcement);
-        
+
         setTimeout(() => {
             document.body.removeChild(announcement);
         }, 1000);
@@ -622,6 +648,9 @@ document.addEventListener('DOMContentLoaded', async () => {
     const app = new WildCardsApp();
     await app.initialize();
 });
+
+// Export ES6 pour les tests
+export { WildCardsApp, AppState, StorageService, DataService };
 
 if (typeof module !== 'undefined' && module.exports) {
     module.exports = { WildCardsApp, AppState, StorageService, DataService };

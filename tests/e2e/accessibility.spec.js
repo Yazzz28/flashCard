@@ -6,7 +6,7 @@
 import { test, expect } from '@playwright/test';
 import AxeBuilder from '@axe-core/playwright';
 
-test.describe('Tests d\'accessibilité WildCards', () => {
+test.describe("Tests d'accessibilité WildCards", () => {
     test.beforeEach(async ({ page }) => {
         // Aller à la page d'accueil
         await page.goto('/');
@@ -14,7 +14,7 @@ test.describe('Tests d\'accessibilité WildCards', () => {
         await page.waitForSelector('.cards .card', { timeout: 5000 });
     });
 
-    test('Page d\'accueil - Scan d\'accessibilité complet', async ({ page }) => {
+    test("Page d'accueil - Scan d'accessibilité complet", async ({ page }) => {
         const accessibilityScanResults = await new AxeBuilder({ page })
             .withTags(['wcag2a', 'wcag2aa', 'wcag21aa'])
             .analyze();
@@ -102,7 +102,7 @@ test.describe('Tests d\'accessibilité WildCards', () => {
         expect(accessibilityScanResults.violations).toEqual([]);
     });
 
-    test('Annonces aux lecteurs d\'écran', async ({ page }) => {
+    test("Annonces aux lecteurs d'écran", async ({ page }) => {
         // Vérifier les éléments aria-live
         await expect(page.locator('[aria-live="polite"]')).toHaveCount(2); // Stats counters
 
@@ -176,7 +176,7 @@ test.describe('Tests d\'accessibilité WildCards', () => {
         await expect(page.locator('.formations__btn')).toBeVisible();
     });
 
-    test('Performance d\'accessibilité - Best practices', async ({ page }) => {
+    test("Performance d'accessibilité - Best practices", async ({ page }) => {
         const accessibilityScanResults = await new AxeBuilder({ page })
             .withTags(['best-practice'])
             .analyze();
