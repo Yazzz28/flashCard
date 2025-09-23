@@ -1,11 +1,11 @@
-const STORAGE_KEY = 'revealedCards';
+const STORAGE_KEY = "revealedCards";
 const ANIMATION_DELAY = 500;
 
 class AppState {
     constructor() {
         this.questionsData = {};
-        this.currentFormation = 'all';
-        this.currentCategory = 'all';
+        this.currentFormation = "all";
+        this.currentCategory = "all";
         this.revealedCards = new Set();
         this.questionCounter = 1;
     }
@@ -17,7 +17,7 @@ class AppState {
 
     setFormation(formation) {
         this.currentFormation = formation;
-        this.currentCategory = 'all';
+        this.currentCategory = "all";
     }
 
     setCategory(category) {
@@ -31,7 +31,7 @@ class StorageService {
             sessionStorage.setItem(key, JSON.stringify(data));
             return true;
         } catch (error) {
-            console.warn('Erreur lors de la sauvegarde:', error);
+            console.warn("Erreur lors de la sauvegarde:", error);
             return false;
         }
     }
@@ -41,7 +41,7 @@ class StorageService {
             const data = sessionStorage.getItem(key);
             return data ? JSON.parse(data) : null;
         } catch (error) {
-            console.warn('Erreur lors du chargement:', error);
+            console.warn("Erreur lors du chargement:", error);
             return null;
         }
     }
@@ -51,7 +51,7 @@ class StorageService {
             sessionStorage.removeItem(key);
             return true;
         } catch (error) {
-            console.warn('Erreur lors de la suppression:', error);
+            console.warn("Erreur lors de la suppression:", error);
             return false;
         }
     }
@@ -66,14 +66,16 @@ class DataService {
             }
             return await response.json();
         } catch (error) {
-            console.error('Erreur lors du chargement des données:', error);
+            console.error("Erreur lors du chargement des données:", error);
             return {
                 CDA: {
-                    frontend: [{
-                        question: "Erreur de chargement",
-                        answer: "Une erreur s'est produite lors du chargement des données.",
-                    }]
-                }
+                    frontend: [
+                        {
+                            question: "Erreur de chargement",
+                            answer: "Une erreur s'est produite lors du chargement des données.",
+                        },
+                    ],
+                },
             };
         }
     }
@@ -107,7 +109,7 @@ class ModalService {
     close() {
         const modalOverlay = document.getElementById("modalOverlay");
         modalOverlay?.classList.remove("show");
-        
+
         if (this.confirmCallback) {
             this.confirmCallback(false);
             this.confirmCallback = null;
@@ -117,7 +119,7 @@ class ModalService {
     confirm() {
         const modalOverlay = document.getElementById("modalOverlay");
         modalOverlay?.classList.remove("show");
-        
+
         if (this.confirmCallback) {
             this.confirmCallback(true);
             this.confirmCallback = null;
@@ -139,7 +141,8 @@ class CardService {
 
         card.innerHTML = `
             <div class="question">
-                <div class="question-icon">Q${this.appState.questionCounter++}</div>
+                <div class="question-icon">Q${this.appState
+                    .questionCounter++}</div>
                 <div class="question-text">${question}</div>
             </div>
             <div class="answer">${answer}</div>
@@ -164,12 +167,14 @@ class CardService {
     }
 
     saveRevealedCards() {
-        const revealedCardIds = Array.from(this.appState.revealedCards).map(card => ({
-            formation: card.dataset.formation,
-            category: card.dataset.category,
-            questionText: card.querySelector('.question-text').textContent
-        }));
-        
+        const revealedCardIds = Array.from(this.appState.revealedCards).map(
+            (card) => ({
+                formation: card.dataset.formation,
+                category: card.dataset.category,
+                questionText: card.querySelector(".question-text").textContent,
+            }),
+        );
+
         this.storageService.save(STORAGE_KEY, revealedCardIds);
     }
 
@@ -177,23 +182,30 @@ class CardService {
         const savedCards = this.storageService.load(STORAGE_KEY);
         if (!savedCards) return;
 
-        savedCards.forEach(cardData => {
-            const card = this.findCardByData(cardData.formation, cardData.category, cardData.questionText);
+        savedCards.forEach((cardData) => {
+            const card = this.findCardByData(
+                cardData.formation,
+                cardData.category,
+                cardData.questionText,
+            );
             if (card) {
-                const answerDiv = card.querySelector('.answer');
-                answerDiv.classList.add('visible');
-                card.classList.add('revealed');
+                const answerDiv = card.querySelector(".answer");
+                answerDiv.classList.add("visible");
+                card.classList.add("revealed");
                 this.appState.revealedCards.add(card);
             }
         });
     }
 
     findCardByData(formation, category, questionText) {
-        const cards = document.querySelectorAll('.card');
-        return Array.from(cards).find(card => {
-            return card.dataset.formation === formation &&
-                   card.dataset.category === category &&
-                   card.querySelector('.question-text').textContent === questionText;
+        const cards = document.querySelectorAll(".card");
+        return Array.from(cards).find((card) => {
+            return (
+                card.dataset.formation === formation &&
+                card.dataset.category === category &&
+                card.querySelector(".question-text").textContent ===
+                    questionText
+            );
         });
     }
 
@@ -210,8 +222,10 @@ class UIService {
 
     updateStats() {
         const totalCards = document.querySelectorAll(".card").length;
-        const revealedCount = document.querySelectorAll(".card.revealed").length;
-        const percentage = totalCards > 0 ? (revealedCount / totalCards) * 100 : 0;
+        const revealedCount =
+            document.querySelectorAll(".card.revealed").length;
+        const percentage =
+            totalCards > 0 ? (revealedCount / totalCards) * 100 : 0;
 
         const totalCountEl = document.getElementById("totalCount");
         const revealedCountEl = document.getElementById("revealedCount");
@@ -223,10 +237,14 @@ class UIService {
     }
 
     showLoadingState(container) {
-        container.innerHTML = '<div class="loading"><div class="spinner"></div></div>';
+        container.innerHTML =
+            '<div class="loading"><div class="spinner"></div></div>';
     }
 
-    showErrorState(container, message = "❌ Aucune donnée disponible. Vérifiez le fichier data.json") {
+    showErrorState(
+        container,
+        message = "❌ Aucune donnée disponible. Vérifiez le fichier data.json",
+    ) {
         container.innerHTML = `<div class="error-message">${message}</div>`;
     }
 
@@ -235,7 +253,9 @@ class UIService {
     }
 
     updateActiveButton(selector, activeSelector) {
-        document.querySelectorAll(selector).forEach(btn => btn.classList.remove("active"));
+        document
+            .querySelectorAll(selector)
+            .forEach((btn) => btn.classList.remove("active"));
         const activeBtn = document.querySelector(activeSelector);
         activeBtn?.classList.add("active");
     }
@@ -257,7 +277,11 @@ class FilterService {
             { key: "project", icon: "📋", label: "Gestion de projet" },
             { key: "tools", icon: "🛠️", label: "Outils" },
             { key: "fullstack", icon: "🔄", label: "Fullstack" },
-            { key: "modern_practices", icon: "✨", label: "Pratiques modernes" },
+            {
+                key: "modern_practices",
+                icon: "✨",
+                label: "Pratiques modernes",
+            },
         ];
     }
 
@@ -265,13 +289,17 @@ class FilterService {
         const availableCategories = new Set();
 
         if (this.appState.currentFormation === "all") {
-            Object.values(this.appState.questionsData).forEach(formation => {
-                Object.keys(formation).forEach(category => {
+            Object.values(this.appState.questionsData).forEach((formation) => {
+                Object.keys(formation).forEach((category) => {
                     availableCategories.add(category);
                 });
             });
-        } else if (this.appState.questionsData[this.appState.currentFormation]) {
-            Object.keys(this.appState.questionsData[this.appState.currentFormation]).forEach(category => {
+        } else if (
+            this.appState.questionsData[this.appState.currentFormation]
+        ) {
+            Object.keys(
+                this.appState.questionsData[this.appState.currentFormation],
+            ).forEach((category) => {
                 availableCategories.add(category);
             });
         }
@@ -289,7 +317,9 @@ class FilterService {
         this.categoryButtons.forEach(({ key, icon, label }) => {
             if (key === "all" || availableCategories.has(key)) {
                 const button = document.createElement("button");
-                button.className = `category-btn ${this.appState.currentCategory === key ? "active" : ""}`;
+                button.className = `category-btn ${
+                    this.appState.currentCategory === key ? "active" : ""
+                }`;
                 button.dataset.category = key;
                 button.innerHTML = `<span>${icon}</span> ${label}`;
                 button.addEventListener("click", () => onCategoryClick(key));
@@ -302,14 +332,18 @@ class FilterService {
         const cards = document.querySelectorAll(".card");
         const term = searchTerm.toLowerCase();
 
-        cards.forEach(card => {
-            const question = card.querySelector(".question .question-text")?.textContent.toLowerCase() || "";
-            const answer = card.querySelector(".answer")?.textContent.toLowerCase() || "";
+        cards.forEach((card) => {
+            const question =
+                card
+                    .querySelector(".question .question-text")
+                    ?.textContent.toLowerCase() || "";
+            const answer =
+                card.querySelector(".answer")?.textContent.toLowerCase() || "";
 
             if (question.includes(term) || answer.includes(term)) {
-                card.classList.remove("u-hidden");
+                card.classList.remove("hidden");
             } else {
-                card.classList.add("u-hidden");
+                card.classList.add("hidden");
             }
         });
     }
@@ -333,60 +367,89 @@ class RenderService {
             this.uiService.clearContainer(container);
             this.appState.questionCounter = 1;
 
-            if (!this.appState.questionsData || Object.keys(this.appState.questionsData).length === 0) {
+            if (
+                !this.appState.questionsData ||
+                Object.keys(this.appState.questionsData).length === 0
+            ) {
                 this.uiService.showErrorState(container);
                 return;
             }
 
             this.renderFilteredCards(container);
-            this.filterService.generateCategoryButtons((category) => this.filterByCategory(category));
+            this.filterService.generateCategoryButtons((category) =>
+                this.filterByCategory(category),
+            );
             this.cardService.loadRevealedCards();
             this.uiService.updateStats();
         }, ANIMATION_DELAY);
     }
 
     renderFilteredCards(container) {
-        Object.entries(this.appState.questionsData).forEach(([formation, categories]) => {
-            if (this.shouldIncludeFormation(formation)) {
-                this.renderFormationCards(container, formation, categories);
-            }
-        });
+        Object.entries(this.appState.questionsData).forEach(
+            ([formation, categories]) => {
+                if (this.shouldIncludeFormation(formation)) {
+                    this.renderFormationCards(container, formation, categories);
+                }
+            },
+        );
     }
 
     shouldIncludeFormation(formation) {
-        return this.appState.currentFormation === "all" || this.appState.currentFormation === formation;
+        return (
+            this.appState.currentFormation === "all" ||
+            this.appState.currentFormation === formation
+        );
     }
 
     renderFormationCards(container, formation, categories) {
         Object.entries(categories).forEach(([category, questions]) => {
             if (this.shouldIncludeCategory(category)) {
-                this.renderCategoryCards(container, formation, category, questions);
+                this.renderCategoryCards(
+                    container,
+                    formation,
+                    category,
+                    questions,
+                );
             }
         });
     }
 
     shouldIncludeCategory(category) {
-        return this.appState.currentCategory === "all" || this.appState.currentCategory === category;
+        return (
+            this.appState.currentCategory === "all" ||
+            this.appState.currentCategory === category
+        );
     }
 
     renderCategoryCards(container, formation, category, questions) {
-        questions.forEach(item => {
+        questions.forEach((item) => {
             const question = item.question || `Question de ${category}`;
             const answer = item.answer || "Réponse non disponible";
-            const card = this.cardService.create(question, answer, formation, category);
+            const card = this.cardService.create(
+                question,
+                answer,
+                formation,
+                category,
+            );
             container.appendChild(card);
         });
     }
 
     filterByCategory(category) {
         this.appState.setCategory(category);
-        this.uiService.updateActiveButton(".category-btn", `[data-category="${category}"]`);
+        this.uiService.updateActiveButton(
+            ".category-btn",
+            `[data-category="${category}"]`,
+        );
         this.renderCards();
     }
 
     filterByFormation(formation) {
         this.appState.setFormation(formation);
-        this.uiService.updateActiveButton(".formation-btn", `[data-formation="${formation}"]`);
+        this.uiService.updateActiveButton(
+            ".formation-btn",
+            `[data-formation="${formation}"]`,
+        );
         this.renderCards();
     }
 }
@@ -400,17 +463,26 @@ class WildCardsApp {
         this.cardService = new CardService(this.appState, this.storageService);
         this.uiService = new UIService(this.appState);
         this.filterService = new FilterService(this.appState);
-        this.renderService = new RenderService(this.appState, this.cardService, this.uiService, this.filterService);
+        this.renderService = new RenderService(
+            this.appState,
+            this.cardService,
+            this.uiService,
+            this.filterService,
+        );
     }
 
     async initialize() {
         try {
-            this.appState.questionsData = await this.dataService.loadQuestionsData();
+            this.appState.questionsData =
+                await this.dataService.loadQuestionsData();
             this.renderService.renderCards();
             this.initializeEventListeners();
         } catch (error) {
-            this.uiService.showErrorState(container, 'Erreur lors du chargement des données');
-            console.error('Erreur d\'initialisation:', error);
+            this.uiService.showErrorState(
+                container,
+                "Erreur lors du chargement des données",
+            );
+            console.error("Erreur d'initialisation:", error);
         }
     }
 
@@ -424,7 +496,7 @@ class WildCardsApp {
     }
 
     initializeFormationButtons() {
-        document.querySelectorAll(".formation-btn").forEach(btn => {
+        document.querySelectorAll(".formation-btn").forEach((btn) => {
             btn.addEventListener("click", () => {
                 this.renderService.filterByFormation(btn.dataset.formation);
             });
@@ -461,7 +533,10 @@ class WildCardsApp {
 
     initializeCardScrolling() {
         document.addEventListener("click", (e) => {
-            if (e.target.classList.contains("card") || e.target.closest(".card")) {
+            if (
+                e.target.classList.contains("card") ||
+                e.target.closest(".card")
+            ) {
                 setTimeout(() => {
                     const card = e.target.closest(".card");
                     if (card?.classList.contains("revealed")) {
@@ -483,36 +558,40 @@ class WildCardsApp {
                     this.cardService.resetRevealedCards();
                     this.renderService.renderCards();
                 }
-            }
+            },
         );
     }
 
     revealAllVisible() {
-        const visibleCards = document.querySelectorAll(".card:not(.u-hidden):not(.revealed)");
+        const visibleCards = document.querySelectorAll(
+            ".card:not(.u-hidden):not(.revealed)",
+        );
         if (visibleCards.length === 0) return;
 
         this.modalService.show(
             `Révéler toutes les ${visibleCards.length} cartes visibles ?`,
             (confirmed) => {
                 if (confirmed) {
-                    visibleCards.forEach(card => {
+                    visibleCards.forEach((card) => {
                         setTimeout(() => {
                             this.cardService.reveal(card);
                             this.uiService.updateStats();
                         }, Math.random() * 1000);
                     });
                 }
-            }
+            },
         );
     }
 
     toggleTheme() {
-        const currentTheme = document.documentElement.getAttribute("data-theme");
+        const currentTheme =
+            document.documentElement.getAttribute("data-theme");
         const newTheme = currentTheme === "dark" ? "light" : "dark";
 
         document.documentElement.setAttribute("data-theme", newTheme);
-        document.body.style.transition = "background-color 0.3s ease, color 0.3s ease";
-        
+        document.body.style.transition =
+            "background-color 0.3s ease, color 0.3s ease";
+
         setTimeout(() => {
             document.body.style.transition = "";
         }, 300);
@@ -524,6 +603,6 @@ document.addEventListener("DOMContentLoaded", async () => {
     await app.initialize();
 });
 
-if (typeof module !== 'undefined' && module.exports) {
+if (typeof module !== "undefined" && module.exports) {
     module.exports = { WildCardsApp, AppState, StorageService, DataService };
 }
