@@ -96,12 +96,29 @@ class ModalService {
     show(message, onConfirm) {
         const modalOverlay = document.getElementById("modalOverlay");
         const modalMessage = document.getElementById("modalMessage");
+        const modalTitle = document.getElementById("modalTitle");
+        const modalSubtitle = document.getElementById("modalSubtitle");
+        const modalActions = document.getElementById("modalActions");
+        const modalIcon = document.getElementById("modalIcon");
 
         if (!modalOverlay || !modalMessage) {
             return;
         }
 
+        // Réinitialiser la modal au format par défaut
+        modalIcon.textContent = "❓";
+        modalTitle.textContent = "Confirmation";
+        modalSubtitle.textContent = "Veuillez confirmer votre action";
         modalMessage.textContent = message;
+        modalActions.innerHTML = `
+            <button class="modal-btn modal-btn-secondary" onclick="closeModal()">
+                Annuler
+            </button>
+            <button class="modal-btn modal-btn-primary" onclick="confirmModal()">
+                Confirmer
+            </button>
+        `;
+
         modalOverlay.classList.add("show");
         this.confirmCallback = onConfirm;
     }
@@ -491,6 +508,7 @@ class WildCardsApp {
         this.initializeSearchBox();
         this.initializeResetButton();
         this.initializeFabButton();
+        this.initializeRandomButton();
         this.initializeThemeToggle();
         this.initializeCardScrolling();
     }
@@ -521,6 +539,13 @@ class WildCardsApp {
         const fab = document.getElementById("fab");
         fab?.addEventListener("click", () => {
             this.revealAllVisible();
+        });
+    }
+
+    initializeRandomButton() {
+        const randomBtn = document.getElementById("randomBtn");
+        randomBtn?.addEventListener("click", () => {
+            this.drawRandomCard();
         });
     }
 
@@ -595,6 +620,64 @@ class WildCardsApp {
         setTimeout(() => {
             document.body.style.transition = "";
         }, 300);
+    }
+
+    drawRandomCard() {
+        const visibleCards = document.querySelectorAll(".card:not(.hidden)");
+        if (visibleCards.length === 0) {
+            this.modalService.show("Aucune carte disponible pour le tirage au sort.", () => {});
+            return;
+        }
+
+        const randomIndex = Math.floor(Math.random() * visibleCards.length);
+        const randomCard = visibleCards[randomIndex];
+
+        const questionText = randomCard.querySelector(".question-text").textContent;
+        const answerText = randomCard.querySelector(".answer").textContent;
+
+        this.showRandomCardModal(questionText, answerText, randomCard);
+    }
+
+    showRandomCardModal(question, answer, originalCard) {
+        const modalOverlay = document.getElementById("modalOverlay");
+        const modalTitle = document.getElementById("modalTitle");
+        const modalSubtitle = document.getElementById("modalSubtitle");
+        const modalMessage = document.getElementById("modalMessage");
+        const modalActions = document.getElementById("modalActions");
+        const modalIcon = document.getElementById("modalIcon");
+
+        if (!modalOverlay) return;
+
+        modalIcon.textContent = "🎲";
+        modalTitle.textContent = "Carte tirée au sort";
+        modalSubtitle.textContent = "Essayez de répondre avant de révéler la réponse";
+        modalMessage.innerHTML = `<div class="random-card-question"><strong>Question :</strong><br>${question}</div>`;
+
+        modalActions.innerHTML = `
+            <button class="modal-btn modal-btn-secondary" onclick="closeModal()">
+                Fermer
+            </button>
+            <button class="modal-btn modal-btn-primary" id="revealAnswerBtn">
+                Révéler la réponse
+            </button>
+        `;
+
+        modalOverlay.classList.add("show");
+
+        const revealBtn = document.getElementById("revealAnswerBtn");
+        revealBtn?.addEventListener("click", () => {
+            modalMessage.innerHTML = `
+                <div class="random-card-question"><strong>Question :</strong><br>${question}</div>
+                <div class="random-card-answer"><strong>Réponse :</strong><br>${answer}</div>
+            `;
+            revealBtn.textContent = "Marquer comme révélée";
+            revealBtn.onclick = () => {
+                this.cardService.reveal(originalCard);
+                this.uiService.updateStats();
+                originalCard.scrollIntoView({ behavior: "smooth", block: "center" });
+                this.modalService.close();
+            };
+        });
     }
 }
 
