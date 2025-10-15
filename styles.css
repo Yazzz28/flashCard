@@ -593,6 +593,8 @@ body {
     max-width: 500px;
     width: 90%;
     max-height: 90vh;
+    display: flex;
+    flex-direction: column;
     overflow: hidden;
     transform: scale(0.8) translateY(20px);
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -609,6 +611,7 @@ body {
     padding: 2rem;
     position: relative;
     overflow: hidden;
+    flex-shrink: 0;
 }
 
 .modal-icon {
@@ -655,6 +658,28 @@ body {
 
 .modal-body {
     padding: 2rem;
+    overflow-y: auto;
+    overflow-x: hidden;
+    flex: 1;
+    min-height: 0;
+}
+
+.modal-body::-webkit-scrollbar {
+    width: 8px;
+}
+
+.modal-body::-webkit-scrollbar-track {
+    background: var(--border-color);
+    border-radius: 4px;
+}
+
+.modal-body::-webkit-scrollbar-thumb {
+    background: var(--primary);
+    border-radius: 4px;
+}
+
+.modal-body::-webkit-scrollbar-thumb:hover {
+    background: var(--primary-dark);
 }
 
 .modal-message {
