@@ -28,7 +28,7 @@ class AppState {
 class StorageService {
     static save(key, data) {
         try {
-            sessionStorage.setItem(key, JSON.stringify(data));
+            localStorage.setItem(key, JSON.stringify(data));
             return true;
         } catch (error) {
             console.warn("Erreur lors de la sauvegarde:", error);
@@ -38,7 +38,7 @@ class StorageService {
 
     static load(key) {
         try {
-            const data = sessionStorage.getItem(key);
+            const data = localStorage.getItem(key);
             return data ? JSON.parse(data) : null;
         } catch (error) {
             console.warn("Erreur lors du chargement:", error);
@@ -48,12 +48,54 @@ class StorageService {
 
     static remove(key) {
         try {
-            sessionStorage.removeItem(key);
+            localStorage.removeItem(key);
             return true;
         } catch (error) {
             console.warn("Erreur lors de la suppression:", error);
             return false;
         }
+    }
+
+    static exportProgress() {
+        try {
+            const data = localStorage.getItem(STORAGE_KEY);
+            if (!data) {
+                alert("Aucune progression à exporter");
+                return;
+            }
+
+            const blob = new Blob([data], { type: "application/json" });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement("a");
+            a.href = url;
+            a.download = `flashcards-progress-${new Date().toISOString().split('T')[0]}.json`;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+
+            alert("Progression exportée avec succès !");
+        } catch (error) {
+            console.error("Erreur lors de l'export:", error);
+            alert("Erreur lors de l'export de la progression");
+        }
+    }
+
+    static importProgress(file) {
+        return new Promise((resolve, reject) => {
+            const reader = new FileReader();
+            reader.onload = (e) => {
+                try {
+                    const data = JSON.parse(e.target.result);
+                    localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
+                    resolve(data);
+                } catch (error) {
+                    reject(error);
+                }
+            };
+            reader.onerror = () => reject(reader.error);
+            reader.readAsText(file);
+        });
     }
 }
 
@@ -509,6 +551,8 @@ class WildCardsApp {
         this.initializeResetButton();
         this.initializeFabButton();
         this.initializeRandomButton();
+        this.initializeExportButton();
+        this.initializeImportButton();
         this.initializeThemeToggle();
         this.initializeCardScrolling();
     }
@@ -546,6 +590,36 @@ class WildCardsApp {
         const randomBtn = document.getElementById("randomBtn");
         randomBtn?.addEventListener("click", () => {
             this.drawRandomCard();
+        });
+    }
+
+    initializeExportButton() {
+        const exportBtn = document.getElementById("exportBtn");
+        exportBtn?.addEventListener("click", () => {
+            this.storageService.exportProgress();
+        });
+    }
+
+    initializeImportButton() {
+        const importBtn = document.getElementById("importBtn");
+        const importFile = document.getElementById("importFile");
+
+        importBtn?.addEventListener("click", () => {
+            importFile?.click();
+        });
+
+        importFile?.addEventListener("change", async (e) => {
+            const file = e.target.files?.[0];
+            if (!file) return;
+
+            try {
+                await this.storageService.importProgress(file);
+                alert("Progression importée avec succès !");
+                window.location.reload();
+            } catch (error) {
+                console.error("Erreur lors de l'import:", error);
+                alert("Erreur : fichier JSON invalide");
+            }
         });
     }
 
