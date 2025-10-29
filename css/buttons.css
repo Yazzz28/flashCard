@@ -1,0 +1,100 @@
+/* Category Buttons */
+.category-btn {
+    padding: 0.75rem 1.5rem;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-hover);
+    border-radius: 2rem;
+    color: var(--text-white);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    font-size: 0.9rem;
+    backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.category-btn:hover {
+    background: var(--border-hover);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+}
+
+.category-btn.active {
+    background: var(--secondary);
+    border-color: var(--secondary);
+    box-shadow: var(--shadow-lg);
+    color: white;
+}
+
+/* Formation Buttons */
+.formations {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.formations-title {
+    font-weight: 700;
+    color: var(--text-white);
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.formations-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.formation-btn {
+    padding: 1rem 2rem;
+    background: var(--bg-secondary);
+    border: 2px solid var(--border-hover);
+    border-radius: 2rem;
+    color: var(--text-white);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 700;
+    font-size: 1rem;
+    backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.formation-btn:hover {
+    background: var(--border-hover);
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--primary);
+}
+
+.formation-btn.active {
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+    border-color: var(--primary);
+    box-shadow: var(--shadow-xl);
+    color: white;
+    transform: translateY(-2px);
+}
+
+.formation-btn.active::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+        45deg,
+        transparent 30%,
+        rgba(255, 255, 255, 0.1) 50%,
+        transparent 70%
+    );
+    animation: shimmer 2s infinite;
+}

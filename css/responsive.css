@@ -1,0 +1,117 @@
+/* Enhanced Responsive Design */
+@media (max-width: 1024px) {
+    .stats-panel {
+        position: relative;
+        top: auto;
+        right: auto;
+        margin-bottom: 2rem;
+        max-width: 400px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .theme-toggle {
+        position: relative;
+        top: auto;
+        left: auto;
+        margin-bottom: 1rem;
+        display: inline-flex;
+        justify-self: center;
+    }
+
+    .header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+
+    .main-title {
+        font-size: 2.5rem;
+    }
+
+    .cards-container {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .card {
+        padding: 1.5rem;
+    }
+
+    .search-icon {
+        transform: translate(-50%, -50%) translateX(-150px);
+    }
+
+    .categories {
+        gap: 0.5rem;
+    }
+
+    .category-btn {
+        padding: 0.5rem 1rem;
+        font-size: 0.8rem;
+    }
+
+    .controls {
+        padding: 1.5rem;
+        border-radius: 1.5rem;
+    }
+
+    .modal {
+        margin: 1rem;
+        width: calc(100% - 2rem);
+    }
+
+    .modal-actions {
+        flex-direction: column-reverse;
+    }
+
+    .modal-btn {
+        width: 100%;
+    }
+
+    .formations-buttons {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+    .formation-btn {
+        padding: 0.75rem 1.5rem;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-title {
+        font-size: 2rem;
+    }
+
+    .search-box {
+        padding: 0.75rem 1rem;
+    }
+
+    .search-icon {
+        display: none;
+    }
+
+    .card {
+        padding: 1rem;
+        border-radius: 1rem;
+    }
+
+    .question {
+        font-size: 1.1rem;
+    }
+
+    .fab {
+        bottom: 1rem;
+        right: 1rem;
+        width: 3.5rem;
+        height: 3.5rem;
+    }
+}
