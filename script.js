@@ -199,6 +199,9 @@ class CardService {
         card.dataset.category = category;
 
         card.innerHTML = `
+            <button class="unreveale-card-btn" title="Masquer la réponse">
+                <span class="unreveale-icon">🔒</span>
+            </button>
             <div class="question">
                 <div class="question-icon">Q${this.appState
                     .questionCounter++}</div>
@@ -211,7 +214,21 @@ class CardService {
             </div>
         `;
 
-        card.addEventListener("click", () => this.reveal(card));
+        // Gestionnaire pour révéler la carte
+        card.addEventListener("click", (e) => {
+            // Ne pas révéler si on clique sur le bouton de masquage
+            if (!e.target.closest(".unreveale-card-btn")) {
+                this.reveal(card);
+            }
+        });
+
+        // Gestionnaire pour masquer à nouveau la réponse
+        const unrevealeBtn = card.querySelector(".unreveale-card-btn");
+        unrevealeBtn.addEventListener("click", (e) => {
+            e.stopPropagation();
+            this.unrevealeCard(card);
+        });
+
         return card;
     }
 
@@ -271,6 +288,23 @@ class CardService {
     resetRevealedCards() {
         this.appState.revealedCards.clear();
         this.storageService.remove(STORAGE_KEY);
+    }
+
+    unrevealeCard(card) {
+        const answerDiv = card.querySelector(".answer");
+
+        // Masquer la réponse
+        answerDiv.classList.remove("visible");
+        card.classList.remove("revealed");
+
+        // Retirer de la liste des cartes révélées
+        this.appState.revealedCards.delete(card);
+        this.saveRevealedCards();
+
+        // Mettre à jour les stats
+        if (window.app && window.app.uiService) {
+            window.app.uiService.updateStats();
+        }
     }
 }
 
@@ -753,10 +787,12 @@ class WildCardsApp {
             };
         });
     }
+
 }
 
 document.addEventListener("DOMContentLoaded", async () => {
     const app = new WildCardsApp();
+    window.app = app;
     await app.initialize();
 });
 
