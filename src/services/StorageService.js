@@ -1,4 +1,4 @@
-import { STORAGE_KEY } from "./constants.js";
+import { STORAGE_KEY } from "../core/constants.js";
 
 export class StorageService {
     static save(key, data) {
@@ -70,7 +70,6 @@ export class StorageService {
             };
             reader.onerror = () => reject(reader.error);
             reader.readAsText(file);
-            location.reload();
         });
     }
 }

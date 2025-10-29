@@ -1,4 +1,4 @@
-import { STORAGE_KEY } from "./constants.js";
+import { STORAGE_KEY } from "../../core/constants.js";
 
 export class CardService {
     constructor(appState, storageService) {
@@ -53,6 +53,9 @@ export class CardService {
             card.classList.add("revealed");
             this.appState.revealedCards.add(card);
             this.saveRevealedCards();
+            if (window.app && window.app.uiService) {
+                window.app.uiService.updateStats();
+            }
         }
     }
 

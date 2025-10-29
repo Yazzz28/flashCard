@@ -1,11 +1,11 @@
-import { AppState } from "./AppState.js";
-import { StorageService } from "./StorageService.js";
-import { DataService } from "./DataService.js";
-import { ModalService } from "./ModalService.js";
-import { CardService } from "./CardService.js";
-import { UIService } from "./UIService.js";
-import { FilterService } from "./FilterService.js";
-import { RenderService } from "./RenderService.js";
+import { AppState } from "./core/AppState.js";
+import { StorageService } from "./services/StorageService.js";
+import { DataService } from "./services/DataService.js";
+import { ModalService } from "./services/ModalService.js";
+import { CardService } from "./components/cards/CardService.js";
+import { UIService } from "./components/ui/UIService.js";
+import { FilterService } from "./components/filters/FilterService.js";
+import { RenderService } from "./components/render/RenderService.js";
 
 export class WildCardsApp {
     constructor() {

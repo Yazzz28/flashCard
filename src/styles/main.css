@@ -1,0 +1,21 @@
+/* Main CSS - Import all stylesheets by domain */
+
+/* 1. Base styles (variables, reset, animations) */
+@import url('./base/variables.css');
+@import url('./base/base.css');
+@import url('./base/animations.css');
+@import url('./base/utilities.css');
+
+/* 2. Layout (header, responsive) */
+@import url('./layout/header.css');
+@import url('./layout/responsive.css');
+
+/* 3. Components - Feature-based */
+@import url('../components/cards/cards.css');
+@import url('../components/ui/ui.css');
+@import url('../components/filters/filters.css');
+
+/* 4. Global components (modal, theme-toggle, fab) */
+@import url('./components/modal.css');
+@import url('./components/theme-toggle.css');
+@import url('./components/fab.css');

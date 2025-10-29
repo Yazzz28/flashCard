@@ -1,4 +1,4 @@
-import { ANIMATION_DELAY } from "./constants.js";
+import { ANIMATION_DELAY } from "../../core/constants.js";
 
 export class RenderService {
     constructor(appState, cardService, uiService, filterService) {
