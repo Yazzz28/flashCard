@@ -16,6 +16,10 @@ export class CardService {
             <button class="unreveale-card-btn" title="Masquer la réponse">
                 <span class="unreveale-icon">🔒</span>
             </button>
+            <div class="card-meta">
+                <span class="formation-badge">${formation}</span>
+                <span class="category-badge">${category}</span>
+            </div>
             <div class="question">
                 <div class="question-icon">Q${this.appState
                     .questionCounter++}</div>
