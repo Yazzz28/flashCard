@@ -1,4 +1,5 @@
 /* Utility Classes */
-.hidden {
+.hidden,
+.u-hidden {
     display: none !important;
 }

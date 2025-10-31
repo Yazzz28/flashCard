@@ -6,10 +6,12 @@ import { CardService } from "./components/cards/CardService.js";
 import { UIService } from "./components/ui/UIService.js";
 import { FilterService } from "./components/filters/FilterService.js";
 import { RenderService } from "./components/render/RenderService.js";
+import { QCMService } from "./components/qcm/QCMService.js";
 
 export class WildCardsApp {
     constructor() {
         this.appState = new AppState();
+        this.appState.currentMode = 'flashcards'; // 'flashcards' or 'qcm'
         this.storageService = StorageService;
         this.dataService = DataService;
         this.modalService = new ModalService();
@@ -22,6 +24,7 @@ export class WildCardsApp {
             this.uiService,
             this.filterService,
         );
+        this.qcmService = new QCMService(this.appState, this.storageService);
     }
 
     async initialize() {
@@ -30,6 +33,7 @@ export class WildCardsApp {
                 await this.dataService.loadQuestionsData();
             this.renderService.renderCards();
             this.initializeEventListeners();
+            this.initializeQCMEventListeners();
         } catch (error) {
             this.uiService.showErrorState(
                 container,
@@ -246,5 +250,294 @@ export class WildCardsApp {
                 this.modalService.close();
             };
         });
+    }
+
+    // ========== QCM Mode Methods ==========
+
+    initializeQCMEventListeners() {
+        const qcmModeBtn = document.getElementById("qcmModeBtn");
+        qcmModeBtn?.addEventListener("click", () => {
+            this.switchToQCMMode();
+        });
+
+        const flashcardModeBtn = document.getElementById("flashcardModeBtn");
+        flashcardModeBtn?.addEventListener("click", () => {
+            this.switchToFlashcardMode();
+        });
+    }
+
+    switchToQCMMode() {
+        this.appState.currentMode = 'qcm';
+        this.updateModeUI();
+        this.showQCMSetup();
+    }
+
+    switchToFlashcardMode() {
+        this.appState.currentMode = 'flashcards';
+        this.updateModeUI();
+        this.renderService.renderCards();
+    }
+
+    updateModeUI() {
+        const flashcardContainer = document.getElementById("flashcardContainer");
+        const qcmContainer = document.getElementById("qcmContainer");
+        const qcmModeBtn = document.getElementById("qcmModeBtn");
+        const flashcardModeBtn = document.getElementById("flashcardModeBtn");
+
+        if (this.appState.currentMode === 'qcm') {
+            flashcardContainer?.classList.add('u-hidden');
+            qcmContainer?.classList.remove('u-hidden');
+            qcmModeBtn?.classList.add('active');
+            flashcardModeBtn?.classList.remove('active');
+        } else {
+            flashcardContainer?.classList.remove('u-hidden');
+            qcmContainer?.classList.add('u-hidden');
+            qcmModeBtn?.classList.remove('active');
+            flashcardModeBtn?.classList.add('active');
+        }
+    }
+
+    async showQCMSetup() {
+        const qcmContainer = document.getElementById("qcmContainer");
+        if (!qcmContainer) return;
+
+        // Charger les données QCM d'abord
+        await this.qcmService.loadQCMData();
+
+        this.renderQCMSetup();
+    }
+
+    renderQCMSetup() {
+        const qcmContainer = document.getElementById("qcmContainer");
+        if (!qcmContainer) return;
+
+        const availableQuestions = this.qcmService.getAllFilteredQCMQuestions();
+        const maxQuestions = Math.min(availableQuestions.length, 50);
+        const availableCategories = this.getAvailableCategoriesForQCM();
+
+        qcmContainer.innerHTML = `
+            <div class="qcm-setup">
+                <div class="qcm-setup-card">
+                    <h2>🎯 Mode QCM</h2>
+                    <p>Testez vos connaissances avec un quiz !</p>
+
+                    <!-- Sélecteur de formation -->
+                    <div class="qcm-filter-section">
+                        <h3 style="color: var(--text-primary); margin-bottom: 1rem; font-size: 1rem;">
+                            🎓 Formation
+                        </h3>
+                        <div class="qcm-formations-buttons">
+                            <button class="qcm-formation-btn ${this.appState.currentFormation === 'all' ? 'active' : ''}" data-formation="all">
+                                <span>📚</span> Toutes
+                            </button>
+                            <button class="qcm-formation-btn ${this.appState.currentFormation === 'CDA' ? 'active' : ''}" data-formation="CDA">
+                                <span>💻</span> CDA
+                            </button>
+                            <button class="qcm-formation-btn ${this.appState.currentFormation === 'DWWM' ? 'active' : ''}" data-formation="DWWM">
+                                <span>🌐</span> DWWM
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Sélecteur de catégorie -->
+                    <div class="qcm-filter-section">
+                        <h3 style="color: var(--text-primary); margin-bottom: 1rem; font-size: 1rem;">
+                            📂 Catégorie
+                        </h3>
+                        <div class="qcm-categories-buttons">
+                            ${this.generateQCMCategoryButtons(availableCategories)}
+                        </div>
+                    </div>
+
+                    <!-- Nombre de questions -->
+                    <div class="qcm-setup-options">
+                        <div class="qcm-setup-option">
+                            <label for="qcm-num-questions">Nombre de questions :</label>
+                            <select id="qcm-num-questions">
+                                <option value="5">5 questions</option>
+                                <option value="10" selected>10 questions</option>
+                                <option value="15">15 questions</option>
+                                <option value="20">20 questions</option>
+                                ${maxQuestions > 20 ? `<option value="${maxQuestions}">${maxQuestions} questions (max)</option>` : ''}
+                            </select>
+                        </div>
+                    </div>
+
+                    <p id="qcm-available-count" style="color: var(--text-secondary); font-size: 0.9rem; margin-top: 1rem;">
+                        <strong style="color: var(--primary);">${availableQuestions.length}</strong> questions disponibles
+                    </p>
+
+                    <button class="btn-primary" id="start-qcm-btn" style="width: 100%; padding: 1rem; margin-top: 1rem;" ${availableQuestions.length === 0 ? 'disabled' : ''}>
+                        🚀 Démarrer le QCM
+                    </button>
+                </div>
+            </div>
+        `;
+
+        // Ajouter les écouteurs d'événements pour les filtres
+        this.initializeQCMFilters();
+
+        const startBtn = document.getElementById("start-qcm-btn");
+        startBtn?.addEventListener("click", () => {
+            const numQuestions = parseInt(document.getElementById("qcm-num-questions").value);
+            this.startQCM(numQuestions);
+        });
+    }
+
+    getAvailableCategoriesForQCM() {
+        const categories = new Set();
+        const { currentFormation } = this.appState;
+        const qcmData = this.qcmService.qcmData;
+
+        if (!qcmData) return [];
+
+        for (const [formation, formationCategories] of Object.entries(qcmData)) {
+            if (currentFormation !== 'all' && formation !== currentFormation) {
+                continue;
+            }
+
+            for (const category of Object.keys(formationCategories)) {
+                categories.add(category);
+            }
+        }
+
+        return Array.from(categories);
+    }
+
+    generateQCMCategoryButtons(availableCategories) {
+        const categoryIcons = {
+            all: '📚',
+            frontend: '🖥️',
+            backend: '⚙️',
+            database: '🗄️',
+            devops: '🚀',
+            architecture: '🏗️',
+            tests: '🧪',
+            security: '🔒',
+            design: '🎨',
+            project: '📋',
+            tools: '🛠️',
+            fullstack: '🌟',
+            modern_practices: '✨'
+        };
+
+        const categoryLabels = {
+            all: 'Toutes',
+            frontend: 'Frontend',
+            backend: 'Backend',
+            database: 'Base de données',
+            devops: 'DevOps',
+            architecture: 'Architecture',
+            tests: 'Tests',
+            security: 'Sécurité',
+            design: 'Conception',
+            project: 'Gestion de projet',
+            tools: 'Outils',
+            fullstack: 'Fullstack',
+            modern_practices: 'Pratiques modernes'
+        };
+
+        let buttons = `
+            <button class="qcm-category-btn ${this.appState.currentCategory === 'all' ? 'active' : ''}" data-category="all">
+                <span>${categoryIcons.all}</span> ${categoryLabels.all}
+            </button>
+        `;
+
+        availableCategories.forEach(category => {
+            if (category !== 'all') {
+                buttons += `
+                    <button class="qcm-category-btn ${this.appState.currentCategory === category ? 'active' : ''}" data-category="${category}">
+                        <span>${categoryIcons[category] || '📁'}</span> ${categoryLabels[category] || category}
+                    </button>
+                `;
+            }
+        });
+
+        return buttons;
+    }
+
+    initializeQCMFilters() {
+        // Formation buttons
+        document.querySelectorAll('.qcm-formation-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const formation = btn.dataset.formation;
+                this.appState.currentFormation = formation;
+                this.appState.currentCategory = 'all'; // Reset catégorie
+                this.renderQCMSetup(); // Re-render pour mettre à jour
+            });
+        });
+
+        // Category buttons
+        document.querySelectorAll('.qcm-category-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const category = btn.dataset.category;
+                this.appState.currentCategory = category;
+                this.renderQCMSetup(); // Re-render pour mettre à jour
+            });
+        });
+    }
+
+    async startQCM(numberOfQuestions) {
+        try {
+            await this.qcmService.generateQuiz(numberOfQuestions);
+            this.renderCurrentQuestion();
+        } catch (error) {
+            alert(error.message);
+        }
+    }
+
+    renderCurrentQuestion() {
+        const qcmContainer = document.getElementById("qcmContainer");
+        if (!qcmContainer) return;
+
+        const question = this.qcmService.getCurrentQuestion();
+        if (!question) return;
+
+        const questionElement = this.qcmService.createQuestionElement(
+            question,
+            (questionId, selectedIndex) => this.handleAnswer(questionId, selectedIndex)
+        );
+
+        qcmContainer.innerHTML = '';
+        qcmContainer.appendChild(questionElement);
+
+        // Ajouter les écouteurs pour la navigation
+        const prevBtn = document.getElementById("qcm-prev");
+        const nextBtn = document.getElementById("qcm-next");
+
+        prevBtn?.addEventListener("click", () => {
+            this.qcmService.previousQuestion();
+            this.renderCurrentQuestion();
+        });
+
+        nextBtn?.addEventListener("click", () => {
+            if (this.qcmService.isQuizComplete() && this.qcmService.currentQuestionIndex === this.qcmService.currentQuiz.length - 1) {
+                this.showQCMResults();
+            } else {
+                this.qcmService.nextQuestion();
+                this.renderCurrentQuestion();
+            }
+        });
+    }
+
+    handleAnswer(questionId, selectedIndex) {
+        const result = this.qcmService.answerQuestion(questionId, selectedIndex);
+        if (result) {
+            // Ré-afficher la question pour montrer le feedback
+            this.renderCurrentQuestion();
+        }
+    }
+
+    showQCMResults() {
+        const qcmContainer = document.getElementById("qcmContainer");
+        if (!qcmContainer) return;
+
+        const resultsElement = this.qcmService.createResultsElement(
+            () => this.showQCMSetup(),
+            () => this.switchToFlashcardMode()
+        );
+
+        qcmContainer.innerHTML = '';
+        qcmContainer.appendChild(resultsElement);
     }
 }

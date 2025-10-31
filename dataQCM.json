@@ -1,0 +1,2998 @@
+{
+  "CDA": {
+    "frontend": [
+      {
+        "question": "Qu'est-ce qu'une SPA ?",
+        "options": [
+          "Une application multi-pages avec rechargement à chaque navigation",
+          "Un système de gestion de contenu statique type WordPress",
+          "Une application mobile native développée avec Swift ou Kotlin",
+          "Une SPA (Single Page Application) est une application web qui charge une seule page HTML et met à"
+        ],
+        "correctAnswers": [
+          3
+        ],
+        "explanation": "Une SPA (Single Page Application) est une application web qui charge une seule page HTML et met à jour dynamiquement le contenu en fonction des interactions de l'utilisateur, sans recharger la page entière."
+      },
+      {
+        "question": "Qu'est-ce qu'Angular ?",
+        "options": [
+          "Un système de gestion de contenu statique type WordPress",
+          "Angular est un framework JavaScript open-source développé par Google pour créer des applications",
+          "Une application multi-pages avec rechargement à chaque navigation",
+          "Une application mobile native développée avec Swift ou Kotlin"
+        ],
+        "correctAnswers": [
+          1
+        ],
+        "explanation": "Angular est un framework JavaScript open-source développé par Google pour créer des applications web dynamiques et des SPAs."
+      },
+      {
+        "question": "Quels sont les avantages d'un framework orienté composant comme Angular ?",
+        "options": [
+          "Une bibliothèque de gestion d'état pour applications serveur",
+          "Un framework backend Python pour créer des API REST",
+          "Les avantages incluent : la réutilisabilité des composants dans différentes parties de",
+          "Un système de gestion de base de données NoSQL"
+        ],
+        "correctAnswers": [
+          2
+        ],
+        "explanation": "Les avantages incluent : la réutilisabilité des composants dans différentes parties de l'application, une meilleure organisation du code en modules logiques, la facilité de maintenance et de test des composants isolés, l'encapsulation qui évite les conflits entre co..."
+      },
+      {
+        "question": "Quels sont les prérequis pour installer et exécuter un projet Angular ?",
+        "options": [
+          "Un système de gestion de base de données NoSQL",
+          "Une bibliothèque de gestion d'état pour applications serveur",
+          "Les prérequis sont : Node.js (version LTS recommandée) avec npm ou yarn comme gestionnaire de",
+          "Un framework backend Python pour créer des API REST"
+        ],
+        "correctAnswers": [
+          2
+        ],
+        "explanation": "Les prérequis sont : Node.js (version LTS recommandée) avec npm ou yarn comme gestionnaire de paquets, Angular CLI installé globalement (npm install -g @angular/cli), un éditeur de code (VS Code recommandé), et optionnellement Git pour le versioning."
+      },
+      {
+        "question": "Comment gères-tu un événement utilisateur dans Angular ?",
+        "options": [
+          "Un système de gestion de base de données NoSQL",
+          "Un framework backend Python pour créer des API REST",
+          "Dans Angular, on gère les événements avec l'event binding en utilisant des parenthèses : (click)",
+          "Une bibliothèque de gestion d'état pour applications serveur"
+        ],
+        "correctAnswers": [
+          2
+        ],
+        "explanation": "Dans Angular, on gère les événements avec l'event binding en utilisant des parenthèses : (click)='maMethode()', (submit)='onSubmit()', (change)='onChange($event)'. On peut accéder à l'objet event avec $event."
+      },
+      {
+        "question": "Comment récupères-tu des données d'une API dans une interface Angular ?",
+        "options": [
+          "On utilise le service HttpClient d'Angular",
+          "Une bibliothèque de gestion d'état pour applications serveur",
+          "Un framework backend Python pour créer des API REST",
+          "Un système de gestion de base de données NoSQL"
+        ],
+        "correctAnswers": [
+          0
+        ],
+        "explanation": "On utilise le service HttpClient d'Angular : 1) Importer HttpClientModule dans app.module.ts, 2) Injecter HttpClient dans le service ou composant, 3) Utiliser les méthodes HTTP (get, post, put, delete) qui retournent des Observables, 4) S'abonner aux Observables ave..."
+      },
+      {
+        "question": "Comment sécuriser les pages en Angular selon le rôle de l'utilisateur ?",
+        "options": [
+          "Une bibliothèque de gestion d'état pour applications serveur",
+          "On utilise les Guards d'Angular",
+          "Un système de gestion de base de données NoSQL",
+          "Un framework backend Python pour créer des API REST"
+        ],
+        "correctAnswers": [
+          1
+        ],
+        "explanation": "On utilise les Guards d'Angular : 1) CanActivate pour protéger l'accès aux routes, 2) Créer un AuthGuard qui vérifie l'authentification et les rôles, 3) Implémenter la méthode canActivate() qui retourne true/false, 4) Ajouter le guard dans les routes : { path: 'admi..."
+      },
+      {
+        "question": "Comment rends-tu une interface responsive ?",
+        "options": [
+          "On crée une application mobile native en complément",
+          "Pour rendre une interface responsive",
+          "On utilise des tailles fixes en pixels pour tous les éléments",
+          "On développe deux versions séparées du site (desktop et mobile)"
+        ],
+        "correctAnswers": [
+          1
+        ],
+        "explanation": "Pour rendre une interface responsive : 1) Utiliser CSS Grid et Flexbox pour des layouts adaptatifs, 2) Définir des media queries pour différentes tailles d'écran, 3) Utiliser des unités relatives (%, em, rem, vw, vh), 4) Adopter l'approche mobile-first, 5) Utiliser ..."
+      },
+      {
+        "question": "Pourquoi est-il important d'adapter une interface à différents types de supports ?",
+        "options": [
+          "Un framework CSS pour améliorer le design responsive",
+          "Un protocole de sécurité pour protéger les données utilisateurs",
+          "Une technique d'optimisation des performances de rendu",
+          "C'est important car : 1) Plus de 50% du trafic web vient du mobile, 2) Google privilégie les"
+        ],
+        "correctAnswers": [
+          3
+        ],
+        "explanation": "C'est important car : 1) Plus de 50% du trafic web vient du mobile, 2) Google privilégie les sites mobile-friendly dans son référencement, 3) L'expérience utilisateur varie selon l'appareil utilisé, 4) Cela améliore l'accessibilité pour tous les utilisateurs, 5) Cel..."
+      },
+      {
+        "question": "Comment t'assures-tu que ton interface respecte la maquette du dossier de conception ?",
+        "options": [
+          "Une application multi-pages avec rechargement à chaque navigation",
+          "Pour respecter la maquette",
+          "Une application mobile native développée avec Swift ou Kotlin",
+          "Un système de gestion de contenu statique type WordPress"
+        ],
+        "correctAnswers": [
+          1
+        ],
+        "explanation": "Pour respecter la maquette : 1) Comparaison pixel-perfect avec des outils de superposition, 2) Utilisation d'un design system cohérent, 3) Respect des spacing, couleurs et typographies définies, 4) Tests sur différents navigateurs et appareils, 5) Validation avec l'..."
+      },
+      {
+        "question": "Pourquoi et comment tester une interface utilisateur ?",
+        "options": [
+          "On crée une application mobile native en complément",
+          "On utilise des tailles fixes en pixels pour tous les éléments",
+          "On développe deux versions séparées du site (desktop et mobile)",
+          "Tests UI essentiels pour : 1) Validation fonctionnelle des interactions, 2)"
+        ],
+        "correctAnswers": [
+          3
+        ],
+        "explanation": "Tests UI essentiels pour : 1) Validation fonctionnelle des interactions, 2) Détection de régressions visuelles, 3) Vérification de l'accessibilité, 4) Performance et responsive design."
+      },
+      {
+        "question": "Quels mécanismes peux-tu mettre en place pour sécuriser une interface ?",
+        "options": [
+          "Une technique d'optimisation du rendu CSS",
+          "Une méthode de minification du code JavaScript",
+          "Sécurisation interface : 1) Validation côté client ET serveur, 2)",
+          "Un protocole CORS pour partager les ressources"
+        ],
+        "correctAnswers": [
+          2
+        ],
+        "explanation": "Sécurisation interface : 1) Validation côté client ET serveur, 2) Échappement des données utilisateur, 3) CSP (Content Security Policy) headers, 4) HTTPS obligatoire, 5) Protection CSRF avec tokens, 6) Sanitization des entrées, 7) Rate limiting, 8) Authentification ..."
+      },
+      {
+        "question": "Comment fonctionne le DOM et quelle est son importance dans les interfaces web ?",
+        "options": [
+          "Des requêtes synchrones bloquantes vers le serveur",
+          "Le DOM (Document Object Model) est une représentation en arbre des éléments HTML d'une page web",
+          "Des web workers créés dynamiquement pour chaque action",
+          "Des triggers automatiques dans la base de données"
+        ],
+        "correctAnswers": [
+          1
+        ],
+        "explanation": "Le DOM (Document Object Model) est une représentation en arbre des éléments HTML d'une page web. Chaque balise devient un nœud que JavaScript peut manipuler dynamiquement."
+      },
+      {
+        "question": "Quelles sont les principales vulnérabilités web (XSS, CSRF) et comment s'en prémunir ?",
+        "options": [
+          "Un protocole de transfert de fichiers sécurisé (SFTP)",
+          "Un framework de développement web full-stack",
+          "XSS (Cross-Site Scripting) : injection de scripts malveillants.",
+          "Un langage de programmation orienté objet compilé"
+        ],
+        "correctAnswers": [
+          2
+        ],
+        "explanation": "XSS (Cross-Site Scripting) : injection de scripts malveillants. Prévention : validation et échappement des données, CSP headers. CSRF (Cross-Site Request Forgery) : exécution d'actions non autorisées."
+      },
+      {
+        "question": "Comment se protéger contre les injections SQL, XSS et CSRF ?",
+        "options": [
+          "Un framework de développement web full-stack",
+          "Un langage de programmation orienté objet compilé",
+          "Un protocole de transfert de fichiers sécurisé (SFTP)",
+          "Protection multicouche : SQL Injection : requêtes préparées, ORM, validation stricte, principe"
+        ],
+        "correctAnswers": [
+          3
+        ],
+        "explanation": "Protection multicouche : SQL Injection : requêtes préparées, ORM, validation stricte, principe moindre privilège DB. XSS : échappement HTML, CSP, validation entrées, sanitization. CSRF : tokens synchronisés, SameSite cookies, vérification Referer/Origin."
+      },
+      {
+        "question": "Pourquoi doit-on valider les données côté frontend et backend ?",
+        "options": [
+          "Double validation nécessaire",
+          "Un système de fichiers réseau pour partager des données",
+          "Un protocole de communication en temps réel bidirectionnel",
+          "Une base de données relationnelle SQL distribuée"
+        ],
+        "correctAnswers": [
+          0
+        ],
+        "explanation": "Double validation nécessaire : Frontend : UX améliorée, feedback immédiat, réduction requêtes serveur, guide utilisateur. Backend : sécurité réelle (frontend contournable), intégrité données, conformité business rules, protection API."
+      },
+      {
+        "question": "Quelles sont les bonnes pratiques UX pour améliorer l'ergonomie d'une interface web ?",
+        "options": [
+          "Un framework CSS pour améliorer le design responsive",
+          "Une technique d'optimisation des performances de rendu",
+          "Bonnes pratiques UX : 1) Design intuitif et prévisible, 2) Navigation claire et cohérente, 3)",
+          "Un protocole de sécurité pour protéger les données utilisateurs"
+        ],
+        "correctAnswers": [
+          2
+        ],
+        "explanation": "Bonnes pratiques UX : 1) Design intuitif et prévisible, 2) Navigation claire et cohérente, 3) Feedback visuel immédiat, 4) Chargement rapide (<3s), 5) Mobile-first design, 6) Accessibilité universelle, 7) Contenu scannable, 8) CTAs clairs, 9) Formulaires simples, 10..."
+      },
+      {
+        "question": "Quels facteurs influencent le référencement SEO d'une interface web ?",
+        "options": [
+          "On développe deux versions séparées du site (desktop et mobile)",
+          "On utilise des tailles fixes en pixels pour tous les éléments",
+          "Facteurs SEO : 1) Performance (Core Web Vitals), 2) Mobile-friendly responsive, 3)",
+          "On crée une application mobile native en complément"
+        ],
+        "correctAnswers": [
+          2
+        ],
+        "explanation": "Facteurs SEO : 1) Performance (Core Web Vitals), 2) Mobile-friendly responsive, 3) Structure HTML sémantique, 4) Balises meta optimisées, 5) Contenu de qualité et unique, 6) URL structure claire, 7) Images optimisées avec alt, 8) HTTPS obligatoire, 9) Schema markup,..."
+      },
+      {
+        "question": "Quelles règles d'accessibilité dois-tu respecter lors du développement d'une interface ?",
+        "options": [
+          "Un framework CSS pour améliorer le design responsive",
+          "Un protocole de sécurité pour protéger les données utilisateurs",
+          "Règles d'accessibilité WCAG 2",
+          "Une technique d'optimisation des performances de rendu"
+        ],
+        "correctAnswers": [
+          2
+        ],
+        "explanation": "Règles d'accessibilité WCAG 2.1 : 1) Perceptible : alt text images, contrastes 4.5:1, sous-titres vidéos, 2) Utilisable : navigation clavier, pas de clignotements, temps suffisant, 3) Compréhensible : langage simple, navigation prévisible, aide erreurs, 4) Robuste :..."
+      },
+      {
+        "question": "Comment améliorer l'accessibilité d'une interface ?",
+        "options": [
+          "Amélioration accessibilité",
+          "Un framework CSS pour améliorer le design responsive",
+          "Un protocole de sécurité pour protéger les données utilisateurs",
+          "Une technique d'optimisation des performances de rendu"
+        ],
+        "correctAnswers": [
+          0
+        ],
+        "explanation": "Amélioration accessibilité : 1) HTML sémantique correct, 2) Alternative text pour images, 3) Contrastes suffisants, 4) Navigation clavier fluide, 5) Labels explicites formulaires, 6) ARIA labels appropriés, 7) Focus visible, 8) Tailles cliquables ≥44px, 9) Tests lec..."
+      },
+      {
+        "question": "Qu'est-ce que le RGAA et pourquoi est-il important ?",
+        "options": [
+          "Un framework CSS pour améliorer le design responsive",
+          "RGAA (Référentiel Général d'Amélioration de l'Accessibilité)",
+          "Une technique d'optimisation des performances de rendu",
+          "Un protocole de sécurité pour protéger les données utilisateurs"
+        ],
+        "correctAnswers": [
+          1
+        ],
+        "explanation": "RGAA (Référentiel Général d'Amélioration de l'Accessibilité) : standard français d'accessibilité numérique basé sur WCAG. Obligatoire pour services publics, recommandé pour privé."
+      }
+    ],
+    "backend": [
+      {
+        "question": "Quels sont les principes SOLID en programmation orientée objet ?",
+        "options": [
+          "Une architecture de base de données relationnelle normalisée",
+          "Une méthodologie de gestion de projet agile avec sprints",
+          "SOLID est un acronyme de 5 principes",
+          "Un framework de test d'intégration et end-to-end"
+        ],
+        "correctAnswers": [
+          2
+        ],
+        "explanation": "SOLID est un acronyme de 5 principes : S - Single Responsibility Principle : une classe ne doit avoir qu'une seule responsabilité. O - Open/Closed Principle : ouvert à l'extension, fermé à la modification."
+      },
+      {
+        "question": "Quels sont les quatre piliers de la Programmation Orientée Objet (POO) ?",
+        "options": [
+          "Une architecture de microservices distribuée sur le cloud",
+          "Un système de gestion automatique de la mémoire avec garbage collector",
+          "Un paradigme de programmation fonctionnelle pure et immutable",
+          "Les 4 piliers sont : 1)"
+        ],
+        "correctAnswers": [
+          3
+        ],
+        "explanation": "Les 4 piliers sont : 1) Encapsulation : regrouper données et méthodes dans une classe, contrôler l'accès via les modificateurs (private, protected, public). 2) Héritage : créer de nouvelles classes basées sur des classes existantes, réutiliser et étendre le code."
+      },
+      {
+        "question": "Comment fonctionne le polymorphisme en Java ?",
+        "options": [
+          "Le polymorphisme en Java permet qu'un même nom de méthode ait différents comportements selon le type d'objet.",
+          "La surcharge de plusieurs serveurs pour équilibrer la charge",
+          "La création de plusieurs instances d'une même application",
+          "L'utilisation de plusieurs bases de données simultanément"
+        ],
+        "correctAnswers": [
+          0
+        ],
+        "explanation": "Le polymorphisme en Java permet qu'un même nom de méthode ait différents comportements selon le type d'objet. Il existe deux types : 1) Polymorphisme de compilation (surcharge) : plusieurs méthodes avec le même nom mais paramètres différents."
+      },
+      {
+        "question": "Pourquoi utilise-t-on des interfaces en POO ?",
+        "options": [
+          "Un système de gestion automatique de la mémoire avec garbage collector",
+          "Une architecture de microservices distribuée sur le cloud",
+          "Un paradigme de programmation fonctionnelle pure et immutable",
+          "Les interfaces servent à : 1) Définir un contrat que les classes doivent respecter, 2)"
+        ],
+        "correctAnswers": [
+          3
+        ],
+        "explanation": "Les interfaces servent à : 1) Définir un contrat que les classes doivent respecter, 2) Permettre l'héritage multiple en Java, 3) Faciliter les tests avec des mocks, 4) Découpler le code et améliorer la flexibilité, 5) Respecter le principe d'inversion de dépendance,..."
+      },
+      {
+        "question": "Dans quel cas utiliser une classe abstraite plutôt qu'une interface ?",
+        "options": [
+          "La copie de code d'une classe vers une autre",
+          "La délégation de méthodes à des objets composés",
+          "L'importation de modules externes dans un projet",
+          "Utiliser une classe abstraite quand"
+        ],
+        "correctAnswers": [
+          3
+        ],
+        "explanation": "Utiliser une classe abstraite quand : 1) Partage de code commun entre classes dérivées, 2) Constructeurs avec logique d'initialisation, 3) Variables d'instance partagées, 4) Méthodes avec implémentation par défaut, 5) Contrôle d'accès varié (protected, private), 6) ..."
+      },
+      {
+        "question": "Pourquoi dit-on que l'héritage favorise la réutilisation du code ?",
+        "options": [
+          "La délégation de méthodes à des objets composés",
+          "L'héritage favorise la réutilisation car",
+          "La copie de code d'une classe vers une autre",
+          "L'importation de modules externes dans un projet"
+        ],
+        "correctAnswers": [
+          1
+        ],
+        "explanation": "L'héritage favorise la réutilisation car : 1) Évite la duplication en héritant des méthodes/attributs de la classe parent, 2) Permet l'extension de fonctionnalités existantes, 3) Factorisation du code commun dans la classe de base, 4) Maintenance centralisée des fon..."
+      },
+      {
+        "question": "Comment empêcher une classe d'être héritée en Java ?",
+        "options": [
+          "En Java, utiliser le mot-clé 'final' devant la déclaration de classe : 'public final class MaClasse'.",
+          "La copie de code d'une classe vers une autre",
+          "La délégation de méthodes à des objets composés",
+          "L'importation de modules externes dans un projet"
+        ],
+        "correctAnswers": [
+          0
+        ],
+        "explanation": "En Java, utiliser le mot-clé 'final' devant la déclaration de classe : 'public final class MaClasse'. Exemples : String, Integer, Boolean sont des classes final."
+      },
+      {
+        "question": "Comment garantit-on l'encapsulation des données en Java ?",
+        "options": [
+          "L'utilisation de commentaires pour documenter le code",
+          "Encapsulation en Java : 1) Attributs privés (private), 2)",
+          "La création de fonctions réutilisables dans des modules",
+          "La division du code en plusieurs fichiers séparés"
+        ],
+        "correctAnswers": [
+          1
+        ],
+        "explanation": "Encapsulation en Java : 1) Attributs privés (private), 2) Getters/setters publics pour accès contrôlé, 3) Validation dans les setters, 4) Retour de copies défensives pour objets mutables, 5) Classes internes privées, 6) Package-private quand approprié."
+      },
+      {
+        "question": "Une classe peut-elle implémenter plusieurs interfaces en Java ?",
+        "options": [
+          "Oui, une classe Java peut implémenter plusieurs interfaces : 'class MaClasse implements Interface1",
+          "La délégation de méthodes à des objets composés",
+          "L'importation de modules externes dans un projet",
+          "La copie de code d'une classe vers une autre"
+        ],
+        "correctAnswers": [
+          0
+        ],
+        "explanation": "Oui, une classe Java peut implémenter plusieurs interfaces : 'class MaClasse implements Interface1, Interface2, Interface3'."
+      },
+      {
+        "question": "Pourquoi et comment appliquer le principe de l'encapsulation ?",
+        "options": [
+          "Encapsulation : principes et mise en œuvre.",
+          "L'utilisation de commentaires pour documenter le code",
+          "La création de fonctions réutilisables dans des modules",
+          "La division du code en plusieurs fichiers séparés"
+        ],
+        "correctAnswers": [
+          0
+        ],
+        "explanation": "Encapsulation : principes et mise en œuvre. Pourquoi : 1) Protection des données internes, 2) Contrôle d'accès et validation, 3) Facilite maintenance et évolution, 4) Réduit couplage, 5) Améliore testabilité."
+      },
+      {
+        "question": "Comment sécuriser une API REST ?",
+        "options": [
+          "Une base de données relationnelle SQL distribuée",
+          "Un protocole de communication en temps réel bidirectionnel",
+          "Un système de fichiers réseau pour partager des données",
+          "Pour sécuriser une API REST"
+        ],
+        "correctAnswers": [
+          3
+        ],
+        "explanation": "Pour sécuriser une API REST : 1) Authentification (JWT, OAuth2), 2) Autorisation basée sur les rôles (RBAC), 3) Validation stricte des entrées, 4) Rate limiting pour éviter les attaques DoS, 5) HTTPS obligatoire, 6) CORS configuré correctement, 7) Logs et monitoring..."
+      },
+      {
+        "question": "Pourquoi et comment valider les entrées utilisateur dans une API ?",
+        "options": [
+          "Une méthode de minification du code JavaScript",
+          "Un protocole CORS pour partager les ressources",
+          "Validation API critique pour : sécurité (injection, XSS), intégrité données, stabilité système, UX cohérente.",
+          "Une technique d'optimisation du rendu CSS"
+        ],
+        "correctAnswers": [
+          2
+        ],
+        "explanation": "Validation API critique pour : sécurité (injection, XSS), intégrité données, stabilité système, UX cohérente."
+      },
+      {
+        "question": "Pourquoi utiliser un format JSON pour les réponses d'une API REST ?",
+        "options": [
+          "Un système de fichiers réseau pour partager des données",
+          "Un protocole de communication en temps réel bidirectionnel",
+          "JSON privilégié pour APIs REST car",
+          "Une base de données relationnelle SQL distribuée"
+        ],
+        "correctAnswers": [
+          2
+        ],
+        "explanation": "JSON privilégié pour APIs REST car : 1) Format léger et compact, 2) Support natif JavaScript, 3) Lisible humainement, 4) Largement supporté tous langages, 5) Structure flexible (objets, arrays), 6) Parsing rapide, 7) Standard web moderne, 8) Moins verbeux que XML, 9..."
+      },
+      {
+        "question": "Comment sécuriser un composant métier dans une application web ?",
+        "options": [
+          "Des services REST pour la communication inter-systèmes",
+          "Des procédures stockées dans la base de données",
+          "Sécurisation composant métier",
+          "Des modules backend pour le traitement des requêtes HTTP"
+        ],
+        "correctAnswers": [
+          2
+        ],
+        "explanation": "Sécurisation composant métier : 1) Validation des entrées systématique, 2) Autorisation granulaire par méthode, 3) Encapsulation des règles business, 4) Audit trail des opérations, 5) Gestion des exceptions sécurisée, 6) Principe de moindre privilège, 7) Tests de sé..."
+      },
+      {
+        "question": "Quelles sont les principales failles de sécurité en développement web ?",
+        "options": [
+          "Un framework de développement web full-stack",
+          "OWASP Top 10 : 1) Broken Access Control, 2) Cryptographic Failures, 3) Injection (SQL, NoSQL, LDAP)",
+          "Un protocole de transfert de fichiers sécurisé (SFTP)",
+          "Un langage de programmation orienté objet compilé"
+        ],
+        "correctAnswers": [
+          1
+        ],
+        "explanation": "OWASP Top 10 : 1) Broken Access Control, 2) Cryptographic Failures, 3) Injection (SQL, NoSQL, LDAP), 4) Insecure Design, 5) Security Misconfiguration, 6) Vulnerable Components, 7) Authentication Failures, 8) Software/Data Integrity Failures, 9) Logging/Monitoring Fa..."
+      },
+      {
+        "question": "Comment fonctionne l'authentification avec JWT ?",
+        "options": [
+          "Une méthode de hashing sécurisé des passwords",
+          "JWT (JSON Web Token) fonctionne ainsi",
+          "Un système de cache distribué pour les sessions",
+          "Un protocole de compression des données JSON"
+        ],
+        "correctAnswers": [
+          1
+        ],
+        "explanation": "JWT (JSON Web Token) fonctionne ainsi : 1) L'utilisateur s'authentifie avec ses identifiants, 2) Le serveur vérifie et génère un token JWT signé contenant des claims (user ID, rôles, expiration), 3) Le client stocke le token (localStorage/sessionStorage), 4) Pour ch..."
+      },
+      {
+        "question": "Comment gérer les autorisations côté backend avec Spring Boot ?",
+        "options": [
+          "L'utilisation de la base de données de production",
+          "La désactivation temporaire des dépendances externes",
+          "La duplication complète du code applicatif pour tester",
+          "Autorisations Spring Boot"
+        ],
+        "correctAnswers": [
+          3
+        ],
+        "explanation": "Autorisations Spring Boot : 1) Spring Security avec @EnableGlobalMethodSecurity, 2) Annotations @PreAuthorize, @PostAuthorize, @Secured, 3) Configuration WebSecurityConfigurer, 4) Roles et Authorities via UserDetails, 5) ACL (Access Control Lists) pour granularité f..."
+      },
+      {
+        "question": "Pourquoi activer CORS dans une API backend ?",
+        "options": [
+          "Une application multi-pages avec rechargement à chaque navigation",
+          "Une application mobile native développée avec Swift ou Kotlin",
+          "Un système de gestion de contenu statique type WordPress",
+          "CORS (Cross-Origin Resource Sharing) nécessaire car"
+        ],
+        "correctAnswers": [
+          3
+        ],
+        "explanation": "CORS (Cross-Origin Resource Sharing) nécessaire car : Same-Origin Policy bloque requêtes inter-domaines par défaut pour sécurité."
+      },
+      {
+        "question": "Pourquoi un token JWT doit-il avoir une durée de vie limitée ?",
+        "options": [
+          "JWT avec expiration courte pour",
+          "Le redémarrage préventif des serveurs toutes les nuits",
+          "L'attente de retours utilisateurs pour détecter les problèmes",
+          "La consultation manuelle des logs une fois par jour"
+        ],
+        "correctAnswers": [
+          0
+        ],
+        "explanation": "JWT avec expiration courte pour : 1) Limiter impact en cas de vol/fuite, 2) Rotation sécurisée des credentials, 3) Révocation possible via refresh tokens, 4) Compliance réglementaire, 5) Principe de moindre exposition."
+      },
+      {
+        "question": "Comment sécuriser une API avec OAuth2 et JWT ?",
+        "options": [
+          "Un système de gestion de contenu statique type WordPress",
+          "OAuth2 + JWT architecture",
+          "Une application mobile native développée avec Swift ou Kotlin",
+          "Une application multi-pages avec rechargement à chaque navigation"
+        ],
+        "correctAnswers": [
+          1
+        ],
+        "explanation": "OAuth2 + JWT architecture : 1) Authorization Server émet JWT après authentification, 2) Resource Server valide JWT signature et claims, 3) Scopes pour granularité permissions, 4) PKCE pour clients publics, 5) State parameter anti-CSRF, 6) TLS obligatoire, 7) Rotatio..."
+      },
+      {
+        "question": "Quelle est la différence entre le JDK et la JVM ?",
+        "options": [
+          "Un système de templates HTML type Handlebars",
+          "JVM (Java Virtual Machine)",
+          "Un bundler de modules frontend type Webpack",
+          "Un gestionnaire d'état côté client type Redux"
+        ],
+        "correctAnswers": [
+          1
+        ],
+        "explanation": "JVM (Java Virtual Machine) : environnement d'exécution qui interprète et exécute le bytecode Java, assure la portabilité 'Write Once, Run Anywhere', gère la mémoire et le garbage collection."
+      },
+      {
+        "question": "Quelles sont les bonnes pratiques pour concevoir une API RESTful bien structurée ?",
+        "options": [
+          "Un protocole de communication en temps réel bidirectionnel",
+          "API RESTful bien conçue : 1) Noms de ressources substantifs (users, orders), 2)",
+          "Une base de données relationnelle SQL distribuée",
+          "Un système de fichiers réseau pour partager des données"
+        ],
+        "correctAnswers": [
+          1
+        ],
+        "explanation": "API RESTful bien conçue : 1) Noms de ressources substantifs (users, orders), 2) HTTP verbs appropriés (GET, POST, PUT, DELETE), 3) Structure URLs hiérarchique (/users/123/orders), 4) Codes de statut HTTP précis, 5) Versioning dans URL ou headers, 6) Pagination, filt..."
+      },
+      {
+        "question": "Quelles sont les différences fondamentales entre REST et GraphQL ?",
+        "options": [
+          "Une base de données relationnelle SQL distribuée",
+          "REST vs GraphQL : REST : multiple endpoints, over/under-fetching possible, cache HTTP natif,",
+          "Un protocole de communication en temps réel bidirectionnel",
+          "Un système de fichiers réseau pour partager des données"
+        ],
+        "correctAnswers": [
+          1
+        ],
+        "explanation": "REST vs GraphQL : REST : multiple endpoints, over/under-fetching possible, cache HTTP natif, maturité élevée, simplicité conceptuelle. GraphQL : endpoint unique, requête précise des données, résolution N+1 potential, cache complexe, courbe apprentissage."
+      },
+      {
+        "question": "Quelles stratégies utiliser pour le versionnement et la compatibilité des APIs ?",
+        "options": [
+          "Stratégies versioning API",
+          "Un gestionnaire d'état côté client type Redux",
+          "Une bibliothèque de composants UI type Material-UI",
+          "Une bibliothèque d'animations CSS type GSAP"
+        ],
+        "correctAnswers": [
+          0
+        ],
+        "explanation": "Stratégies versioning API : 1) URL versioning (/v1/users, /v2/users), 2) Header versioning (Accept: application/vnd.api+json;version=1), 3) Query parameter (?version=1), 4) Semantic versioning (major.minor.patch)."
+      },
+      {
+        "question": "Comment tester efficacement les endpoints d'une API (unitaires et intégration) ?",
+        "options": [
+          "Un système de fichiers réseau pour partager des données",
+          "Une base de données relationnelle SQL distribuée",
+          "Un protocole de communication en temps réel bidirectionnel",
+          "Tests API multicouches : Unitaires : services isolés, mocks dépendances, logique métier pure."
+        ],
+        "correctAnswers": [
+          3
+        ],
+        "explanation": "Tests API multicouches : Unitaires : services isolés, mocks dépendances, logique métier pure. Intégration : @SpringBootTest, TestContainers pour DB, MockMvc pour HTTP layer. Contrat : Pact testing entre consumer/provider."
+      }
+    ],
+    "database": [
+      {
+        "question": "Quelle est la différence entre un schéma conceptuel, un schéma logique et un schéma physique ?",
+        "options": [
+          "Un framework backend basé sur Ruby on Rails",
+          "Un système de build pour applications Java",
+          "Schéma conceptuel : vue métier de haut niveau, indépendante de la technologie, modélise les",
+          "Une bibliothèque de visualisation de données 3D"
+        ],
+        "correctAnswers": [
+          2
+        ],
+        "explanation": "Schéma conceptuel : vue métier de haut niveau, indépendante de la technologie, modélise les entités et relations (MCD en Merise)."
+      },
+      {
+        "question": "Quelle est la différence entre une clé primaire et une clé étrangère ?",
+        "options": [
+          "Clé primaire : identifiant unique pour chaque ligne d'une table, ne peut pas être NULL, une",
+          "Un champ auto-incrémenté obligatoirement numérique",
+          "Un identifiant unique généré aléatoirement par le SGBD",
+          "Un index créé automatiquement sur toutes les colonnes"
+        ],
+        "correctAnswers": [
+          0
+        ],
+        "explanation": "Clé primaire : identifiant unique pour chaque ligne d'une table, ne peut pas être NULL, une seule par table, assure l'intégrité d'entité. Exemple : user_id dans table Users."
+      },
+      {
+        "question": "Quelles sont les principales étapes de la méthode Merise pour concevoir une base de données ?",
+        "options": [
+          "Une méthodologie de développement agile avec sprints de 2 semaines",
+          "Méthode Merise : 1) Analyse des besoins et règles de gestion, 2) MCD (Modèle Conceptuel de Données)",
+          "Une architecture orientée événements asynchrone",
+          "Un système de gestion de versions Git avec branches"
+        ],
+        "correctAnswers": [
+          1
+        ],
+        "explanation": "Méthode Merise : 1) Analyse des besoins et règles de gestion, 2) MCD (Modèle Conceptuel de Données) : entités, associations, cardinalités, 3) MLD (Modèle Logique de Données) : transformation en tables relationnelles, 4) MPD (Modèle Physique de Données) : implémentat..."
+      },
+      {
+        "question": "Quelle est la différence entre une association 1-1, 1-N et N-N dans Merise ?",
+        "options": [
+          "Associations Merise : 1-1 (un-à-un)",
+          "Un système d'exploitation serveur type Linux",
+          "Un protocole de transfert de fichiers type FTP",
+          "Un gestionnaire de versions de code type Git"
+        ],
+        "correctAnswers": [
+          0
+        ],
+        "explanation": "Associations Merise : 1-1 (un-à-un) : une occurrence d'entité liée à une seule occurrence de l'autre (Personne-Passeport). 1-N (un-à-plusieurs) : une occurrence liée à plusieurs (Client-Commandes)."
+      },
+      {
+        "question": "Comment construire et modéliser une base de données relationnelle efficace ?",
+        "options": [
+          "Un protocole de transfert de fichiers sécurisé (SFTP)",
+          "Un langage de programmation orienté objet compilé",
+          "Base de données efficace : 1) Analyse métier approfondie, 2) Normalisation (3NF minimum), 3)",
+          "Un framework de développement web full-stack"
+        ],
+        "correctAnswers": [
+          2
+        ],
+        "explanation": "Base de données efficace : 1) Analyse métier approfondie, 2) Normalisation (3NF minimum), 3) Choix types de données appropriés, 4) Index stratégiques, 5) Contraintes d'intégrité, 6) Dénormalisation contrôlée si nécessaire, 7) Partitioning pour gros volumes, 8) Archi..."
+      },
+      {
+        "question": "Comment créer une base de données en SQL ?",
+        "options": [
+          "Un framework de développement web full-stack",
+          "Un protocole de transfert de fichiers sécurisé (SFTP)",
+          "Un langage de programmation orienté objet compilé",
+          "Pour créer une base de données en SQL"
+        ],
+        "correctAnswers": [
+          3
+        ],
+        "explanation": "Pour créer une base de données en SQL : CREATE DATABASE nom_base_donnees; puis USE nom_base_donnees; pour l'utiliser. Options avancées : CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci; pour l'encodage."
+      },
+      {
+        "question": "Comment créer une table avec une clé primaire et une clé étrangère ?",
+        "options": [
+          "Création table SQL : CREATE TABLE users (id INT PRIMARY KEY AUTO_INCREMENT, nom VARCHAR(100)",
+          "Un système de fichiers réseau pour partager des données",
+          "Un protocole de communication en temps réel bidirectionnel",
+          "Une base de données relationnelle SQL distribuée"
+        ],
+        "correctAnswers": [
+          0
+        ],
+        "explanation": "Création table SQL : CREATE TABLE users (id INT PRIMARY KEY AUTO_INCREMENT, nom VARCHAR(100) NOT NULL, email VARCHAR(255) UNIQUE); CREATE TABLE orders (id INT PRIMARY KEY AUTO_INCREMENT, user_id INT, amount DECIMAL(10,2), FOREIGN KEY (user_id) REFERENCES users(id) O..."
+      },
+      {
+        "question": "Comment protéger une base de données contre les injections SQL ?",
+        "options": [
+          "Un langage de programmation orienté objet compilé",
+          "Protection contre l'injection SQL",
+          "Un framework de développement web full-stack",
+          "Un protocole de transfert de fichiers sécurisé (SFTP)"
+        ],
+        "correctAnswers": [
+          1
+        ],
+        "explanation": "Protection contre l'injection SQL : 1) Requêtes préparées (prepared statements) - séparent code et données, 2) Validation stricte des entrées côté serveur, 3) Échappement des caractères spéciaux, 4) Utilisation d'un ORM (Hibernate, Doctrine), 5) Principe de moindre ..."
+      },
+      {
+        "question": "Quelles sont les stratégies d'optimisation des performances des bases de données SQL ?",
+        "options": [
+          "Un paradigme de programmation fonctionnelle pure et immutable",
+          "Une architecture de microservices distribuée sur le cloud",
+          "Un système de gestion automatique de la mémoire avec garbage collector",
+          "Optimisation performance SQL"
+        ],
+        "correctAnswers": [
+          3
+        ],
+        "explanation": "Optimisation performance SQL : 1) Index appropriés (B-tree, Hash, Bitmap), 2) Requêtes optimisées (EXPLAIN), 3) Dénormalisation contrôlée, 4) Partitioning horizontal/vertical, 5) Cache query results, 6) Connection pooling, 7) Maintenance régulière (ANALYZE, VACUUM),..."
+      },
+      {
+        "question": "Quelles sont les meilleures pratiques pour optimiser les requêtes SQL et NoSQL ?",
+        "options": [
+          "Optimisation requêtes : SQL : 1) Index sur colonnes WHERE/JOIN, 2) Éviter SELECT *, 3) LIMIT",
+          "Un protocole de transfert de fichiers sécurisé (SFTP)",
+          "Un langage de programmation orienté objet compilé",
+          "Un framework de développement web full-stack"
+        ],
+        "correctAnswers": [
+          0
+        ],
+        "explanation": "Optimisation requêtes : SQL : 1) Index sur colonnes WHERE/JOIN, 2) Éviter SELECT *, 3) LIMIT pour pagination, 4) EXISTS vs IN selon contexte, 5) Analyze query plans."
+      },
+      {
+        "question": "Quelles sont les bonnes pratiques pour sécuriser une base de données et gérer les comptes utilisateurs ?",
+        "options": [
+          "Le redémarrage préventif des serveurs toutes les nuits",
+          "L'attente de retours utilisateurs pour détecter les problèmes",
+          "La consultation manuelle des logs une fois par jour",
+          "Sécurisation base de données"
+        ],
+        "correctAnswers": [
+          3
+        ],
+        "explanation": "Sécurisation base de données : 1) Comptes nominatifs avec mots de passe forts, 2) Principe de moindre privilège, 3) Rôles et permissions granulaires, 4) Rotation des mots de passe, 5) Audit des accès, 6) Chiffrement en transit (TLS) et au repos, 7) Sauvegarde chiffr..."
+      },
+      {
+        "question": "Pourquoi ne faut-il pas utiliser root pour les accès à la base de données ?",
+        "options": [
+          "Éviter root car : 1) Principe de moindre privilège violé, 2) Audit impossible (actions non traçables)",
+          "Un protocole de transfert de fichiers type FTP",
+          "Un système de templates type Jinja2",
+          "Un langage de programmation orienté objet type Java"
+        ],
+        "correctAnswers": [
+          0
+        ],
+        "explanation": "Éviter root car : 1) Principe de moindre privilège violé, 2) Audit impossible (actions non traçables), 3) Risque sécuritaire énorme si compromis, 4) Pas de granularité des permissions, 5) Violation des standards sécurité, 6) Impossibilité de révoquer accès spécifiqu..."
+      },
+      {
+        "question": "Pourquoi faut-il toujours valider les entrées utilisateur avant d'insérer des données en base ?",
+        "options": [
+          "Un framework de développement web full-stack",
+          "Un langage de programmation orienté objet compilé",
+          "Validation entrées obligatoire pour",
+          "Un protocole de transfert de fichiers sécurisé (SFTP)"
+        ],
+        "correctAnswers": [
+          2
+        ],
+        "explanation": "Validation entrées obligatoire pour : 1) Prévention injection SQL, 2) Intégrité des données métier, 3) Cohérence format/type, 4) Respect contraintes DB, 5) Performance (éviter rollbacks), 6) Audit et conformité, 7) UX (messages d'erreur clairs), 8) Stabilité système."
+      },
+      {
+        "question": "Comment sécuriser les accès aux bases de données SQL et NoSQL ?",
+        "options": [
+          "Un langage de programmation orienté objet compilé",
+          "Un framework de développement web full-stack",
+          "Sécurisation accès DB : 1) Authentification forte (certificats, 2FA), 2)",
+          "Un protocole de transfert de fichiers sécurisé (SFTP)"
+        ],
+        "correctAnswers": [
+          2
+        ],
+        "explanation": "Sécurisation accès DB : 1) Authentification forte (certificats, 2FA), 2) Autorisation granulaire (RBAC), 3) Chiffrement connexions (TLS/SSL), 4) VPN ou réseaux privés, 5) Firewall DB niveau réseau, 6) Rate limiting connexions, 7) Monitoring et alertes, 8) Audit logs..."
+      },
+      {
+        "question": "Comment tester la sécurité et l'intégrité des accès aux bases de données ?",
+        "options": [
+          "Un système de fichiers réseau pour partager des données",
+          "Tests sécurité DB : 1) Tests d'intrusion automatisés, 2) Audit des permissions et rôles, 3)",
+          "Une base de données relationnelle SQL distribuée",
+          "Un protocole de communication en temps réel bidirectionnel"
+        ],
+        "correctAnswers": [
+          1
+        ],
+        "explanation": "Tests sécurité DB : 1) Tests d'intrusion automatisés, 2) Audit des permissions et rôles, 3) Vérification chiffrement, 4) Tests injection SQL/NoSQL, 5) Monitoring des accès anormaux, 6) Validation sauvegarde/restore, 7) Tests de performance sous charge, 8) Compliance..."
+      },
+      {
+        "question": "Qu'est-ce qu'un ORM et pourquoi l'utiliser ?",
+        "options": [
+          "Un langage de programmation orienté objet compilé",
+          "Un protocole de transfert de fichiers sécurisé (SFTP)",
+          "ORM (Object-Relational Mapping)",
+          "Un framework de développement web full-stack"
+        ],
+        "correctAnswers": [
+          2
+        ],
+        "explanation": "ORM (Object-Relational Mapping) : technique de programmation qui fait le lien entre objets métier et tables de base de données."
+      },
+      {
+        "question": "Comment JPA crée-t-il la base et les tables dans Spring Boot ?",
+        "options": [
+          "JPA/Spring Boot création automatique",
+          "Un framework de développement web full-stack",
+          "Un protocole de transfert de fichiers sécurisé (SFTP)",
+          "Un langage de programmation orienté objet compilé"
+        ],
+        "correctAnswers": [
+          0
+        ],
+        "explanation": "JPA/Spring Boot création automatique : 1) spring.jpa.hibernate.ddl-auto=create/update/validate, 2) Annotations @Entity sur classes, 3) @Table pour noms spécifiques, 4) @Id @GeneratedValue pour PK, 5) @Column pour contraintes, 6) @OneToMany, @ManyToOne pour relations..."
+      },
+      {
+        "question": "Comment accéder aux données avec JPA dans Spring Boot ?",
+        "options": [
+          "Un framework de développement web full-stack",
+          "Accès données JPA Spring Boot",
+          "Un langage de programmation orienté objet compilé",
+          "Un protocole de transfert de fichiers sécurisé (SFTP)"
+        ],
+        "correctAnswers": [
+          1
+        ],
+        "explanation": "Accès données JPA Spring Boot : 1) Repository interfaces (CrudRepository, JpaRepository), 2) Méthodes de requête dérivées (findByName), 3) @Query pour requêtes personnalisées JPQL/SQL, 4) @Modifying pour UPDATE/DELETE, 5) Pagination avec Pageable, 6) Spécifications ..."
+      },
+      {
+        "question": "Comment configurer la connexion à une base MySQL avec Spring Boot ?",
+        "options": [
+          "Configuration MySQL Spring Boot : application.properties : spring.datasource.url=jdbc:mysql://localhost",
+          "Un paradigme de programmation fonctionnelle pure et immutable",
+          "Une architecture de microservices distribuée sur le cloud",
+          "Un système de gestion automatique de la mémoire avec garbage collector"
+        ],
+        "correctAnswers": [
+          0
+        ],
+        "explanation": "Configuration MySQL Spring Boot : application.properties : spring.datasource.url=jdbc:mysql://localhost:3306/mydb, spring.datasource.username=user, spring.datasource.password=password, spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver, spring.jpa.hibernat..."
+      },
+      {
+        "question": "Comment JPA fait-il le lien entre une classe Java et une table en base de données ?",
+        "options": [
+          "Un champ auto-incrémenté obligatoirement numérique",
+          "Un index créé automatiquement sur toutes les colonnes",
+          "Un identifiant unique généré aléatoirement par le SGBD",
+          "Mapping JPA classe-table : 1) @Entity marque la classe persistante, 2) @Table(name=\"users\")"
+        ],
+        "correctAnswers": [
+          3
+        ],
+        "explanation": "Mapping JPA classe-table : 1) @Entity marque la classe persistante, 2) @Table(name=\"users\") spécifie nom table, 3) @Id identifie la clé primaire, 4) @Column(name=\"email\", unique=true) map attribut-colonne, 5) @GeneratedValue pour auto-increment, 6) @Temporal pour da..."
+      },
+      {
+        "question": "Quelle est la différence entre une base de données SQL et NoSQL ?",
+        "options": [
+          "Un langage de programmation orienté objet compilé",
+          "SQL (Relationnel) : structure tabulaire avec schéma fixe",
+          "Un protocole de transfert de fichiers sécurisé (SFTP)",
+          "Un framework de développement web full-stack"
+        ],
+        "correctAnswers": [
+          1
+        ],
+        "explanation": "SQL (Relationnel) : structure tabulaire avec schéma fixe, ACID compliance, relations complexes, langage SQL standardisé, excellente consistance. Exemples : MySQL, PostgreSQL."
+      },
+      {
+        "question": "Quels sont les avantages et inconvénients des procédures stockées et des triggers ?",
+        "options": [
+          "Un système de gestion de contenu statique type WordPress",
+          "Une application mobile native développée avec Swift ou Kotlin",
+          "Une application multi-pages avec rechargement à chaque navigation",
+          "Procédures stockées : Avantages : performance (pré-compilées), sécurité (permissions granulaires)"
+        ],
+        "correctAnswers": [
+          3
+        ],
+        "explanation": "Procédures stockées : Avantages : performance (pré-compilées), sécurité (permissions granulaires), logique centralisée, réduction trafic réseau. Inconvénients : portabilité limitée, versioning complexe, debugging difficile, couplage fort DB."
+      },
+      {
+        "question": "Quels sont les principaux Design Patterns pour l'accès aux bases de données et leur utilité ?",
+        "options": [
+          "Design Patterns accès données",
+          "Une architecture de microservices distribuée sur le cloud",
+          "Un système de gestion automatique de la mémoire avec garbage collector",
+          "Un paradigme de programmation fonctionnelle pure et immutable"
+        ],
+        "correctAnswers": [
+          0
+        ],
+        "explanation": "Design Patterns accès données : 1) Repository : abstraction couche accès, testabilité, 2) DAO (Data Access Object) : encapsulation logique persistance, 3) Unit of Work : gestion transactions, cohérence, 4) Active Record : objet = enregistrement, simplicité, 5) Data ..."
+      },
+      {
+        "question": "Pourquoi intégrer l'authentification et la gestion des accès dans les composants d'accès aux données ?",
+        "options": [
+          "Des services REST pour la communication inter-systèmes",
+          "Des modules backend pour le traitement des requêtes HTTP",
+          "Des procédures stockées dans la base de données",
+          "Sécurité intégrée accès données pour"
+        ],
+        "correctAnswers": [
+          3
+        ],
+        "explanation": "Sécurité intégrée accès données pour : 1) Defense in depth, 2) Autorisation granulaire par donnée, 3) Audit trail complet, 4) Prévention élévation privilèges, 5) Compliance réglementaire, 6) Isolation multi-tenant."
+      }
+    ],
+    "devops": [
+      {
+        "question": "Pourquoi utiliser Docker pour un projet ?",
+        "options": [
+          "Docker apporte : 1) Isolation des applications dans des conteneurs légers, 2)",
+          "Un pattern de conception pour applications desktop",
+          "Une architecture monolithique découpée en modules internes",
+          "Un système de cache distribué en mémoire type Redis"
+        ],
+        "correctAnswers": [
+          0
+        ],
+        "explanation": "Docker apporte : 1) Isolation des applications dans des conteneurs légers, 2) Reproductibilité : 'ça marche sur ma machine' → 'ça marche partout', 3) Portabilité entre environnements (dev, test, prod), 4) Scalabilité horizontale facilitée, 5) Gestion simplifiée des ..."
+      },
+      {
+        "question": "Quels fichiers sont nécessaires pour configurer un conteneur Docker ?",
+        "options": [
+          "Fichiers Docker essentiels",
+          "Un orchestrateur de machines virtuelles traditionnelles",
+          "Un système d'exploitation léger pour serveurs cloud",
+          "Un gestionnaire de versions distribué comme Git"
+        ],
+        "correctAnswers": [
+          0
+        ],
+        "explanation": "Fichiers Docker essentiels : 1) Dockerfile : instructions de build (FROM, RUN, COPY, EXPOSE, CMD), 2) .dockerignore : exclusions du contexte build, 3) docker-compose.yml : orchestration multi-conteneurs, 4) docker-compose.override.yml : surcharges développement."
+      },
+      {
+        "question": "Pourquoi utiliser Docker dans une démarche DevOps ?",
+        "options": [
+          "Docker + DevOps = synergie parfaite",
+          "Un orchestrateur de machines virtuelles traditionnelles",
+          "Un gestionnaire de versions distribué comme Git",
+          "Un système d'exploitation léger pour serveurs cloud"
+        ],
+        "correctAnswers": [
+          0
+        ],
+        "explanation": "Docker + DevOps = synergie parfaite : 1) Standardisation environnements dev→prod, 2) CI/CD simplifié avec images versionnées, 3) Déploiements automatisés et reproductibles, 4) Rollback instantané, 5) Scaling horizontal facilité, 6) Infrastructure as Code, 7) Monitor..."
+      },
+      {
+        "question": "Qu'est-ce que docker-compose et pourquoi l'utiliser ?",
+        "options": [
+          "Docker Compose : outil d'orchestration multi-conteneurs avec fichier YAML déclaratif.",
+          "Un langage de programmation orienté objet compilé",
+          "Un protocole de transfert de fichiers sécurisé (SFTP)",
+          "Un framework de développement web full-stack"
+        ],
+        "correctAnswers": [
+          0
+        ],
+        "explanation": "Docker Compose : outil d'orchestration multi-conteneurs avec fichier YAML déclaratif. Utilité : 1) Définition architecture complète (app, DB, cache, proxy), 2) Gestion des réseaux et volumes, 3) Variables d'environnement centralisées, 4) Commandes simples (up, down,..."
+      },
+      {
+        "question": "Quels sont les avantages de Docker et comment l'utiliser dans un projet ?",
+        "options": [
+          "Un gestionnaire de versions distribué comme Git",
+          "Avantages Docker : isolation, portabilité, efficacité ressources, versioning, scaling.",
+          "Un orchestrateur de machines virtuelles traditionnelles",
+          "Un système d'exploitation léger pour serveurs cloud"
+        ],
+        "correctAnswers": [
+          1
+        ],
+        "explanation": "Avantages Docker : isolation, portabilité, efficacité ressources, versioning, scaling. Utilisation projet : 1) Dockerfile pour chaque service, 2) Multi-stage builds (build/runtime séparés), 3) Base images officielles sécurisées, 4) Secrets management, 5) Health chec..."
+      },
+      {
+        "question": "Comment Kubernetes facilite-t-il l'orchestration des conteneurs ?",
+        "options": [
+          "Un gestionnaire de versions distribué comme Git",
+          "Un système d'exploitation léger pour serveurs cloud",
+          "Un orchestrateur de machines virtuelles traditionnelles",
+          "Kubernetes orchestration : 1) Déploiement automatisé (Deployments, StatefulSets), 2)"
+        ],
+        "correctAnswers": [
+          3
+        ],
+        "explanation": "Kubernetes orchestration : 1) Déploiement automatisé (Deployments, StatefulSets), 2) Service discovery et load balancing, 3) Auto-scaling horizontal/vertical, 4) Rolling updates sans downtime, 5) Health checks et self-healing, 6) Gestion configuration (ConfigMaps, S..."
+      },
+      {
+        "question": "Comment mettre en place une pipeline CI/CD efficace ?",
+        "options": [
+          "Pipeline CI/CD efficace : 1) Source Control (Git) avec branches stratégiques, 2)",
+          "Un système de gestion de versions Git avec branches",
+          "Une méthodologie de développement agile avec sprints de 2 semaines",
+          "Une architecture orientée événements asynchrone"
+        ],
+        "correctAnswers": [
+          0
+        ],
+        "explanation": "Pipeline CI/CD efficace : 1) Source Control (Git) avec branches stratégiques, 2) CI : build automatique, tests unitaires/intégration, analyse qualité code (SonarQube), 3) Artefacts : création et stockage des builds, 4) CD : déploiement automatisé par environnement (..."
+      },
+      {
+        "question": "Qu'est-ce que DevOps et pourquoi l'utiliser ?",
+        "options": [
+          "Une architecture orientée événements asynchrone",
+          "Un système de gestion de versions Git avec branches",
+          "DevOps est une culture et ensemble de pratiques qui rapprochent le développement (Dev) et les op",
+          "Une méthodologie de développement agile avec sprints de 2 semaines"
+        ],
+        "correctAnswers": [
+          2
+        ],
+        "explanation": "DevOps est une culture et ensemble de pratiques qui rapprochent le développement (Dev) et les opérations (Ops) pour : 1) Accélérer la livraison de logiciels, 2) Améliorer la collaboration entre équipes, 3) Automatiser les processus (CI/CD), 4) Réduire les erreurs hu..."
+      },
+      {
+        "question": "Quelle est la différence entre Intégration Continue (CI) et Déploiement Continu (CD) ?",
+        "options": [
+          "CI (Continuous Integration)",
+          "Une architecture orientée événements asynchrone",
+          "Une méthodologie de développement agile avec sprints de 2 semaines",
+          "Un système de gestion de versions Git avec branches"
+        ],
+        "correctAnswers": [
+          0
+        ],
+        "explanation": "CI (Continuous Integration) : pratique de merger fréquemment le code dans la branche principale, avec build et tests automatiques à chaque commit. Objectif : détecter les problèmes tôt."
+      },
+      {
+        "question": "Quels outils sont utilisés pour la CI/CD ?",
+        "options": [
+          "Une architecture orientée événements asynchrone",
+          "Un système de gestion de versions Git avec branches",
+          "Outils CI/CD populaires : 1) Jenkins : open-source, extensible, plugins nombreux, 2) GitLab CI",
+          "Une méthodologie de développement agile avec sprints de 2 semaines"
+        ],
+        "correctAnswers": [
+          2
+        ],
+        "explanation": "Outils CI/CD populaires : 1) Jenkins : open-source, extensible, plugins nombreux, 2) GitLab CI : intégré Git, containers natifs, 3) GitHub Actions : workflows YAML, marketplace, 4) Azure DevOps : Microsoft ecosystem, 5) CircleCI : cloud-native, performance, 6) TeamC..."
+      },
+      {
+        "question": "Pourquoi automatiser les tests dans une CI/CD ?",
+        "options": [
+          "Automatisation tests CI/CD critique pour",
+          "Une méthodologie de développement agile avec sprints de 2 semaines",
+          "Une architecture orientée événements asynchrone",
+          "Un système de gestion de versions Git avec branches"
+        ],
+        "correctAnswers": [
+          0
+        ],
+        "explanation": "Automatisation tests CI/CD critique pour : 1) Détection précoce des régressions, 2) Feedback rapide développeurs, 3) Qualité constante releases, 4) Confiance déploiements, 5) Réduction coûts bugs production, 6) Vélocité équipe maintenue, 7) Documentation comportemen..."
+      },
+      {
+        "question": "Que contient un fichier CI/CD (.yaml) pour GitHub Actions ?",
+        "options": [
+          "Un système de gestion de versions Git avec branches",
+          "Fichier GitHub Actions (.github/workflows/ci.yml) : name, on: [push, pull_request], jobs avec",
+          "Une architecture orientée événements asynchrone",
+          "Une méthodologie de développement agile avec sprints de 2 semaines"
+        ],
+        "correctAnswers": [
+          1
+        ],
+        "explanation": "Fichier GitHub Actions (.github/workflows/ci.yml) : name, on: [push, pull_request], jobs avec runs-on (ubuntu-latest), steps avec uses/run, actions marketplace (checkout, setup-node, cache), variables d'environnement, secrets, artifacts, matrix builds, conditions."
+      },
+      {
+        "question": "Qu'est-ce que le déploiement d'une application ?",
+        "options": [
+          "Un orchestrateur de machines virtuelles traditionnelles",
+          "Un gestionnaire de versions distribué comme Git",
+          "Un système d'exploitation léger pour serveurs cloud",
+          "Déploiement application : processus de mise en production du code depuis l'environnement de développement."
+        ],
+        "correctAnswers": [
+          3
+        ],
+        "explanation": "Déploiement application : processus de mise en production du code depuis l'environnement de développement."
+      },
+      {
+        "question": "Quelle est la différence entre un serveur et un hébergeur ?",
+        "options": [
+          "Serveur : machine physique/virtuelle exécutant des applications et services.",
+          "Un framework de test unitaire type Mocha",
+          "Un système de base de données type MongoDB",
+          "Un framework web full-stack type Next.js"
+        ],
+        "correctAnswers": [
+          0
+        ],
+        "explanation": "Serveur : machine physique/virtuelle exécutant des applications et services. Hébergeur : entreprise fournissant infrastructure (serveurs, réseau, sécurité, maintenance)."
+      },
+      {
+        "question": "Qu'est-ce qu'un DNS et quel est son rôle ?",
+        "options": [
+          "Un protocole de communication réseau entre clients et serveurs",
+          "Une base de données orientée documents comme MongoDB",
+          "Un système de fichiers virtuel pour le stockage web",
+          "DNS (Domain Name System) : système de résolution de noms de domaine en adresses IP."
+        ],
+        "correctAnswers": [
+          3
+        ],
+        "explanation": "DNS (Domain Name System) : système de résolution de noms de domaine en adresses IP. Rôle : 1) Traduction google.com → 172.217.14.110, 2) Hiérarchie distributée (root → TLD → autoritaire), 3) Cache pour performance, 4) Redondance et fiabilité, 5) Load balancing par r..."
+      },
+      {
+        "question": "Qu'est-ce qu'un reverse proxy et pourquoi l'utiliser ?",
+        "options": [
+          "Une méthode d'encodage des URL en format sémantique",
+          "Un protocole HTTP avec compression automatique des données",
+          "Un système de cache CDN pour les fichiers statiques",
+          "Un reverse proxy (ex: Nginx, HAProxy) se place devant les serveurs d'application et agit au nom du serveur."
+        ],
+        "correctAnswers": [
+          3
+        ],
+        "explanation": "Un reverse proxy (ex: Nginx, HAProxy) se place devant les serveurs d'application et agit au nom du serveur."
+      },
+      {
+        "question": "Comment gérer efficacement le versionnement et les mises à jour d'un logiciel ?",
+        "options": [
+          "Versionnement efficace : 1)",
+          "La consultation manuelle des logs une fois par jour",
+          "L'attente de retours utilisateurs pour détecter les problèmes",
+          "Le redémarrage préventif des serveurs toutes les nuits"
+        ],
+        "correctAnswers": [
+          0
+        ],
+        "explanation": "Versionnement efficace : 1) Semantic Versioning (MAJOR.MINOR.PATCH), 2) Git flow ou GitHub flow, 3) Tags pour releases, 4) Changelog détaillé, 5) Branches de maintenance LTS, 6) Tests automatisés complets, 7) Déploiements progressifs (canary, blue-green), 8) Rollbac..."
+      },
+      {
+        "question": "Quelles stratégies adopter pour une migration de logiciel sans rupture ?",
+        "options": [
+          "La consultation manuelle des logs une fois par jour",
+          "Migration sans rupture : 1) Strangler Pattern : remplacement progressif, 2) Blue-Green",
+          "Le redémarrage préventif des serveurs toutes les nuits",
+          "L'attente de retours utilisateurs pour détecter les problèmes"
+        ],
+        "correctAnswers": [
+          1
+        ],
+        "explanation": "Migration sans rupture : 1) Strangler Pattern : remplacement progressif, 2) Blue-Green Deployment : environnements parallèles, 3) Feature Flags : activation contrôlée, 4) Database migration scripts, 5) API versioning pour compatibilité, 6) Tests de charge avant swit..."
+      },
+      {
+        "question": "Qu'est-ce que l'Infrastructure as Code et quels outils utiliser (Terraform, Ansible…) ?",
+        "options": [
+          "Infrastructure as Code (IaC) : gestion infrastructure via code déclaratif versionné.",
+          "Un framework de test unitaire type Mocha",
+          "Un langage de programmation compilé type Rust",
+          "Une bibliothèque de composants UI type Bootstrap"
+        ],
+        "correctAnswers": [
+          0
+        ],
+        "explanation": "Infrastructure as Code (IaC) : gestion infrastructure via code déclaratif versionné. Avantages : reproductibilité, versioning, collaboration, automatisation."
+      },
+      {
+        "question": "Quels outils recommandes-tu pour la supervision et la gestion des logs en production ?",
+        "options": [
+          "Le redémarrage préventif des serveurs toutes les nuits",
+          "L'attente de retours utilisateurs pour détecter les problèmes",
+          "Monitoring et logs production",
+          "La consultation manuelle des logs une fois par jour"
+        ],
+        "correctAnswers": [
+          2
+        ],
+        "explanation": "Monitoring et logs production : 1) APM : New Relic, Datadog, AppDynamics pour performance applicative, 2) Infrastructure : Prometheus + Grafana, Nagios, Zabbix, 3) Logs : ELK Stack (Elasticsearch, Logstash, Kibana), Splunk, Fluentd, 4) Alerting : PagerDuty, OpsGenie..."
+      },
+      {
+        "question": "Quels outils de monitoring et de logging recommandes-tu pour suivre les performances d'une application ?",
+        "options": [
+          "Une base de données orientée documents comme MongoDB",
+          "Un protocole de communication réseau entre clients et serveurs",
+          "Stack monitoring moderne : 1) Métriques : Prometheus (collecte) + Grafana (visualisation), 2)",
+          "Un système de fichiers virtuel pour le stockage web"
+        ],
+        "correctAnswers": [
+          2
+        ],
+        "explanation": "Stack monitoring moderne : 1) Métriques : Prometheus (collecte) + Grafana (visualisation), 2) Traces distribuées : Jaeger, Zipkin pour microservices, 3) Logs : ELK/EFK stack, Loki, 4) APM : New Relic, Datadog, Dynatrace pour code-level insights, 5) Synthetics : Ping..."
+      },
+      {
+        "question": "Quelles sont les stratégies de mise en cache pour améliorer les performances d'une application ?",
+        "options": [
+          "Stratégies cache multicouche",
+          "Un framework de test unitaire type Mocha",
+          "Une méthode de conception UML pour diagrammes",
+          "Un système de templates type EJS"
+        ],
+        "correctAnswers": [
+          0
+        ],
+        "explanation": "Stratégies cache multicouche : 1) Browser cache : CSS/JS/images avec Cache-Control, 2) CDN : géodistribution contenu statique, 3) Reverse proxy cache : Varnish, Nginx, 4) Application cache : Redis, Memcached pour données fréquentes, 5) Database query cache, 6) Objec..."
+      },
+      {
+        "question": "Comment fonctionne le load balancing et quand l'utiliser ?",
+        "options": [
+          "Une architecture monolithique découpée en modules internes",
+          "Un pattern de conception pour applications desktop",
+          "Le load balancing distribue le trafic entre plusieurs serveurs selon différents algorithmes",
+          "Un système de cache distribué en mémoire type Redis"
+        ],
+        "correctAnswers": [
+          2
+        ],
+        "explanation": "Le load balancing distribue le trafic entre plusieurs serveurs selon différents algorithmes : Round Robin (rotation), Least Connections (moins de connexions), IP Hash (basé sur IP client), Weighted (pondéré par capacité)."
+      }
+    ],
+    "architecture": [
+      {
+        "question": "Quels sont les principes des architectures logicielles multicouches ?",
+        "options": [
+          "Un framework de logging structuré",
+          "Un système de monitoring type Prometheus",
+          "Une bibliothèque de validation de formulaires",
+          "Architecture multicouches (n-tier) organise l'application en couches distinctes"
+        ],
+        "correctAnswers": [
+          3
+        ],
+        "explanation": "Architecture multicouches (n-tier) organise l'application en couches distinctes : 1) Présentation : interface utilisateur (UI/UX), 2) Logique métier : règles de gestion et traitements, 3) Accès aux données : persistance et récupération."
+      },
+      {
+        "question": "Quel est l'intérêt d'une architecture en couches ?",
+        "options": [
+          "Des modules backend pour le traitement des requêtes HTTP",
+          "Architecture en couches bénéfique pour",
+          "Des services REST pour la communication inter-systèmes",
+          "Des procédures stockées dans la base de données"
+        ],
+        "correctAnswers": [
+          1
+        ],
+        "explanation": "Architecture en couches bénéfique pour : 1) Séparation des responsabilités claire, 2) Réutilisabilité des composants, 3) Maintenance facilitée par isolation, 4) Tests indépendants par couche, 5) Évolutivité contrôlée, 6) Équipes spécialisées par couche, 7) Sécurité ..."
+      },
+      {
+        "question": "Quelle est la différence entre une architecture monolithique et une architecture en microservices ?",
+        "options": [
+          "Monolithique : application déployée comme une seule unité, toutes les fonctionnalités dans un même processus.",
+          "Un pattern de conception pour applications desktop",
+          "Une architecture monolithique découpée en modules internes",
+          "Un système de cache distribué en mémoire type Redis"
+        ],
+        "correctAnswers": [
+          0
+        ],
+        "explanation": "Monolithique : application déployée comme une seule unité, toutes les fonctionnalités dans un même processus. Avantages : simplicité développement/déploiement, performance interne élevée. Inconvénients : scaling difficile, technologies figées, risque de panne globale."
+      },
+      {
+        "question": "Quelles sont les principales couches d'une architecture logicielle multicouche ?",
+        "options": [
+          "Couches architecture multicouche typique",
+          "Une base de données orientée documents comme MongoDB",
+          "Un protocole de communication réseau entre clients et serveurs",
+          "Un système de fichiers virtuel pour le stockage web"
+        ],
+        "correctAnswers": [
+          0
+        ],
+        "explanation": "Couches architecture multicouche typique : 1) Présentation : UI, contrôleurs, formatage données, 2) Application/Service : orchestration, workflows, APIs, 3) Métier/Domaine : règles business, entités, logique core, 4) Persistance/Données : repositories, DAO, mapping ..."
+      },
+      {
+        "question": "Quels sont les principes d'architecture d'une application SaaS et leurs avantages ?",
+        "options": [
+          "Un framework CSS pour améliorer le design responsive",
+          "Un protocole de sécurité pour protéger les données utilisateurs",
+          "Architecture SaaS : 1) Multi-tenancy : isolation données clients, 2) Élasticité : scaling",
+          "Une technique d'optimisation des performances de rendu"
+        ],
+        "correctAnswers": [
+          2
+        ],
+        "explanation": "Architecture SaaS : 1) Multi-tenancy : isolation données clients, 2) Élasticité : scaling automatique, 3) API-first : intégrations facilitées, 4) Microservices : déploiements indépendants, 5) Event-driven : asynchrone, découplage, 6) Cloud-native : containers, orche..."
+      },
+      {
+        "question": "Comment sécuriser une architecture logicielle ?",
+        "options": [
+          "Sécurisation architecture",
+          "La consultation manuelle des logs une fois par jour",
+          "L'attente de retours utilisateurs pour détecter les problèmes",
+          "Le redémarrage préventif des serveurs toutes les nuits"
+        ],
+        "correctAnswers": [
+          0
+        ],
+        "explanation": "Sécurisation architecture : 1) Defense in depth : sécurité multicouche, 2) Principe de moindre privilège, 3) Zero Trust : vérifier tout, ne rien supposer, 4) Chiffrement en transit (HTTPS) et au repos, 5) Authentification forte et autorisation granulaire, 6) Segment..."
+      },
+      {
+        "question": "Quelles sont les principales vulnérabilités des architectures multicouches et comment les prévenir ?",
+        "options": [
+          "Un protocole de transfert de fichiers sécurisé (SFTP)",
+          "Un framework de développement web full-stack",
+          "Un langage de programmation orienté objet compilé",
+          "Vulnérabilités multicouches"
+        ],
+        "correctAnswers": [
+          3
+        ],
+        "explanation": "Vulnérabilités multicouches : 1) Injection attacks (SQL, NoSQL, LDAP) → prepared statements, validation, 2) Broken authentication → MFA, session management, 3) Data exposure → chiffrement, access control, 4) API abuse → rate limiting, validation, 5) Privilege escala..."
+      },
+      {
+        "question": "Comment adapter une architecture logicielle aux exigences de sécurité de l'ANSSI ?",
+        "options": [
+          "Conformité ANSSI : 1) Référentiel RGS (Référentiel Général de Sécurité), 2)",
+          "Un système de build pour applications Java",
+          "Un framework backend basé sur Ruby on Rails",
+          "Une bibliothèque de visualisation de données 3D"
+        ],
+        "correctAnswers": [
+          0
+        ],
+        "explanation": "Conformité ANSSI : 1) Référentiel RGS (Référentiel Général de Sécurité), 2) Classification données (DR, Confidentiel, Secret), 3) Homologation sécurité obligatoire, 4) Chiffrement qualifié (algorithmes ANSSI), 5) Architecture cloisonnée, 6) Audit et traçabilité, 7) ..."
+      },
+      {
+        "question": "Quels sont les principaux indicateurs de sécurité des systèmes d'information (DICP) ?",
+        "options": [
+          "Une méthodologie de gestion de projet Kanban",
+          "DICP (Disponibilité, Intégrité, Confidentialité, Preuve) : 1)",
+          "Une plateforme de déploiement type Heroku",
+          "Un framework de logging structuré"
+        ],
+        "correctAnswers": [
+          1
+        ],
+        "explanation": "DICP (Disponibilité, Intégrité, Confidentialité, Preuve) : 1) Disponibilité : uptime, RTO/RPO, redondance, 2) Intégrité : checksums, signatures numériques, contrôles cohérence, 3) Confidentialité : chiffrement, access control, classification, 4) Preuve/Non-répudiati..."
+      },
+      {
+        "question": "Quels outils peux-tu utiliser pour modéliser une architecture logicielle ?",
+        "options": [
+          "Des modules backend pour le traitement des requêtes HTTP",
+          "Outils de modélisation architecture",
+          "Des procédures stockées dans la base de données",
+          "Des services REST pour la communication inter-systèmes"
+        ],
+        "correctAnswers": [
+          1
+        ],
+        "explanation": "Outils de modélisation architecture : 1) UML : diagrammes de composants, déploiement, séquence (Lucidchart, Draw.io), 2) C4 Model : Context, Containers, Components, Code (PlantUML, Structurizr), 3) ArchiMate : framework enterprise (Archi, BiZZdesign), 4) Diagrammes ..."
+      },
+      {
+        "question": "Quels principes d'éco-conception peux-tu appliquer dans une architecture logicielle ?",
+        "options": [
+          "Éco-conception logicielle",
+          "Des contraintes d'intégrité référentielle entre tables",
+          "Des partitions horizontales automatiques des données",
+          "Des copies de tables pour améliorer la disponibilité"
+        ],
+        "correctAnswers": [
+          0
+        ],
+        "explanation": "Éco-conception logicielle : 1) Optimisation algorithmes (complexité réduite), 2) Lazy loading et pagination, 3) Cache intelligent pour réduire calculs, 4) Compression données/images, 5) Base de données optimisées (index, requêtes), 6) Architecture serverless/cloud-n..."
+      }
+    ],
+    "tests": [
+      {
+        "question": "Qu'est-ce qu'un plan de tests et pourquoi est-il important ?",
+        "options": [
+          "Le nombre total de bugs détectés par les tests",
+          "Un plan de tests est un document détaillant la stratégie",
+          "Le nombre de développeurs ayant contribué aux tests",
+          "Le temps moyen d'exécution de la suite de tests"
+        ],
+        "correctAnswers": [
+          1
+        ],
+        "explanation": "Un plan de tests est un document détaillant la stratégie, l'approche, les ressources et le calendrier des activités de test. Il contient : objectifs, périmètre, types de tests, environnements, critères d'entrée/sortie, risques, planning."
+      },
+      {
+        "question": "Quels sont les types de tests inclus dans un plan de tests ?",
+        "options": [
+          "Une technique d'optimisation des performances de rendu",
+          "Un protocole de sécurité pour protéger les données utilisateurs",
+          "Un framework CSS pour améliorer le design responsive",
+          "Types de tests dans un plan"
+        ],
+        "correctAnswers": [
+          3
+        ],
+        "explanation": "Types de tests dans un plan : 1) Tests fonctionnels : unitaires, intégration, système, acceptation, 2) Tests non-fonctionnels : performance, charge, stress, sécurité, compatibilité, 3) Tests structurels : boîte blanche, couverture de code, 4) Tests de changement : r..."
+      },
+      {
+        "question": "Quelle est la différence entre un test unitaire et un test d'intégration ?",
+        "options": [
+          "Des services REST pour la communication inter-systèmes",
+          "Test unitaire : teste une unité de code isolée (fonction, méthode, classe) avec des dépendances mockées.",
+          "Des modules backend pour le traitement des requêtes HTTP",
+          "Des procédures stockées dans la base de données"
+        ],
+        "correctAnswers": [
+          1
+        ],
+        "explanation": "Test unitaire : teste une unité de code isolée (fonction, méthode, classe) avec des dépendances mockées. Caractéristiques : rapide, déterministe, nombreux, scope limité. Exemple : tester une fonction de calcul."
+      },
+      {
+        "question": "Quelle est la différence entre un test manuel et un test automatisé ?",
+        "options": [
+          "Un système de gestion de versions Git avec branches",
+          "Une architecture orientée événements asynchrone",
+          "Une méthodologie de développement agile avec sprints de 2 semaines",
+          "Test manuel : exécuté par un humain, interaction directe avec l'application, détecte problèmes"
+        ],
+        "correctAnswers": [
+          3
+        ],
+        "explanation": "Test manuel : exécuté par un humain, interaction directe avec l'application, détecte problèmes UX/UI, créativité dans les scénarios, coûteux en temps. Adapté pour : tests exploratoires, utilisabilité, acceptation utilisateur."
+      },
+      {
+        "question": "Quelle est la différence entre tests unitaires, d'intégration, fonctionnels et E2E ?",
+        "options": [
+          "Des modules backend pour le traitement des requêtes HTTP",
+          "Tests unitaires : unité de code isolée, rapides, nombreux.",
+          "Des procédures stockées dans la base de données",
+          "Des services REST pour la communication inter-systèmes"
+        ],
+        "correctAnswers": [
+          1
+        ],
+        "explanation": "Tests unitaires : unité de code isolée, rapides, nombreux. Tests d'intégration : interaction entre composants, APIs, DB. Tests fonctionnels : validation des exigences métier, comportement attendu."
+      },
+      {
+        "question": "Qu'est-ce qu'un test de charge ?",
+        "options": [
+          "Une plateforme d'intégration type Zapier",
+          "Test de charge : évalue le comportement d'un système sous une charge normale et pic attendue.",
+          "Un système de versioning sémantique type SemVer",
+          "Un système de CI/CD type Jenkins ou GitLab"
+        ],
+        "correctAnswers": [
+          1
+        ],
+        "explanation": "Test de charge : évalue le comportement d'un système sous une charge normale et pic attendue. Objectifs : 1) Identifier les goulots d'étranglement, 2) Valider les temps de réponse, 3) Vérifier la stabilité sous charge, 4) Déterminer la capacité maximale."
+      },
+      {
+        "question": "Pourquoi réaliser des tests unitaires sur un composant métier ?",
+        "options": [
+          "Tests unitaires sur composants métier essentiels pour",
+          "Des procédures stockées dans la base de données",
+          "Des services REST pour la communication inter-systèmes",
+          "Des modules backend pour le traitement des requêtes HTTP"
+        ],
+        "correctAnswers": [
+          0
+        ],
+        "explanation": "Tests unitaires sur composants métier essentiels pour : 1) Validation des règles de gestion complexes, 2) Détection précoce des erreurs logiques, 3) Documentation vivante du comportement attendu, 4) Facilitation des refactors sans crainte, 5) Regression testing auto..."
+      },
+      {
+        "question": "Qu'est-ce que le Test-Driven Development (TDD) ?",
+        "options": [
+          "Un processus de revue de code par les pairs développeurs",
+          "Une technique d'optimisation des performances applicatives",
+          "TDD est une pratique de développement qui suit le cycle Red-Green-Refactor",
+          "Une méthode de débogage pas à pas avec breakpoints"
+        ],
+        "correctAnswers": [
+          2
+        ],
+        "explanation": "TDD est une pratique de développement qui suit le cycle Red-Green-Refactor : 1) Red : écrire un test qui échoue pour une fonctionnalité non implémentée, 2) Green : écrire le code minimal pour faire passer le test, 3) Refactor : améliorer le code tout en gardant les ..."
+      },
+      {
+        "question": "Quelles sont les bonnes pratiques du Test-Driven Development (TDD) et comment l'implémenter ?",
+        "options": [
+          "Bonnes pratiques TDD : 1) Tests simples et focalisés (une assertion par test), 2)",
+          "Des procédures stockées dans la base de données",
+          "Des services REST pour la communication inter-systèmes",
+          "Des modules backend pour le traitement des requêtes HTTP"
+        ],
+        "correctAnswers": [
+          0
+        ],
+        "explanation": "Bonnes pratiques TDD : 1) Tests simples et focalisés (une assertion par test), 2) Noms de tests explicites et métier, 3) Arrange-Act-Assert structure, 4) Red-Green-Refactor strict (ne pas sauter d'étapes), 5) Refactor tests ET code, 6) Tests indépendants (pas d'ordr..."
+      },
+      {
+        "question": "Qu'est-ce que le mocking et comment gérer les dépendances dans les tests ?",
+        "options": [
+          "La duplication complète du code applicatif pour tester",
+          "Le mocking consiste à remplacer les dépendances externes par des objets simulés (mocks)",
+          "L'utilisation de la base de données de production",
+          "La désactivation temporaire des dépendances externes"
+        ],
+        "correctAnswers": [
+          1
+        ],
+        "explanation": "Le mocking consiste à remplacer les dépendances externes par des objets simulés (mocks) pour isoler l'unité testée. Types : Mock (vérification comportement), Stub (retourne des données prédéfinies), Spy (observateur), Fake (implémentation simplifiée)."
+      },
+      {
+        "question": "Comment créer un environnement de test ?",
+        "options": [
+          "Un gestionnaire de versions distribué comme Git",
+          "Un système d'exploitation léger pour serveurs cloud",
+          "Création environnement test",
+          "Un orchestrateur de machines virtuelles traditionnelles"
+        ],
+        "correctAnswers": [
+          2
+        ],
+        "explanation": "Création environnement test : 1) Isolation (base de données test séparée), 2) Données de test reproductibles (fixtures, factories), 3) Configuration spécifique (properties/env vars), 4) Dépendances mockées/stubbed, 5) Nettoyage automatique après tests, 6) Parallélis..."
+      },
+      {
+        "question": "Que faire si un test échoue ?",
+        "options": [
+          "Une méthode de modélisation de bases de données",
+          "Un framework de développement backend type Spring",
+          "Quand un test échoue : 1) Analyser le message d'erreur précisément, 2) Reproduire l'échec",
+          "Une plateforme d'intégration type Zapier"
+        ],
+        "correctAnswers": [
+          2
+        ],
+        "explanation": "Quand un test échoue : 1) Analyser le message d'erreur précisément, 2) Reproduire l'échec localement, 3) Vérifier si c'est un vrai bug ou test défaillant, 4) Debugger avec breakpoints/logs, 5) Corriger le code ou ajuster le test, 6) Relancer tous les tests impactés,..."
+      },
+      {
+        "question": "Quels outils et frameworks recommandes-tu pour automatiser les tests ?",
+        "options": [
+          "Outils tests par type : Unitaires : JUnit (Java), Jest (JS), pytest (Python), xUnit (.NET).",
+          "Une base de données relationnelle SQL distribuée",
+          "Un protocole de communication en temps réel bidirectionnel",
+          "Un système de fichiers réseau pour partager des données"
+        ],
+        "correctAnswers": [
+          0
+        ],
+        "explanation": "Outils tests par type : Unitaires : JUnit (Java), Jest (JS), pytest (Python), xUnit (.NET). Intégration : TestNG, Mockito, WireMock. E2E : Selenium, Cypress, Playwright, Puppeteer."
+      },
+      {
+        "question": "Comment organiser et prioriser les tests en méthodologie Agile ?",
+        "options": [
+          "Une technique d'optimisation des performances applicatives",
+          "Un processus de revue de code par les pairs développeurs",
+          "Organisation tests Agile : 1) Pyramide des tests (beaucoup unitaires, moins E2E), 2)",
+          "Une méthode de débogage pas à pas avec breakpoints"
+        ],
+        "correctAnswers": [
+          2
+        ],
+        "explanation": "Organisation tests Agile : 1) Pyramide des tests (beaucoup unitaires, moins E2E), 2) Tests dans Definition of Done, 3) Acceptance criteria = scenarios de test, 4) Test automation dans sprints, 5) Régression automatisée continue."
+      }
+    ],
+    "security": [
+      {
+        "question": "Pourquoi utiliser HTTPS au lieu de HTTP ?",
+        "options": [
+          "HTTPS (HTTP + SSL/TLS) apporte",
+          "Un protocole de communication sécurisée entre serveurs",
+          "Une méthode de compression d'images et d'assets statiques",
+          "Un système de cache pour accélérer le chargement des pages"
+        ],
+        "correctAnswers": [
+          0
+        ],
+        "explanation": "HTTPS (HTTP + SSL/TLS) apporte : 1) Chiffrement des données en transit, protection contre l'écoute, 2) Authentification du serveur via certificats, 3) Intégrité des données, détection des modifications, 4) Confiance utilisateur (cadenas vert), 5) SEO amélioré (Googl..."
+      },
+      {
+        "question": "Pourquoi ne jamais stocker un mot de passe en clair et comment le sécuriser ?",
+        "options": [
+          "Risques du stockage en clair : vol de base de données expose tous les mots de passe,",
+          "Une architecture de load balancing type Nginx",
+          "Une méthode de compression de données type Gzip",
+          "Un framework d'optimisation des performances web"
+        ],
+        "correctAnswers": [
+          0
+        ],
+        "explanation": "Risques du stockage en clair : vol de base de données expose tous les mots de passe, non-conformité RGPD, responsabilité légale."
+      },
+      {
+        "question": "Quelles sont les bonnes pratiques pour définir un mot de passe sécurisé ?",
+        "options": [
+          "Un système de logging centralisé type ELK",
+          "Un outil de monitoring de ressources système",
+          "Une méthode de compression de données type Gzip",
+          "Mot de passe sécurisé : 1) Longueur minimale 12-16 caractères, 2) Mélange majuscules,"
+        ],
+        "correctAnswers": [
+          3
+        ],
+        "explanation": "Mot de passe sécurisé : 1) Longueur minimale 12-16 caractères, 2) Mélange majuscules, minuscules, chiffres, symboles, 3) Éviter informations personnelles et mots du dictionnaire, 4) Unique par service, 5) Passphrase mémorable avec mots aléatoires, 6) Gestionnaire de..."
+      },
+      {
+        "question": "Comment intégrer la cryptographie et la gestion des identités dans une application sécurisée ?",
+        "options": [
+          "Une architecture de load balancing type Nginx",
+          "Un système de cache distribué type Memcached",
+          "Intégration crypto et identités",
+          "Un framework d'optimisation des performances web"
+        ],
+        "correctAnswers": [
+          2
+        ],
+        "explanation": "Intégration crypto et identités : 1) PKI (Public Key Infrastructure) pour certificats, 2) HSM (Hardware Security Module) pour clés sensibles, 3) Chiffrement asymétrique pour échange clés, 4) Chiffrement symétrique pour données, 5) Signatures numériques pour intégrit..."
+      },
+      {
+        "question": "Comment implémenter un système de gestion des permissions efficace ?",
+        "options": [
+          "Système permissions efficace",
+          "L'importation de modules externes dans un projet",
+          "La copie de code d'une classe vers une autre",
+          "La délégation de méthodes à des objets composés"
+        ],
+        "correctAnswers": [
+          0
+        ],
+        "explanation": "Système permissions efficace : 1) RBAC (Role-Based Access Control) avec rôles métier, 2) ABAC (Attribute-Based) pour règles complexes, 3) Principe moindre privilège par défaut, 4) Héritage hiérarchique des permissions, 5) Permissions granulaires (CRUD par ressource)..."
+      },
+      {
+        "question": "Quelles sont les meilleures pratiques pour sécuriser les données sensibles en transit et au repos ?",
+        "options": [
+          "Données en transit : 1)",
+          "Une méthode d'encodage des URL en format sémantique",
+          "Un système de cache CDN pour les fichiers statiques",
+          "Un protocole HTTP avec compression automatique des données"
+        ],
+        "correctAnswers": [
+          0
+        ],
+        "explanation": "Données en transit : 1) TLS 1.3 minimum, 2) Certificate pinning, 3) VPN pour réseaux non sûrs, 4) API Gateway avec chiffrement bout-en-bout."
+      },
+      {
+        "question": "Quels sont les défis spécifiques à la sécurité des applications mobiles et PWA ?",
+        "options": [
+          "Une architecture de load balancing type Nginx",
+          "Un framework d'optimisation des performances web",
+          "Un système de logging centralisé type ELK",
+          "Défis mobiles/PWA : 1) Stockage local non sécurisé (keychain, encrypted preferences), 2)"
+        ],
+        "correctAnswers": [
+          3
+        ],
+        "explanation": "Défis mobiles/PWA : 1) Stockage local non sécurisé (keychain, encrypted preferences), 2) Communication réseau sur WiFi publics, 3) Jailbreak/Root detection, 4) Reverse engineering apps, 5) Certificate pinning contournement, 6) Biométrie et authentification locale, 7..."
+      },
+      {
+        "question": "Comment détecter et corriger les failles de sécurité dans une application en production ?",
+        "options": [
+          "Détection failles production",
+          "Un système de gestion de contenu statique type WordPress",
+          "Une application mobile native développée avec Swift ou Kotlin",
+          "Une application multi-pages avec rechargement à chaque navigation"
+        ],
+        "correctAnswers": [
+          0
+        ],
+        "explanation": "Détection failles production : 1) SIEM (Security Information Event Management), 2) WAF (Web Application Firewall) avec logs, 3) Monitoring anomalies comportementales, 4) Vulnerability scanning automatisé, 5) Bug bounty programs, 6) Pentest réguliers, 7) Code review ..."
+      },
+      {
+        "question": "Quel est le rôle de l'ANSSI et pourquoi suivre ses recommandations ?",
+        "options": [
+          "Une méthode de compression de données type Gzip",
+          "Une plateforme de CDN type Cloudflare",
+          "Un outil de monitoring de ressources système",
+          "L'ANSSI (Agence Nationale de la Sécurité des Systèmes d'Information) est l'autorité française de cybersécurité"
+        ],
+        "correctAnswers": [
+          3
+        ],
+        "explanation": "L'ANSSI (Agence Nationale de la Sécurité des Systèmes d'Information) est l'autorité française de cybersécurité."
+      },
+      {
+        "question": "Quelles sont les obligations du RGPD pour une application qui stocke des données utilisateurs ?",
+        "options": [
+          "Une architecture de load balancing type Nginx",
+          "Une plateforme de CDN type Cloudflare",
+          "Obligations RGPD : 1) Consentement explicite et révocable, 2) Finalité définie et proportionnelle, 3)",
+          "Un système de logging centralisé type ELK"
+        ],
+        "correctAnswers": [
+          2
+        ],
+        "explanation": "Obligations RGPD : 1) Consentement explicite et révocable, 2) Finalité définie et proportionnelle, 3) Durée de conservation limitée, 4) Droit d'accès, rectification, effacement ('droit à l'oubli'), 5) Portabilité des données, 6) Notification violation sous 72h, 7) D..."
+      },
+      {
+        "question": "Quelles obligations le RGPD impose-t-il pour une interface utilisateur ?",
+        "options": [
+          "Une application multi-pages avec rechargement à chaque navigation",
+          "RGPD pour interfaces : 1) Consentement granulaire par finalité (cookies, analytics, marketing), 2)",
+          "Une application mobile native développée avec Swift ou Kotlin",
+          "Un système de gestion de contenu statique type WordPress"
+        ],
+        "correctAnswers": [
+          1
+        ],
+        "explanation": "RGPD pour interfaces : 1) Consentement granulaire par finalité (cookies, analytics, marketing), 2) Interfaces de gestion du consentement claires, 3) Information transparente sur collecte/usage, 4) Accès facilité aux paramètres de confidentialité, 5) Export/suppressi..."
+      },
+      {
+        "question": "Quelles obligations légales dois-tu respecter lors de la conception d'une interface ?",
+        "options": [
+          "Un protocole de sécurité pour protéger les données utilisateurs",
+          "Un framework CSS pour améliorer le design responsive",
+          "Une technique d'optimisation des performances de rendu",
+          "Obligations légales interfaces"
+        ],
+        "correctAnswers": [
+          3
+        ],
+        "explanation": "Obligations légales interfaces : 1) RGPD (protection données personnelles), 2) Accessibilité numérique (RGAA en France, WCAG internationalement), 3) Mentions légales obligatoires, 4) CGU/CGV conformes, 5) Cookies et traceurs (consentement CNIL), 6) Droit à l'oubli i..."
+      }
+    ],
+    "design": [
+      {
+        "question": "Pourquoi réaliser des maquettes avant de coder ?",
+        "options": [
+          "Réaliser des maquettes avant le développement",
+          "Un outil de profiling de performance",
+          "Une architecture de base de données type CQRS",
+          "Un système de gestion de versions type SVN"
+        ],
+        "correctAnswers": [
+          0
+        ],
+        "explanation": "Réaliser des maquettes avant le développement : 1) Valide l'idée avec les parties prenantes tôt, 2) Détecte les problèmes UX avant le code, 3) Facilite la communication équipe/client, 4) Estime mieux les coûts et délais, 5) Guide le développement avec une vision cla..."
+      },
+      {
+        "question": "Quelle est la différence entre un wireframe et une maquette ?",
+        "options": [
+          "Un système de gestion de versions type SVN",
+          "Wireframe : structure schématique en noir et blanc, focus sur layout et hiérarchie de",
+          "Une méthode de déploiement blue-green",
+          "Un outil de profiling de performance"
+        ],
+        "correctAnswers": [
+          1
+        ],
+        "explanation": "Wireframe : structure schématique en noir et blanc, focus sur layout et hiérarchie de l'information, sans couleurs ni images finales. Objectif : architecture de l'information et navigation."
+      },
+      {
+        "question": "Quelle est la différence entre une maquette et un prototype ?",
+        "options": [
+          "Maquette : représentation visuelle statique haute-fidélité avec design final (couleurs,",
+          "Un framework de test d'intégration Selenium",
+          "Un système de gestion de versions type SVN",
+          "Un protocole de communication RPC"
+        ],
+        "correctAnswers": [
+          0
+        ],
+        "explanation": "Maquette : représentation visuelle statique haute-fidélité avec design final (couleurs, typographies, images), montre l'apparence exacte. Prototype : version interactive de la maquette avec navigation, transitions, animations, simule le comportement réel."
+      },
+      {
+        "question": "Que contient un dossier de conception ?",
+        "options": [
+          "Une application multi-pages avec rechargement à chaque navigation",
+          "Dossier de conception contient",
+          "Un système de gestion de contenu statique type WordPress",
+          "Une application mobile native développée avec Swift ou Kotlin"
+        ],
+        "correctAnswers": [
+          1
+        ],
+        "explanation": "Dossier de conception contient : 1) Brief et cahier des charges, 2) Personas et user journey maps, 3) Benchmarks concurrentiels, 4) Arborescence et architecture information, 5) Wireframes et user flows, 6) Maquettes haute fidélité toutes résolutions, 7) Prototype in..."
+      },
+      {
+        "question": "Quels outils de maquettage utiliser et comment les intégrer dans un projet ?",
+        "options": [
+          "Des services REST pour la communication inter-systèmes",
+          "Outils maquettage : 1) Figma : collaboratif, web-based, components/variants, 2)",
+          "Des modules backend pour le traitement des requêtes HTTP",
+          "Des procédures stockées dans la base de données"
+        ],
+        "correctAnswers": [
+          1
+        ],
+        "explanation": "Outils maquettage : 1) Figma : collaboratif, web-based, components/variants, 2) Adobe XD : écosystème Adobe, prototypage avancé, 3) Sketch : Mac only, plugins riches, 4) Framer : prototypage complexe avec code."
+      },
+      {
+        "question": "Quelle est la différence entre UI et UX ?",
+        "options": [
+          "Un système de gestion de versions type SVN",
+          "UI (User Interface) : aspect visuel et interactif, design des éléments graphiques, couleurs,",
+          "Un protocole de communication RPC",
+          "Une architecture de base de données type CQRS"
+        ],
+        "correctAnswers": [
+          1
+        ],
+        "explanation": "UI (User Interface) : aspect visuel et interactif, design des éléments graphiques, couleurs, typographies, boutons, animations. Focus sur l'esthétique et l'utilisabilité immédiate."
+      },
+      {
+        "question": "Quels principes ergonomiques faut-il respecter pour une bonne expérience utilisateur ?",
+        "options": [
+          "Une architecture de base de données type CQRS",
+          "Principes ergonomiques UX",
+          "Un framework de test d'intégration Selenium",
+          "Une méthode de déploiement blue-green"
+        ],
+        "correctAnswers": [
+          1
+        ],
+        "explanation": "Principes ergonomiques UX : 1) Simplicité et clarté (loi de Hick), 2) Cohérence interface et interactions, 3) Feedback immédiat sur actions, 4) Contrôle utilisateur (undo/redo), 5) Prévention erreurs et récupération, 6) Reconnaissance plutôt que rappel, 7) Flexibili..."
+      },
+      {
+        "question": "Comment analyser un cahier des charges et formaliser les besoins utilisateurs ?",
+        "options": [
+          "Analyse cahier des charges",
+          "Un outil de profiling de performance",
+          "Un système de monitoring type Grafana",
+          "Une architecture de base de données type CQRS"
+        ],
+        "correctAnswers": [
+          0
+        ],
+        "explanation": "Analyse cahier des charges : 1) Extraction objectifs métier et contraintes, 2) Identification personas et contextes usage, 3) Mapping besoins fonctionnels/non-fonctionnels, 4) User stories avec acceptance criteria."
+      },
+      {
+        "question": "Quelles sont les normes d'accessibilité à respecter pour concevoir une interface inclusive ?",
+        "options": [
+          "Une technique d'optimisation des performances de rendu",
+          "Un protocole de sécurité pour protéger les données utilisateurs",
+          "Un framework CSS pour améliorer le design responsive",
+          "Normes d'accessibilité (WCAG 2"
+        ],
+        "correctAnswers": [
+          3
+        ],
+        "explanation": "Normes d'accessibilité (WCAG 2.1) : 1) Perceptible : alternatives textuelles pour images, contrastes suffisants (4.5:1), texte redimensionnable, 2) Utilisable : navigation au clavier, pas de clignotements, délais suffisants, 3) Compréhensible : texte lisible, naviga..."
+      },
+      {
+        "question": "Quels éléments composent une charte graphique ?",
+        "options": [
+          "Charte graphique contient",
+          "Une application mobile native développée avec Swift ou Kotlin",
+          "Un système de gestion de contenu statique type WordPress",
+          "Une application multi-pages avec rechargement à chaque navigation"
+        ],
+        "correctAnswers": [
+          0
+        ],
+        "explanation": "Charte graphique contient : 1) Logo : versions, variations, utilisation correcte/incorrecte, 2) Couleurs : palette principale/secondaire, codes RGB/CMYK/Pantone, 3) Typographies : familles, hiérarchie, tailles, 4) Iconographie : style, pictogrammes, illustrations, 5..."
+      }
+    ],
+    "project": [
+      {
+        "question": "Comment planifies-tu les tâches de développement d'un projet ?",
+        "options": [
+          "Une période de déploiement en production supervisé",
+          "Une réunion hebdomadaire de suivi de projet",
+          "Planification développement",
+          "Une phase intensive de correction de bugs critiques"
+        ],
+        "correctAnswers": [
+          2
+        ],
+        "explanation": "Planification développement : 1) Décomposition fonctionnalités en user stories, 2) Estimation effort (story points, planning poker), 3) Priorisation selon valeur métier (MoSCoW), 4) Sprint planning avec capacité équipe, 5) Backlog refinement régulier, 6) Identificat..."
+      },
+      {
+        "question": "Quelle est la différence entre une gestion de projet séquentielle et Agile ?",
+        "options": [
+          "Gestion séquentielle (Waterfall)",
+          "Un protocole de communication asynchrone pour équipes",
+          "Une architecture logicielle de microservices distribuée",
+          "Un système de versioning de code distribué type Git"
+        ],
+        "correctAnswers": [
+          0
+        ],
+        "explanation": "Gestion séquentielle (Waterfall) : phases linéaires (analyse→conception→développement→test→déploiement), planification complète en amont, changements difficiles. Avantages : prévisibilité, documentation complète."
+      },
+      {
+        "question": "Quelle est la différence entre une approche séquentielle et Agile en gestion de projet ?",
+        "options": [
+          "Un système de versioning de code distribué type Git",
+          "Un protocole de communication asynchrone pour équipes",
+          "Approche séquentielle : 1) Phases successives avec gates, 2) Planification détaillée initiale,",
+          "Une architecture logicielle de microservices distribuée"
+        ],
+        "correctAnswers": [
+          2
+        ],
+        "explanation": "Approche séquentielle : 1) Phases successives avec gates, 2) Planification détaillée initiale, 3) Changements coûteux, 4) Validation finale, 5) Documentation extensive, 6) Équipes spécialisées par phase."
+      },
+      {
+        "question": "Qu'est-ce qu'un daily meeting en Agile ?",
+        "options": [
+          "Daily meeting (stand-up) : réunion quotidienne de 15 minutes max avec l'équipe de développement.",
+          "Un système de gestion de contenu statique type WordPress",
+          "Une application mobile native développée avec Swift ou Kotlin",
+          "Une application multi-pages avec rechargement à chaque navigation"
+        ],
+        "correctAnswers": [
+          0
+        ],
+        "explanation": "Daily meeting (stand-up) : réunion quotidienne de 15 minutes max avec l'équipe de développement. 3 questions par membre : 1) Qu'ai-je fait hier ? 2) Que vais-je faire aujourd'hui ? 3) Quels obstacles rencontré-je ? Objectifs : synchronisation équipe, identification ..."
+      },
+      {
+        "question": "Quels outils peux-tu utiliser pour gérer un projet en équipe ?",
+        "options": [
+          "Un système de gestion de versions Git avec branches",
+          "Une méthodologie de développement agile avec sprints de 2 semaines",
+          "Outils gestion projet : 1)",
+          "Une architecture orientée événements asynchrone"
+        ],
+        "correctAnswers": [
+          2
+        ],
+        "explanation": "Outils gestion projet : 1) Planification : Jira, Asana, Trello, Monday.com, 2) Communication : Slack, Microsoft Teams, Discord, 3) Versioning : Git (GitHub, GitLab, Bitbucket), 4) Documentation : Confluence, Notion, Wiki, 5) Design : Figma, Adobe XD, 6) CI/CD : Jenk..."
+      },
+      {
+        "question": "Quels sont les principaux outils de gestion de projet informatique ?",
+        "options": [
+          "Un système de versioning de code distribué type Git",
+          "Un protocole de communication asynchrone pour équipes",
+          "Une architecture logicielle de microservices distribuée",
+          "Outils gestion projet IT : 1) Planification : Microsoft Project, Smartsheet pour Gantt"
+        ],
+        "correctAnswers": [
+          3
+        ],
+        "explanation": "Outils gestion projet IT : 1) Planification : Microsoft Project, Smartsheet pour Gantt complexes, 2) Agile : Jira, Azure DevOps, Rally, VersionOne, 3) Collaboration : Confluence, SharePoint, Notion, 4) Communication : Slack, Teams, Mattermost, 5) Temps/Budget : Togg..."
+      },
+      {
+        "question": "Comment organiser et animer une réunion efficace dans un projet informatique ?",
+        "options": [
+          "Une réunion hebdomadaire de suivi de projet",
+          "Une phase intensive de correction de bugs critiques",
+          "Une période de déploiement en production supervisé",
+          "Réunion efficace : Avant : 1) Objectif clair et agenda partagé, 2)"
+        ],
+        "correctAnswers": [
+          3
+        ],
+        "explanation": "Réunion efficace : Avant : 1) Objectif clair et agenda partagé, 2) Participants pertinents uniquement, 3) Durée limitée (25/50min), 4) Documentation préparatoire."
+      },
+      {
+        "question": "Comment assurer la qualité du code dans un projet ?",
+        "options": [
+          "Un système de gestion de versions Git avec branches",
+          "Une architecture orientée événements asynchrone",
+          "Qualité code : 1) Standards de codage et conventions équipe, 2)",
+          "Une méthodologie de développement agile avec sprints de 2 semaines"
+        ],
+        "correctAnswers": [
+          2
+        ],
+        "explanation": "Qualité code : 1) Standards de codage et conventions équipe, 2) Code reviews systématiques (pull requests), 3) Tests automatisés (unitaires, intégration, E2E), 4) Analyse statique de code (SonarQube, ESLint), 5) CI/CD avec gates qualité, 6) Pair programming ou mob p..."
+      },
+      {
+        "question": "Pourquoi est-il important de rédiger de la documentation technique dans un projet ?",
+        "options": [
+          "Documentation technique essentielle pour",
+          "Un système de sauvegarde automatique sur le cloud",
+          "Une plateforme d'intégration et de déploiement continu",
+          "Un outil de génération automatique de documentation"
+        ],
+        "correctAnswers": [
+          0
+        ],
+        "explanation": "Documentation technique essentielle pour : 1) Onboarding nouveaux développeurs, 2) Maintenance et évolution future, 3) Partage connaissance (pas de single point of failure), 4) Décisions d'architecture justifiées, 5) Compliance et audit, 6) Debugging facilité, 7) AP..."
+      },
+      {
+        "question": "Quelle est la différence entre un use case et une user story ?",
+        "options": [
+          "Un système de build pour applications Java",
+          "Une bibliothèque de visualisation de données 3D",
+          "Use case : description détaillée d'une interaction utilisateur-système pour atteindre un",
+          "Un framework backend basé sur Ruby on Rails"
+        ],
+        "correctAnswers": [
+          2
+        ],
+        "explanation": "Use case : description détaillée d'une interaction utilisateur-système pour atteindre un objectif, format structuré avec acteurs, préconditions, scénarios principaux/alternatifs, postconditions. Focus technique et exhaustif."
+      }
+    ],
+    "tools": [
+      {
+        "question": "Quels sont les outils indispensables à ton environnement de développement ?",
+        "options": [
+          "Un framework de développement web full-stack",
+          "Un langage de programmation orienté objet compilé",
+          "Outils indispensables : 1) IDE/Éditeur : VS Code, IntelliJ, Eclipse avec extensions, 2)",
+          "Un protocole de transfert de fichiers sécurisé (SFTP)"
+        ],
+        "correctAnswers": [
+          2
+        ],
+        "explanation": "Outils indispensables : 1) IDE/Éditeur : VS Code, IntelliJ, Eclipse avec extensions, 2) Versioning : Git + GitHub/GitLab, 3) Terminal/Shell : PowerShell, Bash, Zsh, 4) Navigateur avec dev tools, 5) Gestionnaire de paquets : npm, Maven, Composer, 6) Base de données :..."
+      },
+      {
+        "question": "Pourquoi utiliser un gestionnaire de versions comme Git ?",
+        "options": [
+          "Une méthodologie de développement agile avec sprints de 2 semaines",
+          "Git apporte : 1) Historique complet des modifications avec possibilité de revenir en arrière, 2)",
+          "Un système de gestion de versions Git avec branches",
+          "Une architecture orientée événements asynchrone"
+        ],
+        "correctAnswers": [
+          1
+        ],
+        "explanation": "Git apporte : 1) Historique complet des modifications avec possibilité de revenir en arrière, 2) Collaboration équipe sans conflits via branches et merge, 3) Sauvegarde distribuée (chaque clone = backup complet), 4) Branches pour développement parallèle de fonctionn..."
+      },
+      {
+        "question": "Comment assures-tu la compatibilité entre ton environnement local et l'environnement de production ?",
+        "options": [
+          "Un orchestrateur de machines virtuelles traditionnelles",
+          "Compatibilité dev/prod : 1) Docker pour containerisation identique, 2)",
+          "Un gestionnaire de versions distribué comme Git",
+          "Un système d'exploitation léger pour serveurs cloud"
+        ],
+        "correctAnswers": [
+          1
+        ],
+        "explanation": "Compatibilité dev/prod : 1) Docker pour containerisation identique, 2) Variables d'environnement pour configuration, 3) Infrastructure as Code (Terraform, Ansible), 4) Même versions des dépendances (package-lock.json), 5) Tests dans environnements staging identiques..."
+      }
+    ]
+  },
+  "DWWM": {
+    "frontend": [
+      {
+        "question": "Quels outils as-tu utilisé ?",
+        "options": [
+          "Pour le développement frontend, j'utilise principalement",
+          "Un framework full-stack pour Node.js et Express",
+          "Un système de templates côté serveur type EJS",
+          "Un ORM pour la gestion de bases de données"
+        ],
+        "correctAnswers": [
+          0
+        ],
+        "explanation": "Pour le développement frontend, j'utilise principalement : VS Code comme éditeur avec extensions ESLint/Prettier, Git pour le versioning, npm/yarn pour la gestion des paquets, Webpack/Vite pour le bundling, Chrome DevTools pour le debugging, Figma pour les maquettes..."
+      },
+      {
+        "question": "Quelles sont les 3 étapes du maquettage ?",
+        "options": [
+          "Les 3 étapes du maquettage sont",
+          "Une bibliothèque de traitement de données côté serveur",
+          "Un gestionnaire de paquets système type apt ou yum",
+          "Une plateforme de déploiement cloud type AWS"
+        ],
+        "correctAnswers": [
+          0
+        ],
+        "explanation": "Les 3 étapes du maquettage sont : 1) Wireframing : création de la structure et de l'organisation des éléments sans design visuel, focus sur l'UX et la hiérarchie de l'information."
+      },
+      {
+        "question": "Responsive design ?",
+        "options": [
+          "Le responsive design est une approche qui permet aux sites web de s'adapter automatiq",
+          "On développe deux versions séparées du site (desktop et mobile)",
+          "On utilise des tailles fixes en pixels pour tous les éléments",
+          "On crée une application mobile native en complément"
+        ],
+        "correctAnswers": [
+          0
+        ],
+        "explanation": "Le responsive design est une approche qui permet aux sites web de s'adapter automatiquement à différentes tailles d'écran (mobile, tablette, desktop)."
+      },
+      {
+        "question": "UX ? UI ?",
+        "options": [
+          "Un gestionnaire de paquets système type apt ou yum",
+          "Un compilateur de code TypeScript vers JavaScript",
+          "Une bibliothèque de traitement de données côté serveur",
+          "UX (User Experience) concerne l'expérience globale de l'utilisateur : parcours, émotions,"
+        ],
+        "correctAnswers": [
+          3
+        ],
+        "explanation": "UX (User Experience) concerne l'expérience globale de l'utilisateur : parcours, émotions, facilité d'usage, recherche utilisateur, tests d'utilisabilité. UI (User Interface) concerne l'interface visuelle : couleurs, typographies, boutons, disposition des éléments."
+      },
+      {
+        "question": "Connais-tu le système de composants ?",
+        "options": [
+          "Des procédures stockées dans la base de données",
+          "Un système de composants (Design System)",
+          "Des services REST pour la communication inter-systèmes",
+          "Des modules backend pour le traitement des requêtes HTTP"
+        ],
+        "correctAnswers": [
+          1
+        ],
+        "explanation": "Un système de composants (Design System) est une bibliothèque d'éléments UI réutilisables et cohérents : boutons, formulaires, cards, navigation, etc. Chaque composant a ses variantes, états et règles d'usage."
+      },
+      {
+        "question": "Qu'est-ce que le CSS ? Comment rendre responsive avec le CSS ?",
+        "options": [
+          "On développe deux versions séparées du site (desktop et mobile)",
+          "On utilise des tailles fixes en pixels pour tous les éléments",
+          "CSS (Cascading Style Sheets) est le langage de style qui définit l'apparence des éléments HTML",
+          "On crée une application mobile native en complément"
+        ],
+        "correctAnswers": [
+          2
+        ],
+        "explanation": "CSS (Cascading Style Sheets) est le langage de style qui définit l'apparence des éléments HTML : couleurs, polices, layouts, animations."
+      },
+      {
+        "question": "Qu'est-ce que le SASS ? Différence avec le CSS ?",
+        "options": [
+          "SASS (Syntactically Awesome Style Sheets) est un préprocesseur CSS qui ajoute des fonctionnalités",
+          "Une bibliothèque de traitement de données côté serveur",
+          "Une plateforme de déploiement cloud type AWS",
+          "Un compilateur de code TypeScript vers JavaScript"
+        ],
+        "correctAnswers": [
+          0
+        ],
+        "explanation": "SASS (Syntactically Awesome Style Sheets) est un préprocesseur CSS qui ajoute des fonctionnalités : variables ($primary-color), nesting (imbrication), mixins (fonctions réutilisables), fonctions, imports, conditions. SASS se compile en CSS standard."
+      },
+      {
+        "question": "Tu as utilisé une librairie CSS (ex : tailwind) : peux-tu donner les avantages et les inconvénients ?",
+        "options": [
+          "Des services REST pour la communication inter-systèmes",
+          "Des modules backend pour le traitement des requêtes HTTP",
+          "Des procédures stockées dans la base de données",
+          "Tailwind CSS - Avantages : développement rapide avec classes utilitaires, pas de CSS custom à"
+        ],
+        "correctAnswers": [
+          3
+        ],
+        "explanation": "Tailwind CSS - Avantages : développement rapide avec classes utilitaires, pas de CSS custom à écrire, design system cohérent, purge automatique du CSS inutilisé, responsive facile, customisation via config."
+      },
+      {
+        "question": "Qu'est-ce que le Référencement naturel ? Que signifie S.E.O ? À quoi ça sert ? Pourquoi c'est important ? Quelles sont les bonnes pratiques (en citer au moins 3) ?",
+        "options": [
+          "Un système de cache pour accélérer le chargement des pages",
+          "Une méthode de compression d'images et d'assets statiques",
+          "Un protocole de communication sécurisée entre serveurs",
+          "SEO (Search Engine Optimization)"
+        ],
+        "correctAnswers": [
+          3
+        ],
+        "explanation": "SEO (Search Engine Optimization) = référencement naturel, techniques pour améliorer la visibilité d'un site dans les résultats de recherche Google. Importance : trafic gratuit, crédibilité, ROI élevé."
+      },
+      {
+        "question": "Quelle architecture as-tu mis en place ?",
+        "options": [
+          "Un système de build pour applications Java",
+          "Une bibliothèque de visualisation de données 3D",
+          "J'ai implémenté une architecture frontend modulaire avec : structure par composants",
+          "Un framework backend basé sur Ruby on Rails"
+        ],
+        "correctAnswers": [
+          2
+        ],
+        "explanation": "J'ai implémenté une architecture frontend modulaire avec : structure par composants (components, pages, services, utils), séparation des préoccupations (logique métier séparée de l'UI), gestion d'état centralisée (Redux/Vuex), routing côté client, APIs REST consommé..."
+      },
+      {
+        "question": "Différence librairie VS framework ?",
+        "options": [
+          "Un système de gestion de base de données NoSQL",
+          "Librairie : collection de fonctions que vous appelez dans votre code, vous gardez le contrôle",
+          "Une bibliothèque de gestion d'état pour applications serveur",
+          "Un framework backend Python pour créer des API REST"
+        ],
+        "correctAnswers": [
+          1
+        ],
+        "explanation": "Librairie : collection de fonctions que vous appelez dans votre code, vous gardez le contrôle du flux d'exécution (ex: jQuery, Lodash, Axios)."
+      },
+      {
+        "question": "Qu'est-ce que React ? Pourquoi avoir choisi React pour réaliser ton projet ?",
+        "options": [
+          "Un système de templates côté serveur type EJS",
+          "Un ORM pour la gestion de bases de données",
+          "Un framework full-stack pour Node.js et Express",
+          "React est une librairie JavaScript pour créer des interfaces utilisateur avec une approche comp"
+        ],
+        "correctAnswers": [
+          3
+        ],
+        "explanation": "React est une librairie JavaScript pour créer des interfaces utilisateur avec une approche composants. Avantages : composants réutilisables, Virtual DOM pour performance, JSX expressif, écosystème riche, communauté active, backing Facebook/Meta."
+      },
+      {
+        "question": "Qu'est-ce qu'une SPA ? Avantages et inconvénients ?",
+        "options": [
+          "Un système de gestion de contenu statique type WordPress",
+          "Une application multi-pages avec rechargement à chaque navigation",
+          "Une application mobile native développée avec Swift ou Kotlin",
+          "SPA (Single Page Application)"
+        ],
+        "correctAnswers": [
+          3
+        ],
+        "explanation": "SPA (Single Page Application) : application web qui charge une seule page HTML et met à jour le contenu dynamiquement via JavaScript. Avantages : expérience utilisateur fluide, performance améliorée après chargement initial, facilite le développement mobile."
+      },
+      {
+        "question": "A quoi sert vite ?",
+        "options": [
+          "Un système de templates côté serveur type EJS",
+          "Un framework full-stack pour Node.js et Express",
+          "Un ORM pour la gestion de bases de données",
+          "Vite est un build tool moderne pour le développement frontend"
+        ],
+        "correctAnswers": [
+          3
+        ],
+        "explanation": "Vite est un build tool moderne pour le développement frontend. Avantages : démarrage ultra-rapide grâce aux ES modules natifs, Hot Module Replacement (HMR) instantané, build de production optimisé avec Rollup, support TypeScript/JSX natif, plugins riches, configurat..."
+      },
+      {
+        "question": "Qu'est-ce qu'un bundle JS ?",
+        "options": [
+          "Des modules backend pour le traitement des requêtes HTTP",
+          "Des procédures stockées dans la base de données",
+          "Des services REST pour la communication inter-systèmes",
+          "Un bundle JS est un fichier JavaScript unique (ou plusieurs fichiers optimisé"
+        ],
+        "correctAnswers": [
+          3
+        ],
+        "explanation": "Un bundle JS est un fichier JavaScript unique (ou plusieurs fichiers optimisés) qui contient tout le code de l'application : composants, librairies, assets."
+      },
+      {
+        "question": "Comment, depuis un composant JSX, on en arrive à un fichier JS dans le navigateur ?",
+        "options": [
+          "Un ORM pour la gestion de bases de données",
+          "Processus de transformation",
+          "Un système de templates côté serveur type EJS",
+          "Un framework full-stack pour Node.js et Express"
+        ],
+        "correctAnswers": [
+          1
+        ],
+        "explanation": "Processus de transformation : 1) Code JSX écrit par le développeur, 2) Babel transpile JSX en appels React.createElement(), 3) Bundler (Webpack/Vite) résout les imports et crée le bundle, 4) Optimisations : minification, tree-shaking, code splitting, 5) Fichiers gén..."
+      },
+      {
+        "question": "Comment React gère-t-il la mise à jour du DOM ?",
+        "options": [
+          "React utilise le Virtual DOM",
+          "Un framework full-stack pour Node.js et Express",
+          "Un système de templates côté serveur type EJS",
+          "Un ORM pour la gestion de bases de données"
+        ],
+        "correctAnswers": [
+          0
+        ],
+        "explanation": "React utilise le Virtual DOM : 1) Représentation JS en mémoire du DOM réel, 2) À chaque changement d'état, création d'un nouveau Virtual DOM, 3) Algorithme de diffing compare ancien vs nouveau Virtual DOM, 4) Calcul des changements minimaux nécessaires, 5) Réconcili..."
+      },
+      {
+        "question": "Qu'est-ce que le DOM ?",
+        "options": [
+          "DOM (Document Object Model) : représentation arborescente des éléments HTML d'une page web.",
+          "Une base de données orientée documents comme MongoDB",
+          "Un protocole de communication réseau entre clients et serveurs",
+          "Un système de fichiers virtuel pour le stockage web"
+        ],
+        "correctAnswers": [
+          0
+        ],
+        "explanation": "DOM (Document Object Model) : représentation arborescente des éléments HTML d'une page web. Chaque balise HTML devient un nœud que JavaScript peut manipuler dynamiquement."
+      },
+      {
+        "question": "Qu'est-ce que npm ? A quoi sert le package.json ? Le dossier node_modules ?",
+        "options": [
+          "Un protocole de communication en temps réel bidirectionnel",
+          "npm (Node Package Manager) : gestionnaire de paquets JavaScript pour installer/gérer les dépendances.",
+          "Une base de données relationnelle SQL distribuée",
+          "Un système de fichiers réseau pour partager des données"
+        ],
+        "correctAnswers": [
+          1
+        ],
+        "explanation": "npm (Node Package Manager) : gestionnaire de paquets JavaScript pour installer/gérer les dépendances. package.json : fichier de configuration contenant métadonnées du projet, dépendances (dependencies/devDependencies), scripts NPM, version."
+      },
+      {
+        "question": "Qu'est-ce qu'un linter ? A quoi ça sert ?",
+        "options": [
+          "Un linter est un outil d'analyse statique qui détecte erreurs",
+          "Une architecture orientée événements asynchrone",
+          "Un système de gestion de versions Git avec branches",
+          "Une méthodologie de développement agile avec sprints de 2 semaines"
+        ],
+        "correctAnswers": [
+          0
+        ],
+        "explanation": "Un linter est un outil d'analyse statique qui détecte erreurs, bugs potentiels et violations de style dans le code. Objectifs : qualité code constante, détection précoce d'erreurs, respect des conventions équipe, amélioration lisibilité."
+      },
+      {
+        "question": "Qu'est-ce que le JSX ? Différence avec le JS ?",
+        "options": [
+          "Un système de templates côté serveur type EJS",
+          "Un ORM pour la gestion de bases de données",
+          "Un framework full-stack pour Node.js et Express",
+          "JSX (JavaScript XML) : extension syntaxique de JavaScript qui permet d'écrire des éléments HTML"
+        ],
+        "correctAnswers": [
+          3
+        ],
+        "explanation": "JSX (JavaScript XML) : extension syntaxique de JavaScript qui permet d'écrire des éléments HTML dans le code JavaScript. Ressemble à HTML mais avec la puissance de JS."
+      },
+      {
+        "question": "Comment met-on le routing en place dans React ? Qu'est-ce qu'un loader ?",
+        "options": [
+          "Un framework full-stack pour Node.js et Express",
+          "Un ORM pour la gestion de bases de données",
+          "Routing React avec React Router",
+          "Un système de templates côté serveur type EJS"
+        ],
+        "correctAnswers": [
+          2
+        ],
+        "explanation": "Routing React avec React Router : 1) Installation react-router-dom, 2) BrowserRouter wrap l'application, 3) Routes définit les chemins, 4) Route pour chaque page, 5) Link pour navigation. Nouveau : createBrowserRouter avec data loading."
+      },
+      {
+        "question": "Qu'est-ce qu'un composant ? À quoi ça sert ?",
+        "options": [
+          "Des procédures stockées dans la base de données",
+          "Des modules backend pour le traitement des requêtes HTTP",
+          "Des services REST pour la communication inter-systèmes",
+          "Un composant est une unité d'interface utilisateur réutilisable et autonome q"
+        ],
+        "correctAnswers": [
+          3
+        ],
+        "explanation": "Un composant est une unité d'interface utilisateur réutilisable et autonome qui encapsule logique et rendu."
+      },
+      {
+        "question": "A quoi sert le .map en JS ? Pourquoi l'utilise-t-on régulièrement en JSX ?",
+        "options": [
+          "Array.map() transforme chaque élément d'un tableau et retourne un nouveau tableau.",
+          "Un système de templates côté serveur type EJS",
+          "Un ORM pour la gestion de bases de données",
+          "Un framework full-stack pour Node.js et Express"
+        ],
+        "correctAnswers": [
+          0
+        ],
+        "explanation": "Array.map() transforme chaque élément d'un tableau et retourne un nouveau tableau. En JSX, utilisé pour rendre des listes dynamiques : users.map(user => <UserCard key={user.id} user={user} />). Chaque élément du tableau devient un composant JSX."
+      },
+      {
+        "question": "Lorsque tu déclares une variable, à quoi dois-tu faire attention ?",
+        "options": [
+          "Déclaration variables JS : 1)",
+          "Une plateforme de déploiement cloud type AWS",
+          "Un compilateur de code TypeScript vers JavaScript",
+          "Une bibliothèque de traitement de données côté serveur"
+        ],
+        "correctAnswers": [
+          0
+        ],
+        "explanation": "Déclaration variables JS : 1) Utiliser const par défaut, let si réassignation nécessaire, éviter var, 2) Noms explicites et significatifs (camelCase), 3) Scope approprié (éviter variables globales), 4) Initialisation si possible, 5) Éviter hoisting involontaire, 6) ..."
+      },
+      {
+        "question": "Quels types de données connais-tu en JS ?",
+        "options": [
+          "Une architecture de microservices distribuée",
+          "Une plateforme de déploiement cloud type AWS",
+          "Un système de gestion de base de données type PostgreSQL",
+          "Types primitifs JS : 1) Number (entiers, décimaux, NaN, Infinity), 2)"
+        ],
+        "correctAnswers": [
+          3
+        ],
+        "explanation": "Types primitifs JS : 1) Number (entiers, décimaux, NaN, Infinity), 2) String (texte, template literals), 3) Boolean (true/false), 4) Undefined (variable non assignée), 5) Null (valeur vide intentionnelle), 6) Symbol (identifiant unique), 7) BigInt (grands entiers)."
+      },
+      {
+        "question": "Qu'est-ce qu'un objet ?",
+        "options": [
+          "Une architecture de microservices distribuée sur le cloud",
+          "Un système de gestion automatique de la mémoire avec garbage collector",
+          "Un objet JS est une collection de propriétés (clé-valeur) qui représente une entité",
+          "Un paradigme de programmation fonctionnelle pure et immutable"
+        ],
+        "correctAnswers": [
+          2
+        ],
+        "explanation": "Un objet JS est une collection de propriétés (clé-valeur) qui représente une entité. Création : littéral {}, constructeur Object(), classe. Propriétés accessibles par notation point (obj.prop) ou crochets (obj['prop'])."
+      },
+      {
+        "question": "Qu'est-ce qu'une boucle ?",
+        "options": [
+          "Un framework de développement backend type Express.js",
+          "Un compilateur de code TypeScript vers JavaScript",
+          "Une boucle est une structure de contrôle qui répète un bloc de code tant qu'une condition est vraie",
+          "Une architecture de microservices distribuée"
+        ],
+        "correctAnswers": [
+          2
+        ],
+        "explanation": "Une boucle est une structure de contrôle qui répète un bloc de code tant qu'une condition est vraie."
+      },
+      {
+        "question": "Qu'est-ce qu'une clé ? Une valeur ?",
+        "options": [
+          "Un gestionnaire de paquets système type apt ou yum",
+          "Une architecture de microservices distribuée",
+          "Un compilateur de code TypeScript vers JavaScript",
+          "Dans un objet JS : Clé (key/propriété)"
+        ],
+        "correctAnswers": [
+          3
+        ],
+        "explanation": "Dans un objet JS : Clé (key/propriété) = identifiant qui nomme une propriété de l'objet, peut être string ou Symbol. Valeur (value) = donnée associée à la clé, peut être de tout type."
+      },
+      {
+        "question": "Qu'est-ce qu'une fonction ? Un paramètre ? Un argument ? Le return ?",
+        "options": [
+          "Fonction : bloc de code réutilisable qui effectue une tâche spécifique.",
+          "Une plateforme de déploiement cloud type AWS",
+          "Un framework de développement backend type Express.js",
+          "Une architecture de microservices distribuée"
+        ],
+        "correctAnswers": [
+          0
+        ],
+        "explanation": "Fonction : bloc de code réutilisable qui effectue une tâche spécifique. Paramètre : variable dans la déclaration de fonction (function add(a, b)). Argument : valeur réelle passée lors de l'appel (add(5, 3))."
+      },
+      {
+        "question": "Qu'est-ce que la POO ? Une class ? Un constructor ? Une propriété ? Une méthode ? Le mot clé 'this' ? Une instance ?",
+        "options": [
+          "Une architecture de microservices distribuée sur le cloud",
+          "Un paradigme de programmation fonctionnelle pure et immutable",
+          "POO (Programmation Orientée Objet) : paradigme basé sur objets contenant données et méthodes.",
+          "Un système de gestion automatique de la mémoire avec garbage collector"
+        ],
+        "correctAnswers": [
+          2
+        ],
+        "explanation": "POO (Programmation Orientée Objet) : paradigme basé sur objets contenant données et méthodes. Classe : modèle/blueprint pour créer des objets. Constructor : méthode spéciale d'initialisation d'une instance."
+      },
+      {
+        "question": "Qu'est-ce que l'héritage ? Le mot clé 'extends' ? Quels sont ses inconvénients ?",
+        "options": [
+          "Héritage : mécanisme permettant à une classe d'hériter propriétés et méthodes d'une classe parent.",
+          "L'importation de modules externes dans un projet",
+          "La délégation de méthodes à des objets composés",
+          "La copie de code d'une classe vers une autre"
+        ],
+        "correctAnswers": [
+          0
+        ],
+        "explanation": "Héritage : mécanisme permettant à une classe d'hériter propriétés et méthodes d'une classe parent. 'extends' : mot-clé créant une relation d'héritage (class Child extends Parent)."
+      },
+      {
+        "question": "Qu'est-ce qu'une interface ? À quoi ça sert ?",
+        "options": [
+          "Des services REST pour la communication inter-systèmes",
+          "Des procédures stockées dans la base de données",
+          "Des modules backend pour le traitement des requêtes HTTP",
+          "Interface (TypeScript) : contrat définissant la structure qu'un objet doit respecter, sans implémentation."
+        ],
+        "correctAnswers": [
+          3
+        ],
+        "explanation": "Interface (TypeScript) : contrat définissant la structure qu'un objet doit respecter, sans implémentation. Définit types des propriétés et signatures des méthodes."
+      },
+      {
+        "question": "Qu'est-ce qu'une méthode abstraite ?",
+        "options": [
+          "Un système de gestion de base de données type PostgreSQL",
+          "Une bibliothèque de traitement de données côté serveur",
+          "Méthode abstraite : méthode déclarée sans implémentation dans une classe parente, doit être",
+          "Un framework de développement backend type Express.js"
+        ],
+        "correctAnswers": [
+          2
+        ],
+        "explanation": "Méthode abstraite : méthode déclarée sans implémentation dans une classe parente, doit être implémentée par les classes enfants. Force un contrat d'implémentation. JavaScript/TypeScript : simulation via erreurs dans méthodes ou classes abstraites TypeScript."
+      },
+      {
+        "question": "Qu'est-ce qu'une classe abstraite ?",
+        "options": [
+          "Un framework de développement backend type Express.js",
+          "Un protocole de communication réseau type WebSocket",
+          "Un gestionnaire de paquets système type apt ou yum",
+          "Classe abstraite : classe qui ne peut pas être instanciée directement, sert de base pour d'autres classes."
+        ],
+        "correctAnswers": [
+          3
+        ],
+        "explanation": "Classe abstraite : classe qui ne peut pas être instanciée directement, sert de base pour d'autres classes. Contient méthodes abstraites (à implémenter) et/ou concrètes (déjà implémentées). TypeScript supporte avec 'abstract class'."
+      },
+      {
+        "question": "Qu'est-ce qu'une props ? Pourquoi les utiliser ? Quel grand principe cela permet-il de respecter ? Montre-moi en une dans ton code en m'expliquant le plus rigoureusement possible",
+        "options": [
+          "Un système de templates côté serveur type EJS",
+          "Un framework full-stack pour Node.js et Express",
+          "Props (properties) : données passées d'un composant parent à un composant enfant en React.",
+          "Un ORM pour la gestion de bases de données"
+        ],
+        "correctAnswers": [
+          2
+        ],
+        "explanation": "Props (properties) : données passées d'un composant parent à un composant enfant en React. Lecture seule, permettent la communication descendante. Principe respecté : immutabilité et flux de données unidirectionnel."
+      },
+      {
+        "question": "A quoi sert le mot clé 'default' dans 'export default myFunction' ?",
+        "options": [
+          "export default définit l'export principal d'un module ES6.",
+          "Une bibliothèque de traitement de données côté serveur",
+          "Une plateforme de déploiement cloud type AWS",
+          "Un framework de développement backend type Express.js"
+        ],
+        "correctAnswers": [
+          0
+        ],
+        "explanation": "export default définit l'export principal d'un module ES6. Un seul export default par fichier. Import sans accolades : import MyFunction from './module'."
+      },
+      {
+        "question": "En React, où placerais-tu des objets 'globaux et utilisables par tous les composants' ?",
+        "options": [
+          "Un ORM pour la gestion de bases de données",
+          "Gestion d'état global React",
+          "Un système de templates côté serveur type EJS",
+          "Un framework full-stack pour Node.js et Express"
+        ],
+        "correctAnswers": [
+          1
+        ],
+        "explanation": "Gestion d'état global React : 1) Context API + useContext pour états simples, 2) Redux/Redux Toolkit pour applications complexes, 3) Zustand pour solution légère, 4) Custom hooks pour logique partagée, 5) Variables d'environnement (process.env), 6) Singleton pattern..."
+      },
+      {
+        "question": "À quoi sert useEffect ? (il faut savoir expliquer tous les 'use' : useEffect, useMemo, useNavigate, etc…)",
+        "options": [
+          "useEffect : gère les effets de bord (API calls, DOM manipulation, subscriptions).",
+          "Un système de templates côté serveur type EJS",
+          "Un ORM pour la gestion de bases de données",
+          "Un framework full-stack pour Node.js et Express"
+        ],
+        "correctAnswers": [
+          0
+        ],
+        "explanation": "useEffect : gère les effets de bord (API calls, DOM manipulation, subscriptions). useEffect(() => {}, [deps]). useMemo : mémorise résultat de calcul coûteux."
+      },
+      {
+        "question": "Dans un useEffect, à quoi sert le tableau de dépendances ? S'il est vide, que se passe-t-il ? Et si j'oublie le tableau de dépendances ?",
+        "options": [
+          "Une plateforme de déploiement cloud type AWS",
+          "Un framework de développement backend type Express.js",
+          "Tableau de dépendances contrôle quand useEffect s'exécute",
+          "Un gestionnaire de paquets système type apt ou yum"
+        ],
+        "correctAnswers": [
+          2
+        ],
+        "explanation": "Tableau de dépendances contrôle quand useEffect s'exécute : 1) [dep1, dep2] : re-exécute si dep1 ou dep2 change, 2) [] : exécute une seule fois au montage (componentDidMount), 3) Pas de tableau : exécute à chaque render (dangereux, peut causer boucles infinies)."
+      },
+      {
+        "question": "Montre-moi comment tu trouves une réponse sur internet ?",
+        "options": [
+          "Un ORM pour la gestion de bases de données",
+          "Un framework full-stack pour Node.js et Express",
+          "Un système de templates côté serveur type EJS",
+          "Méthodologie de recherche"
+        ],
+        "correctAnswers": [
+          3
+        ],
+        "explanation": "Méthodologie de recherche : 1) Définir précisément le problème, 2) Mots-clés spécifiques + technologies (React error, JavaScript array methods), 3) Sources fiables : MDN, documentation officielle, Stack Overflow, 4) GitHub Issues pour bugs spécifiques, 5) Blogs tech..."
+      },
+      {
+        "question": "À quoi sert de commenter son code ? C'est bien ou c'est mal ? Qu'est-ce qu'un bon commentaire ? Un mauvais ?",
+        "options": [
+          "Un système de gestion de base de données type PostgreSQL",
+          "Commentaires : Bon si expliquent le POURQUOI, pas le QUOI.",
+          "Une architecture de microservices distribuée",
+          "Un protocole de communication réseau type WebSocket"
+        ],
+        "correctAnswers": [
+          1
+        ],
+        "explanation": "Commentaires : Bon si expliquent le POURQUOI, pas le QUOI. Bon commentaire : justifie décisions complexes, explique business logic, documente APIs, warnings importants. Mauvais : répète le code évident, obsolète, mensonger."
+      },
+      {
+        "question": "Comment travailles-tu en groupe ? Quels outils utilises-tu ?",
+        "options": [
+          "Travail en équipe : 1) Git flow avec branches feature, pull requests, code reviews, 2)",
+          "Une méthodologie de développement agile avec sprints de 2 semaines",
+          "Un système de gestion de versions Git avec branches",
+          "Une architecture orientée événements asynchrone"
+        ],
+        "correctAnswers": [
+          0
+        ],
+        "explanation": "Travail en équipe : 1) Git flow avec branches feature, pull requests, code reviews, 2) Outils : Slack/Teams communication, Jira/Trello gestion tâches, Figma designs, 3) Conventions code partagées (ESLint, Prettier), 4) Daily meetings, sprint planning, retrospectives..."
+      },
+      {
+        "question": "Qu'est-ce que git ? github ? Quelles sont les bonnes pratiques à respecter que tu connais ?",
+        "options": [
+          "Une plateforme d'intégration et de déploiement continu",
+          "Un outil de génération automatique de documentation",
+          "Un système de sauvegarde automatique sur le cloud",
+          "Git : système de contrôle de version distribué pour tracker changements code."
+        ],
+        "correctAnswers": [
+          3
+        ],
+        "explanation": "Git : système de contrôle de version distribué pour tracker changements code. GitHub : plateforme cloud hébergeant repos Git avec features collaboration."
+      }
+    ],
+    "backend": [
+      {
+        "question": "Qu'est-ce que le SQL ? Le NoSQL ? Un SGBDR ? Quel SGBDR utilises-tu dans ton projet ? Connais-tu une alternative ?",
+        "options": [
+          "Un framework de développement web full-stack",
+          "Un langage de programmation orienté objet compilé",
+          "SQL (Structured Query Language)",
+          "Un protocole de transfert de fichiers sécurisé (SFTP)"
+        ],
+        "correctAnswers": [
+          2
+        ],
+        "explanation": "SQL (Structured Query Language) : langage de requête pour bases de données relationnelles avec schéma fixe, tables liées, ACID compliance. NoSQL : bases non-relationnelles avec schéma flexible (document, clé-valeur, graphe, colonne)."
+      },
+      {
+        "question": "Écris moi une jointure au tableau (il faut alors le faire sur tableau blanc. Il faut bien connaître tous les fondamentaux en SQL)",
+        "options": [
+          "Un langage de programmation orienté objet compilé",
+          "Un framework de développement web full-stack",
+          "Jointure SQL exemple : SELECT u.nom, c.titre FROM users u INNER JOIN commandes c ON u.id =",
+          "Un protocole de transfert de fichiers sécurisé (SFTP)"
+        ],
+        "correctAnswers": [
+          2
+        ],
+        "explanation": "Jointure SQL exemple : SELECT u.nom, c.titre FROM users u INNER JOIN commandes c ON u.id = c.user_id WHERE u.actif = 1; Types : INNER JOIN (correspondance exacte), LEFT JOIN (tous les enregistrements de gauche), RIGHT JOIN (tous de droite), FULL OUTER JOIN (tous)."
+      },
+      {
+        "question": "Qu'est-ce qu'une clé primaire ? Clé étrangère ? Table de jointure ?",
+        "options": [
+          "Clé primaire : identifiant unique de chaque ligne, non NULL, une seule par table, assure intégrité d'entité.",
+          "Un système de fichiers réseau pour partager des données",
+          "Une base de données relationnelle SQL distribuée",
+          "Un protocole de communication en temps réel bidirectionnel"
+        ],
+        "correctAnswers": [
+          0
+        ],
+        "explanation": "Clé primaire : identifiant unique de chaque ligne, non NULL, une seule par table, assure intégrité d'entité. Clé étrangère : référence à clé primaire d'autre table, maintient intégrité référentielle, peut être NULL."
+      },
+      {
+        "question": "Parle-moi des cardinalités ?",
+        "options": [
+          "Un framework JavaScript frontend type React ou Vue",
+          "Un préprocesseur CSS type Sass ou Less",
+          "Cardinalités définissent relations entre entités",
+          "Un bundler de modules frontend type Webpack"
+        ],
+        "correctAnswers": [
+          2
+        ],
+        "explanation": "Cardinalités définissent relations entre entités : 1-1 (un-à-un) : chaque occurrence liée à une seule (Personne-Passeport), 1-N (un-à-plusieurs) : une occurrence liée à plusieurs (Client-Commandes), N-N (plusieurs-à-plusieurs) : plusieurs liées à plusieurs (Étudiant..."
+      },
+      {
+        "question": "Quelles contraintes connais-tu ? (Appliquées sur des colonnes)",
+        "options": [
+          "Un langage de programmation orienté objet compilé",
+          "Un protocole de transfert de fichiers sécurisé (SFTP)",
+          "Un framework de développement web full-stack",
+          "Contraintes SQL sur colonnes"
+        ],
+        "correctAnswers": [
+          3
+        ],
+        "explanation": "Contraintes SQL sur colonnes : 1) NOT NULL : valeur obligatoire, 2) UNIQUE : valeurs uniques dans la colonne, 3) PRIMARY KEY : NOT NULL + UNIQUE, 4) FOREIGN KEY : référence autre table, 5) CHECK : condition personnalisée (âge > 0), 6) DEFAULT : valeur par défaut, 7)..."
+      },
+      {
+        "question": "De quoi est constituée une table SQL ?",
+        "options": [
+          "Un langage de programmation orienté objet compilé",
+          "Table SQL constituée de : 1) Colonnes (attributs)",
+          "Un framework de développement web full-stack",
+          "Un protocole de transfert de fichiers sécurisé (SFTP)"
+        ],
+        "correctAnswers": [
+          1
+        ],
+        "explanation": "Table SQL constituée de : 1) Colonnes (attributs) avec type de données (VARCHAR, INT, DATE, etc.), 2) Lignes (enregistrements/tuples) contenant les données, 3) Clé primaire identifiant unique, 4) Contraintes d'intégrité, 5) Index pour performance, 6) Triggers éventu..."
+      },
+      {
+        "question": "Quelles failles de sécurité connais-tu ? Qu'est-ce qu'une injection SQL ? Une attaque CSRF ? Une attaque XSS ?",
+        "options": [
+          "Des services REST pour la communication inter-systèmes",
+          "Failles sécurité web : 1) Injection SQL : insertion code SQL malveillant via inputs",
+          "Des modules backend pour le traitement des requêtes HTTP",
+          "Des procédures stockées dans la base de données"
+        ],
+        "correctAnswers": [
+          1
+        ],
+        "explanation": "Failles sécurité web : 1) Injection SQL : insertion code SQL malveillant via inputs utilisateur, contournement authentification/accès données. Prévention : requêtes préparées. 2) CSRF : exécution actions non autorisées au nom utilisateur connecté."
+      },
+      {
+        "question": "Qu'est-ce que le format JSON ? Qu'est-ce que la sérialisation ?",
+        "options": [
+          "Une base de données relationnelle SQL distribuée",
+          "Un protocole de communication en temps réel bidirectionnel",
+          "JSON (JavaScript Object Notation)",
+          "Un système de fichiers réseau pour partager des données"
+        ],
+        "correctAnswers": [
+          2
+        ],
+        "explanation": "JSON (JavaScript Object Notation) : format d'échange de données léger, lisible, basé sur syntaxe JS mais indépendant du langage. Structure : objets {}, tableaux [], chaînes, nombres, booléens, null."
+      },
+      {
+        "question": "Comment sont transférées les données entre ton frontend et ton backend ?",
+        "options": [
+          "Un système de fichiers réseau pour partager des données",
+          "Une base de données relationnelle SQL distribuée",
+          "Un protocole de communication en temps réel bidirectionnel",
+          "Transfert données Frontend/Backend"
+        ],
+        "correctAnswers": [
+          3
+        ],
+        "explanation": "Transfert données Frontend/Backend : 1) Protocole HTTP/HTTPS, 2) Format JSON pour APIs REST, 3) Méthodes HTTP : GET (lecture), POST (création), PUT (modification complète), PATCH (modification partielle), DELETE (suppression), 4) Headers pour métadonnées (Content-Ty..."
+      },
+      {
+        "question": "Quelles sont les 2 parties qui constituent ton backend ?",
+        "options": [
+          "Un protocole de transfert de fichiers sécurisé (SFTP)",
+          "Un langage de programmation orienté objet compilé",
+          "Backend constitué de : 1)",
+          "Un framework de développement web full-stack"
+        ],
+        "correctAnswers": [
+          2
+        ],
+        "explanation": "Backend constitué de : 1) API/Serveur d'application : gère requêtes HTTP, logique métier, authentification, validation, routing (Express.js, Spring Boot, Laravel), 2) Base de données : stockage persistant des données avec SGBDR (MySQL, PostgreSQL) ou NoSQL (MongoDB)."
+      },
+      {
+        "question": "Qu'est-ce qu'une API ? Une WEB API ?",
+        "options": [
+          "Une base de données relationnelle SQL distribuée",
+          "API (Application Programming Interface)",
+          "Un protocole de communication en temps réel bidirectionnel",
+          "Un système de fichiers réseau pour partager des données"
+        ],
+        "correctAnswers": [
+          1
+        ],
+        "explanation": "API (Application Programming Interface) : interface permettant communication entre applications, définit méthodes d'accès aux fonctionnalités. Web API : API accessible via protocoles web (HTTP/HTTPS), généralement REST ou GraphQL."
+      },
+      {
+        "question": "Qu'est-ce qu'une base de données ?",
+        "options": [
+          "Un protocole de transfert de fichiers sécurisé (SFTP)",
+          "Un langage de programmation orienté objet compilé",
+          "Un framework de développement web full-stack",
+          "Base de données : système organisé de stockage, gestion et récupération de données structurées."
+        ],
+        "correctAnswers": [
+          3
+        ],
+        "explanation": "Base de données : système organisé de stockage, gestion et récupération de données structurées. Types : relationnelles (tables liées, SQL), NoSQL (document, clé-valeur, graphe, colonne)."
+      },
+      {
+        "question": "Quelle architecture as-tu utilisé pour organiser ta WEB API ?",
+        "options": [
+          "Un pattern de sécurité pour les applications web",
+          "Architecture Web API : 1) MVC (Model-View-Controller) avec séparation couches, 2)",
+          "Une architecture de base de données trois tiers",
+          "Une méthode de test logiciel en trois phases"
+        ],
+        "correctAnswers": [
+          1
+        ],
+        "explanation": "Architecture Web API : 1) MVC (Model-View-Controller) avec séparation couches, 2) Architecture en couches : routes → controllers → services → repositories → database, 3) Pattern Repository pour abstraction données, 4) Middleware pour concerns transversaux (auth, log..."
+      },
+      {
+        "question": "Qu'est-ce que la spécification REST ? RESTful ?",
+        "options": [
+          "Une base de données relationnelle SQL distribuée",
+          "Un système de fichiers réseau pour partager des données",
+          "REST (Representational State Transfer)",
+          "Un protocole de communication en temps réel bidirectionnel"
+        ],
+        "correctAnswers": [
+          2
+        ],
+        "explanation": "REST (Representational State Transfer) : style architectural pour services web basé sur HTTP. Principes : 1) Stateless (sans état), 2) Interface uniforme (HTTP verbs), 3) Cacheable, 4) Client-serveur séparé, 5) Architecture en couches, 6) Code on demand (optionnel)."
+      },
+      {
+        "question": "Ta WEB API est-elle REST ou RESTful ? Quels principes respecte-t-elle ?",
+        "options": [
+          "Mon API est RESTful car respecte",
+          "Une base de données relationnelle SQL distribuée",
+          "Un système de fichiers réseau pour partager des données",
+          "Un protocole de communication en temps réel bidirectionnel"
+        ],
+        "correctAnswers": [
+          0
+        ],
+        "explanation": "Mon API est RESTful car respecte : 1) URLs représentent ressources (/users, /users/123), 2) Méthodes HTTP appropriées (GET lecture, POST création), 3) Stateless (pas de session serveur), 4) Status codes standards (200, 201, 400, 404, 500), 5) Format JSON uniforme, 6..."
+      },
+      {
+        "question": "Que signifie dans ton controller le 'res.json()' ?",
+        "options": [
+          "Une bibliothèque d'animations CSS type GSAP",
+          "Un préprocesseur CSS type Sass ou Less",
+          "Un framework JavaScript frontend type React ou Vue",
+          "res.json() (Express.js) : méthode qui sérialise un objet JavaScript en JSON et l'envoie comme réponse HTTP."
+        ],
+        "correctAnswers": [
+          3
+        ],
+        "explanation": "res.json() (Express.js) : méthode qui sérialise un objet JavaScript en JSON et l'envoie comme réponse HTTP. Définit automatiquement Content-Type: application/json, convertit données avec JSON.stringify(), termine la requête."
+      },
+      {
+        "question": "Parle-moi des différents types de requêtes",
+        "options": [
+          "Un système de templates HTML type Handlebars",
+          "Un gestionnaire d'état côté client type Redux",
+          "Un bundler de modules frontend type Webpack",
+          "Méthodes HTTP : 1) GET : récupération données, idempotent, cacheable, paramètres URL, 2)"
+        ],
+        "correctAnswers": [
+          3
+        ],
+        "explanation": "Méthodes HTTP : 1) GET : récupération données, idempotent, cacheable, paramètres URL, 2) POST : création ressource, non-idempotent, body required, 3) PUT : modification complète, idempotent, remplace ressource, 4) PATCH : modification partielle, update fields spécif..."
+      },
+      {
+        "question": "Montre-moi dans ton backend le chemin qu'emprunte une requête de type GET sur la route 'X'",
+        "options": [
+          "Chemin requête GET /api/users",
+          "Un langage de programmation orienté objet compilé",
+          "Un protocole de transfert de fichiers sécurisé (SFTP)",
+          "Un framework de développement web full-stack"
+        ],
+        "correctAnswers": [
+          0
+        ],
+        "explanation": "Chemin requête GET /api/users : 1) Serveur reçoit requête HTTP, 2) Router Express identifie route correspondante, 3) Middleware d'authentification vérifie token JWT, 4) Controller getUsersController appelé, 5) Controller appelle service UserService.getAllUsers(), 6)..."
+      },
+      {
+        "question": "Idem pour POST. Que doit ajouter le client, par rapport à une requête GET ?",
+        "options": [
+          "Requête POST /api/users : parcours similaire mais 1) Client ajoute : body JSON avec données",
+          "Un bundler de modules frontend type Webpack",
+          "Une bibliothèque d'animations CSS type GSAP",
+          "Un protocole de communication navigateur type HTTP/2"
+        ],
+        "correctAnswers": [
+          0
+        ],
+        "explanation": "Requête POST /api/users : parcours similaire mais 1) Client ajoute : body JSON avec données utilisateur, header Content-Type: application/json, méthode POST, 2) Middleware validation vérifie format/contraintes données, 3) Controller extrait données req.body, 4) Serv..."
+      },
+      {
+        "question": "À quoi sert le index.js ? Le table.js ? Le seed.js ?",
+        "options": [
+          "Des contraintes d'intégrité référentielle entre tables",
+          "Des copies de tables pour améliorer la disponibilité",
+          "Des partitions horizontales automatiques des données",
+          "Fichiers Node.js/Backend : 1) index.js : point d'entrée application, configure serveur Express,"
+        ],
+        "correctAnswers": [
+          3
+        ],
+        "explanation": "Fichiers Node.js/Backend : 1) index.js : point d'entrée application, configure serveur Express, middleware, routes, démarre serveur sur port spécifié, 2) table.js : création/migration schéma base de données, définit structure tables, colonnes, contraintes, 3) seed.j..."
+      },
+      {
+        "question": "Dans tes managers : pourquoi as-tu utilisé extends sur un AbstractManager ?",
+        "options": [
+          "L'importation de modules externes dans un projet",
+          "La délégation de méthodes à des objets composés",
+          "La copie de code d'une classe vers une autre",
+          "Pattern héritage avec AbstractManager"
+        ],
+        "correctAnswers": [
+          3
+        ],
+        "explanation": "Pattern héritage avec AbstractManager : 1) Factorisation code commun (connection DB, méthodes CRUD basiques), 2) Respect DRY principle, 3) Cohérence interface entre managers, 4) Maintenance centralisée des fonctionnalités communes, 5) Extension avec méthodes spécifi..."
+      },
+      {
+        "question": "Qu'est-ce qu'une middleware ? Peux-tu m'en montrer/décrire un ? Quels sont les 3 paramètres que prend un midleware ? À quoi sert le troisième justement ?",
+        "options": [
+          "Middleware Express : fonction exécutée entre requête et réponse, prend 3 paramètres : (req, res, next).",
+          "Un bundler de modules frontend type Webpack",
+          "Un protocole de communication navigateur type HTTP/2",
+          "Un gestionnaire d'état côté client type Redux"
+        ],
+        "correctAnswers": [
+          0
+        ],
+        "explanation": "Middleware Express : fonction exécutée entre requête et réponse, prend 3 paramètres : (req, res, next). 1) req : objet requête HTTP, 2) res : objet réponse HTTP, 3) next : fonction pour passer au middleware suivant."
+      },
+      {
+        "question": "Comment utilises-tu un midleware ?",
+        "options": [
+          "Un framework JavaScript frontend type React ou Vue",
+          "Une bibliothèque d'animations CSS type GSAP",
+          "Un système de templates HTML type Handlebars",
+          "Utilisation middleware Express"
+        ],
+        "correctAnswers": [
+          3
+        ],
+        "explanation": "Utilisation middleware Express : 1) Global : app.use(middleware) pour toutes routes, 2) Spécifique : app.get('/protected', authMiddleware, controller) pour routes ciblées, 3) Router : router.use(middleware) pour groupe routes, 4) Conditionnel : if/else dans middleware."
+      },
+      {
+        "question": "Comment as-tu mis en place l'authentification ?",
+        "options": [
+          "Un système de cache distribué pour les sessions",
+          "Authentification implémentée avec",
+          "Une méthode de hashing sécurisé des passwords",
+          "Un protocole de compression des données JSON"
+        ],
+        "correctAnswers": [
+          1
+        ],
+        "explanation": "Authentification implémentée avec : 1) JWT (JSON Web Tokens) pour stateless auth, 2) Route POST /auth/login vérifie credentials, 3) Hash passwords avec bcrypt, 4) Génération token JWT avec payload user + expiration, 5) Middleware vérifie token sur routes protégées, ..."
+      },
+      {
+        "question": "Peux-tu me parler du JWT ? Des cookies ? Me montrer où tu les as impleménté ?",
+        "options": [
+          "JWT : token auto-contenu avec header.payload.signature, payload contient user info +",
+          "Un système de fichiers virtuel pour le stockage web",
+          "Une base de données orientée documents comme MongoDB",
+          "Un protocole de communication réseau entre clients et serveurs"
+        ],
+        "correctAnswers": [
+          0
+        ],
+        "explanation": "JWT : token auto-contenu avec header.payload.signature, payload contient user info + expiration, signature vérifie intégrité. Avantages : stateless, scalable, cross-domain. Cookies : stockage côté client géré par navigateur, httpOnly pour sécurité, SameSite pour CSRF."
+      },
+      {
+        "question": "Pourquoi est-il important de vérifier, côté backend, les données que tu reçois depuis ton frontend ? As-tu mis en place cette couche de vérification ?",
+        "options": [
+          "Une bibliothèque d'animations CSS type GSAP",
+          "Validation backend critique car",
+          "Un gestionnaire d'état côté client type Redux",
+          "Un framework JavaScript frontend type React ou Vue"
+        ],
+        "correctAnswers": [
+          1
+        ],
+        "explanation": "Validation backend critique car : 1) Sécurité (frontend contournable), 2) Intégrité données business, 3) Protection injection attacks, 4) Conformité contraintes DB, 5) Never trust client data."
+      }
+    ],
+    "fullstack": [
+      {
+        "question": "En cliquant sur ton bouton 'X' de ton application, peux-tu me décrire les couches que traverse ta requête, du client vers le serveur puis du serveur vers le client ? Peux-tu me montrer le code aussi, qui est exécuté ligne par ligne ?",
+        "options": [
+          "Un ORM pour la gestion de bases de données",
+          "Un framework full-stack pour Node.js et Express",
+          "Parcours complet requête : CLIENT : 1) onClick handler déclenché, 2)",
+          "Un système de templates côté serveur type EJS"
+        ],
+        "correctAnswers": [
+          2
+        ],
+        "explanation": "Parcours complet requête : CLIENT : 1) onClick handler déclenché, 2) fetch('/api/users', {method: 'DELETE', headers: {Authorization: Bearer token}}) envoyé, SERVEUR : 3) Express router identifie route DELETE /api/users/:id, 4) Middleware auth vérifie token JWT, 5) C..."
+      },
+      {
+        "question": "Tu affiches X éléments sur cette page. Tu as fait un 'getAll()'. Mais si tu avais 1 million d'objets à récupérer, quel serait le problème ? Que pourrais-tu mettre en place ?",
+        "options": [
+          "Un protocole de transfert de fichiers sécurisé (SFTP)",
+          "Un framework de développement web full-stack",
+          "Un langage de programmation orienté objet compilé",
+          "Problèmes 1M objets : 1) Mémoire serveur insuffisante, 2) Temps réponse très long, 3) Bande"
+        ],
+        "correctAnswers": [
+          3
+        ],
+        "explanation": "Problèmes 1M objets : 1) Mémoire serveur insuffisante, 2) Temps réponse très long, 3) Bande passante saturée, 4) Interface utilisateur inutilisable."
+      }
+    ],
+    "modern_practices": [
+      {
+        "question": "As-tu écris des tests ? À quoi ça sert ?",
+        "options": [
+          "Des modules backend pour le traitement des requêtes HTTP",
+          "Des procédures stockées dans la base de données",
+          "Tests implémentés : 1) Tests unitaires (Jest) pour fonctions pures et composants isolés, 2)",
+          "Des services REST pour la communication inter-systèmes"
+        ],
+        "correctAnswers": [
+          2
+        ],
+        "explanation": "Tests implémentés : 1) Tests unitaires (Jest) pour fonctions pures et composants isolés, 2) Tests intégration (Supertest) pour APIs, 3) Tests E2E (Cypress) pour parcours utilisateur."
+      },
+      {
+        "question": "Comment fonctionne la mise en prod ? Qu'est-ce que la CI/CD ? Quels outils connais-tu ?",
+        "options": [
+          "Une méthodologie de développement agile avec sprints de 2 semaines",
+          "Une architecture orientée événements asynchrone",
+          "Un système de gestion de versions Git avec branches",
+          "Mise en prod avec CI/CD : 1) Développeur push code sur Git, 2)"
+        ],
+        "correctAnswers": [
+          3
+        ],
+        "explanation": "Mise en prod avec CI/CD : 1) Développeur push code sur Git, 2) CI déclenche : build, tests, analyse qualité, 3) Si succès, CD déploie automatiquement, 4) Monitoring post-déploiement."
+      },
+      {
+        "question": "Qu'est-ce qu'un VPS ? Une solution Cloud ?",
+        "options": [
+          "Un système de templates statiques type Jekyll",
+          "Un framework backend legacy type Struts",
+          "Un système de fichiers distribué type NFS",
+          "VPS (Virtual Private Server)"
+        ],
+        "correctAnswers": [
+          3
+        ],
+        "explanation": "VPS (Virtual Private Server) : serveur virtuel dédié sur hardware partagé, isolation ressources, accès root, configuration libre. vs Mutualisé (ressources partagées) vs Dédié (hardware exclusif)."
+      }
+    ]
+  }
+}

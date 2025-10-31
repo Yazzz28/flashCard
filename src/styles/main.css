@@ -14,8 +14,10 @@
 @import url('../components/cards/cards.css');
 @import url('../components/ui/ui.css');
 @import url('../components/filters/filters.css');
+@import url('../components/qcm/qcm.css');
 
 /* 4. Global components (modal, theme-toggle, fab) */
 @import url('./components/modal.css');
 @import url('./components/theme-toggle.css');
 @import url('./components/fab.css');
+@import url('./components/mode-toggle.css');

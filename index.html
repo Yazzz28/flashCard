@@ -22,8 +22,20 @@
                 </div>
                 <h1 class="main-title">WildCards</h1>
                 <p class="subtitle">Fiches de révision pour CDA et DWWM</p>
+
+                <!-- Mode Toggle -->
+                <div class="mode-toggle">
+                    <button class="mode-btn active" id="flashcardModeBtn">
+                        <span>🎴</span> FlashCards
+                    </button>
+                    <button class="mode-btn" id="qcmModeBtn">
+                        <span>🎯</span> QCM
+                    </button>
+                </div>
             </header>
 
+            <!-- FlashCard Container -->
+            <div id="flashcardContainer">
             <div class="stats-panel" id="statsPanel">
                 <div class="stats-title">📊 Progression</div>
                 <div class="stat-item">
@@ -134,6 +146,15 @@
             >
                 ⚡
             </button>
+            </div>
+            <!-- End FlashCard Container -->
+
+            <!-- QCM Container -->
+            <div id="qcmContainer" class="u-hidden">
+                <!-- QCM content will be dynamically inserted here -->
+            </div>
+            <!-- End QCM Container -->
+
         </div>
         <script type="module" src="src/app.js"></script>
         <div id="modalOverlay" class="modal-overlay">
